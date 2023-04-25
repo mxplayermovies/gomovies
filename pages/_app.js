@@ -4,12 +4,10 @@ import Hamburger from '../components/Hamburger';
 import { PageTransition } from "../components/PageTransition";
 import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 import Script from 'next/script';
-import Maintenance from './maintenance';
 
-function Application({ Component, pageProps, isMaintenanceMode }) {
-  if (isMaintenanceMode) {
-    return <Maintenance />;
-  }
+
+function Application({ Component, pageProps }) {
+ 
 
   return ( 
     <>
@@ -28,13 +26,6 @@ function Application({ Component, pageProps, isMaintenanceMode }) {
   );
 }
 
-Application.getInitialProps = async (appContext) => {
-  const isMaintenanceMode = process.env.REACT_APP_MAINTENANCE_MODE === "true";
-  let pageProps = {};
-  if (appContext.Component.getInitialProps) {
-    pageProps = await appContext.Component.getInitialProps(appContext);
-  }
-  return { pageProps, isMaintenanceMode };
-};
+
 
 export default Application;
