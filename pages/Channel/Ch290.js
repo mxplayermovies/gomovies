@@ -21,7 +21,7 @@ const Ch290 = () => {
   return (
     <div>
        <Head>
-    <title>Go Movies™ | Watch Movies, TV-Series & Sports Live Online Free</title>
+    <title>Go Movies™ | SPORTS TV</title>
     <meta name="robots" content="index, follow" />  
     <meta name="revisit-after" content="1 days" />
    

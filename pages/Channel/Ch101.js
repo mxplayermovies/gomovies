@@ -21,7 +21,7 @@ const Ch101 = () => {
   return (
     <div>
        <Head>
-    <title>Go Movies™ | Watch Movies, TV-Series & Sports Live Online Free</title>
+    <title>Go Movies™ | Sport Klub 1 Serbia</title>
     <meta name="robots" content="index, follow" />  
     <meta name="revisit-after" content="1 days" />
    

@@ -21,7 +21,7 @@ const Ch322 = () => {
   return (
     <div>
        <Head>
-    <title>Go Movies™ | Watch Movies, TV-Series & Sports Live Online Free</title>
+    <title>Go Movies™ | History</title>
     <meta name="robots" content="index, follow" />  
     <meta name="revisit-after" content="1 days" />
    

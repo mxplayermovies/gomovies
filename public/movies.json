@@ -34,8 +34,8 @@
 
   {
     "id": "IPL PBvsRR",
-    "title": "IPL CSK VS SRH",
-    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610073/ipl-2023-match29_hef7dr.webp",
+    "title": "IPL RR VS CSK",
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610073/ipl-2023-match37_xkcak6.webp",
     "yearRelease": 2023,
     "genre": ["SPORTS "],
     "rating": 0,
@@ -49,8 +49,8 @@
   },
   {
     "id": "IPL PBvsRR",
-    "title": "IPL GT VS LSG",
-    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610073/ipl-2023-match30_flnzw6.webp",
+    "title": "IPL PBKS VS LSG",
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610074/ipl-2023-match38_wthho0.webp",
     "yearRelease": 2023,
     "genre": ["SPORTS "],
     "rating": 0,
@@ -64,8 +64,8 @@
   },
   {
     "id": "IPLKKRvsRCB",
-    "title": "IPL MI VS PBKS",
-    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610073/ipl-2023-match31_aqkll9.webp",
+    "title": "IPL KKR VS GT",
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610074/ipl-2023-match39_kmdse5.webp",
     "yearRelease": 2023,
     "genre": ["SPORTS "],
     "rating": 0,
@@ -79,8 +79,8 @@
   },
   {
     "id": "IPLKKRvsRCB",
-    "title": "IPL RR VS RCB",
-    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610073/ipl-2023-match32_ldigms.webp",
+    "title": "IPL DC VS SRH",
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610074/ipl-2023-match40_p8qxgd.webp",
     "yearRelease": 2023,
     "genre": ["SPORTS "],
     "rating": 0,
@@ -94,8 +94,8 @@
   },
   {
     "id": "IPLKKRvsRCB",
-    "title": "IPL CSK VS KKR",
-    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610073/ipl-2023-match33_n4jgyq.webp",
+    "title": "IPL CSK VS PBKS",
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610074/ipl-2023-match41_ypnd08.webp",
     "yearRelease": 2023,
     "genre": ["SPORTS "],
     "rating": 0,
@@ -107,11 +107,26 @@
     "link": "https://www.imdb.com/title/tt0167260/",
     "movie.watch": "../../Sports-2023/IPL-2023/IPLMatch01"
   },
- 
+  {
+    "id": "IPLKKRvsRCB",
+    "title": "IPL MI VS RR",
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610074/ipl-2023-match42_mbpelg.webp",
+    "yearRelease": 2023,
+    "genre": ["SPORTS "],
+    "rating": 0,
+    "synopsis": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+    "starring": ["Elijah Wood", "Viggo Mortensen", "Ian McKellen"],
+    "director": "Peter Jackson",
+    "country": "INDIA",
+    "status": "Sports",
+    "link": "https://www.imdb.com/title/tt0167260/",
+    "movie.watch": "../../Sports-2023/IPL-2023/IPLMatch01"
+
+  },
   {
     "id": "TVO",
-    "title": "AMERICAN IDOL - S21",
-    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681609918/american-idol_gd00be.webp",
+    "title": "YOUNG SHELDONn - S6",
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610141/young-sheldon-2023_hqvkgk.webp",
     "yearRelease": 2023,
     "genre": [" Reality ", " TV SHOW," , " GAME SHOW" ],
     "rating": 4.2,
@@ -121,12 +136,12 @@
     "country": "USA",
     "status": "Tv Show",
     "link": "https://www.imdb.com/title/tt0319931/",
-    "movie.watch": "../TvShows/AmericanIdol-2023/AmericanIdol"
+    "movie.watch": "../TvShows/YoungSheldon-2023/YoungSheldon"
    },
    {
     "id": "TVO",
-    "title": "9-1-1 - S6",
-    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681609916/9-1-1-lone-star-2023_geti7w.webp",
+    "title": " LAW & ORDER - S22",
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610080/law_order-2023_cegi6i.webp",
     "yearRelease": 2023,
     "genre": [" DRAMA ", " ACTION" ],
     "rating": 7.1,
@@ -136,14 +151,14 @@
     "country": "USA",
     "status": "Tv Show",
     "link": "https://www.imdb.com/title/tt10323338/",
-    "movie.watch": "../TvShows/911LoneStar-2023/Lone911Star"
+    "movie.watch": "../TvShows/LawAndOrder-2023/LawAndOrder"
    },
    {
     "id": "TVO",
-    "title": " ALL AMERICAN - S5 ",
-    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681609917/all-american-2023_aybbnz.webp",
+    "title": " NEXT LEVEL CHEF - S2 ",
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610085/next-level-chef-2023_pz5x1s.webp",
     "yearRelease": 2023,
-    "genre": [" SPORTS ", " TV SHOW" ],
+    "genre": [" COOKING ", " TV SHOW" ],
     "rating": 7.6,
     "synopsis": "Four famous musicians search for the best voices in America and will mentor these singers to become artists. America will decide which singer will be worthy of the grand prize.",
     "starring": ["Elijah Wood", "Viggo Mortensen", "Ian McKellen"],
@@ -151,13 +166,13 @@
     "country": "USA",
     "status": "Tv Show",
     "link": "https://www.imdb.com/title/tt7414406/",
-    "movie.watch": "../TvShows/AllAmerican-2023/AllAmerican"
+    "movie.watch": "../TvShows/NextLevelChef-2023/NextLevelChef"
    },
 
    {
     "id": "TVO",
-    "title": " PERRY MANSON - S2",
-    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610088/perry-mason-2023_hwin2j.webp",
+    "title": " WALKER - S3",
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610139/walker-2023_pvyqnc.webp",
     "yearRelease": 2023,
     "genre": [" CRIME, ", " THRILLER," , " DRAMA" ],
     "rating": 5.1,
@@ -167,12 +182,12 @@
     "country": "USA",
     "status": "Tv Show",
     "link": "https://www.imdb.com/title/tt2077823/",
-    "movie.watch": "../TvShows/PerryMason-2023/PerryMason"
+    "movie.watch": "../TvShows/Walker-2023/Walker"
    },
   {
     "id": "TVO",
-    "title": "BASKETBALL WIVES - S10",
-    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681609991/basketball-wives-2023_ocplea.webp",
+    "title": "Ex ON THE BEACH COUPLES - S11",
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681610003/ex-onthe-beach-couples-2023_k5sbji.webp",
     "yearRelease": 2023,
     "genre": [" REALITY ", " TV SHOW" ],
     "rating": 7.8,
@@ -184,6 +199,790 @@
     "link": "https://www.imdb.com/title/tt1637756/",
     "movie.watch": "../TvShows/BasketballWives-2023/BasketballWives"
    },
+   {
+    "id": "VIP",
+    "title": " VIRUPAKSHA  ",
+    "name": " Virupaksha (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464977/virupaksha-2023_zjbf8h.webp",
+    "yearRelease": 2023,
+    "genre": [" ACTION ",  "MYSTERY" ,  "DRAMA" ],
+    "rating": 8.1,
+    "synopsis": "Mysterious deaths occur in a village due to an unknown person's occult practices. The whole town is afraid, and the problems continue as they search for the one responsible.",
+    "starring": [" Sai Dharam Tej", "Ajay", "Brahmaji" , "Rajeev Kanakala" , "Koushik Mahata" ],
+    "director": " Karthik Varma Dandu",
+    "country": "India",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt24059780/",
+
+    "movie.watch": "../../Bollywood/Virupaksha-2023/Virupaksha",
+
+    "movie.watchP1": "https://lvturbo.com/e/dwtbfgip9het.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/j6xz8lgr3lig",
+    
+   
+    "download1": "../../Bollywood/Virupaksha-2023/DownloadVIP1",
+
+    "down1link1": "https://lvturbo.com/d/dwtbfgip9het.html",
+
+    "download2": "../../Bollywood/Virupaksha-2023/DownloadVIP2",
+    "down2link1": "https://dooood.com/d/j6xz8lgr3lig",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Virupaksha-Teaser.mp4?updatedAt=1682483198618"
+
+  },
+   {
+    "id": "OPF",
+    "title": " OPERATION FRYDAY  ",
+    "name": " Operation Fryday (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464976/operation-fryday-2023_gzeeyt.webp",
+    "yearRelease": 2023,
+    "genre": [" ACTION ",  "CRIME" ,  "DRAMA" ],
+    "rating": 4.1,
+    "synopsis": "It is a realistic film about poor people based in Mumbai who turn criminals.",
+    "starring": [" Suniel Shetty", "Randeep Hooda", "Nitu Chandra" , "Rukhsar Rehman" , "Zakir Hussain" ],
+    "director": "  Vishram Sawant",
+    "country": "India",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt2599878/",
+
+    "movie.watch": "../../Bollywood/OperationFryday-2023/OperationFryday",
+
+    "movie.watchP1": "https://lvturbo.com/e/bzt3qk118cu7.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/rn77tyztyygg",
+    
+   
+    "download1": "../../Bollywood/OperationFryday-2023/DownloadOPF1",
+
+    "down1link1": "https://lvturbo.com/d/bzt3qk118cu7.html",
+
+    "download2": "../../Bollywood/OperationFryday-2023/DownloadOPF2",
+    "down2link1": "https://dooood.com/d/rn77tyztyygg",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Operation_Fryday_2023_Official_Trailer.mp4?updatedAt=1682483442342"
+
+  },
+   {
+    "id": "GUM",
+    "title": " GUMRAAH ",
+    "name": " Gumraah (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464975/gumraah-2023_fokgem.webp",
+    "yearRelease": 2023,
+    "genre": [" ACTION ",  "CRIME" ,  "DRAMA" ],
+    "rating": 6.5,
+    "synopsis": "The murder investigation of a young man takes an unexpected turn when the cops discover that the prime suspect has a lookalike.",
+    "starring": [" Mrunal Thakur", "Aditya Roy Kapoor", "Ronit Roy" , "Vedika Pinto" , "Deepak Kalra" ],
+    "director": "  Vardhan Ketkar",
+    "country": "India",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt11905536/",
+
+    "movie.watch": "../../Bollywood/Gumraah-2023/Gumraah",
+
+    "movie.watchP1": "https://lvturbo.com/e/z7jjhequrmd4.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/yixzyqvuzjjx",
+    
+   
+    "download1": "../../Bollywood/Gumraah-2023/DownloadGUM1",
+
+    "down1link1": "https://lvturbo.com/d/z7jjhequrmd4.html",
+
+    "download2": "../../Bollywood/Gumraah-2023/DownloadGUM2",
+    "down2link1": "https://dooood.com/d/yixzyqvuzjjx",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Gumraah_2023_Teaser.mp4?updatedAt=1682483417900"
+
+  },
+   {
+    "id": "AGT",
+    "title": " ANGITHEE 2 ",
+    "name": " Angithee 2 (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464974/angithee2-2023_dkv9gt.webp",
+    "yearRelease": 2023,
+    "genre": [" DRAMA ",  "THRILLER" ],
+    "rating": 5.9,
+    "synopsis": "Kavya, a married woman, lives a dull life with her husband Rajeev in a small town of Jammu. Sick of the monotonous routine, she seeks happiness and excitement. This is when a young boy enters her life and makes her feel liberated.",
+    "starring": [" Rishi Bhutani", "Fezan Khan", "Shafaq Naaz" ],
+    "director": " Shoib Nikash Shah",
+    "country": "India",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt27216785/",
+
+    "movie.watch": "../../Bollywood/Angithee2-2023/Angithee2",
+
+    "movie.watchP1": "https://lvturbo.com/e/o92yv9nkpwq0.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/ewxg25ctut9v",
+    
+   
+    "download1": "../../Bollywood/Angithee2-2023/DownloadAGT1",
+
+    "down1link1": "https://lvturbo.com/d/o92yv9nkpwq0.html",
+
+    "download2": "../../Bollywood/Angithee2-2023/DownloadAGT2",
+    "down2link1": "https://dooood.com/d/ewxg25ctut9v",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Angithee_2_Official_Trailer_-_Shafaq_Naaz_-_Rishi_Bhutani_-_Fezan_Khan_-_Streaming_Now_On_ShemarooMe.mp4?updatedAt=1682482246606"
+
+  },
+   {
+    "id": "DOM",
+    "title": " DOMME ",
+    "name": " Domme (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464975/domme-2023_somfvi.webp",
+    "yearRelease": 2023,
+    "genre": [" ADULT, ", " HOT,", " 18 +" ],
+    "rating": 5.9,
+    "synopsis": "A man spies on his neighbors because of the noises they create every night. But he discovers that they do wild erotic practices. As he interferes with their business, the more he gets involved in their lives and their mess.",
+    "starring": ["Ava Mendez", "Ali Asistio", "Mark Anthony Fernandez", "Marco Gomez" , "Ada Hermosa"  ],
+    "director": " Roman Perez Jr.",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt27048129/",
+
+    "movie.watch": "../../Adult/Domme-2023/Domme",
+
+    "movie.watchP1": "https://lvturbo.com/e/4p3einml9iie.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/oj5xufjtbgj6",
+    
+   
+    "download1": "../../Adult/Domme-2023/DownloadDOM1",
+
+    "down1link1": "https://lvturbo.com/d/4p3einml9iie.html",
+
+    "download2": "../../Adult/Domme-2023/DownloadDOM2",
+    "down2link1": "https://dooood.com/d/oj5xufjtbgj6",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Domme_Official_Trailer___World_Premiere_This_March_17_Only_On_Vivamax.mp4?updatedAt=1682482298211"
+
+  },
+   {
+    "id": "BGC",
+    "title": " BREAKING GIRL CODE ",
+    "name": " Breaking Girl Code (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682485021/breaking-girl-code-2023_tj68gt.webp",
+    "yearRelease": 2023,
+    "genre": [  " DRAMA,", " THRILLER" ],
+    "rating": 5.3,
+    "synopsis": "After moving to a new city, Andi meets Farrah through a deceptive and dangerous friendship app called BFF.",
+    "starring": ["Katelynn Bennett", "Revell Carpenter", "Ignacyo Matynia", "Johnny Ramey" , "Ashlei Hazell"  ],
+    "director": " Kristin Fairweather",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt21830964/",
+
+    "movie.watch": "../../Hollywood/BreakingGirlCode-2023/BreakingGirlCode",
+
+    "movie.watchP1": "https://lvturbo.com/e/ho388n3t3g0e.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/lfowm5x3fdjk",
+    
+   
+    "download1": "../../Hollywood/BreakingGirlCode-2023/DownloadBGC1",
+
+    "down1link1": "https://lvturbo.com/d/ho388n3t3g0e.html",
+
+    "download2": "../../Hollywood/BreakingGirlCode-2023/DownloadBGC2",
+    "down2link1": "https://dooood.com/d/lfowm5x3fdjk",
+    
+
+    "movie.trailer": "#"
+
+  },
+   {
+    "id": "TOF",
+    "title": " THE OFFERING ",
+    "name": " The Offering (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464977/the-offering-2023_n6x8fq.webp",
+    "yearRelease": 2023,
+    "genre": [ " MYSTERY,", " DRAMA,", " THRILLER" ],
+    "rating": 5.2,
+    "synopsis": "A family struggling with loss find themselves at the mercy of an ancient demon trying to destroy them from the inside.",
+    "starring": ["Nick Blood", "Emily Wiseman", "Paul Kaye", "Allan Corduner" , "Daniel Ben Zenou"  ],
+    "director": " Oliver Park",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt13103732/",
+
+    "movie.watch": "../../Hollywood/TheOffering-2023/TheOffering",
+
+    "movie.watchP1": "https://lvturbo.com/e/bp82u87xgakw.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/4tpy071reumm",
+    
+   
+    "download1": "../../Hollywood/TheOffering-2023/DownloadTOF1",
+
+    "down1link1": "https://lvturbo.com/d/bp82u87xgakw.html",
+
+    "download2": "../../Hollywood/TheOffering-2023/DownloadTOF2",
+    "down2link1": "https://dooood.com/d/4tpy071reumm",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/The_Offering.mp4?updatedAt=1682482936697"
+
+  },
+   {
+    "id": "TUT",
+    "title": " THE TUTOR ",
+    "name": " The Tutor (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464977/the-tutor-2023_j7vibz.webp",
+    "yearRelease": 2023,
+    "genre": [ " MYSTERY,", " DRAMA,", " THRILLER" ],
+    "rating": 5.2,
+    "synopsis": "Follows a tutor who, after being assigned an unexpected task at a mansion, finds himself struggling with the obsessions of his student, who threatens to expose his darkest secrets.",
+    "starring": ["Garrett Hedlund", "Victoria Justice", "Noah Schnapp", "Jonny Weston" , "Kabby Borders"  ],
+    "director": " Jordan Ross",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt19637278/",
+
+    "movie.watch": "../../Hollywood/TheTutor-2023/TheTutor",
+
+    "movie.watchP1": "https://lvturbo.com/e/bw57ru7gtbmc.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/a8pryunhybx0",
+    
+   
+    "download1": "../../Hollywood/TheTutor-2023/DownloadTUT1",
+
+    "down1link1": "https://lvturbo.com/d/bw57ru7gtbmc.html",
+
+    "download2": "../../Hollywood/TheTutor-2023/DownloadTUT2",
+    "down2link1": "https://dooood.com/d/a8pryunhybx0",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/The_Tutor_Where_Were_You.mp4?updatedAt=1682528346377"
+
+  },
+   {
+    "id": "EDR",
+    "title": " EVIL DEAD RISE  ",
+    "name": " Evil Dead Rise (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464976/evil-dead-rise-2023_tdgwfb.webp",
+    "yearRelease": 2023,
+    "genre": [ " HORROR,", " DRAMA,", " THRILLER" ],
+    "rating": 7.3,
+    "synopsis": "A twisted tale of two estranged sisters whose reunion is cut short by the rise of flesh-possessing demons, thrusting them into a primal battle for survival as they face the most nightmarish version of family imaginable.",
+    "starring": ["Mirabai Pease", "Richard Crouchley", "Anna-Maree Thomas", "Lily Sullivan" , "Noah Paul"  ],
+    "director": " Lee Cronin",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt13345606/",
+
+    "movie.watch": "../../Hollywood/EvilDeadRise-2023/EvilDeadRise",
+
+    "movie.watchP1": "https://lvturbo.com/e/ekz5d59ot1yd.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/0m2piufyd2jt",
+    
+   
+    "download1": "../../Hollywood/EvilDeadRise-2023/DownloadEDR1",
+
+    "down1link1": "https://lvturbo.com/d/ekz5d59ot1yd.html",
+
+    "download2": "../../Hollywood/EvilDeadRise-2023/DownloadEDR2",
+    "down2link1": "https://dooood.com/d/0m2piufyd2jt",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Evil_Dead_Rise_2023_Trailer.mp4?updatedAt=1682483617893"
+
+  },
+   {
+    "id": "FFK",
+    "title": " FALLING FOR A KILLER  ",
+    "name": " Falling For A Killer (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464975/falling-for-a-killer-2023_mzsu6n.webp",
+    "yearRelease": 2023,
+    "genre": [ " ACTION,", " CRIME,", " THRILLER" ],
+    "rating": 4.7,
+    "synopsis": "Falling for a Killer: Directed by Lindsay Hartley. With Olivia Buckle, Jonathan Stoddard, Aubrey Reynolds, Mike Gassaway.",
+    "starring": ["Olivia Buckle", "Jonathan Stoddard", "Aubrey Reynolds", "Mike Gassaway" , "Lindsay Hartley"  ],
+    "director": " Lindsay Hartley",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt21363128/",
+
+    "movie.watch": "../../Hollywood/FallingForAKiller-2023/FallingForAKiller",
+
+    "movie.watchP1": "https://lvturbo.com/e/8n30mfn0u35t.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/sm9cmg1z9x8m",
+    
+   
+    "download1": "../../Hollywood/FallingForAKiller-2023/DownloadFFK1",
+
+    "down1link1": "https://lvturbo.com/d/8n30mfn0u35t.html",
+
+    "download2": "../../Hollywood/FallingForAKiller-2023/DownloadFFK2",
+    "down2link1": "https://dooood.com/d/sm9cmg1z9x8m",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/FALLING_FOR_A_KILLER_Official_Trailer.mp4?updatedAt=1682482322644"
+
+  },
+   {
+    "id": "RGT",
+    "title": " RIGHTEOUS THIEVES ",
+    "name": " Righteous Thieves (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464976/righteous-thieves-2023_fxyrr3.webp",
+    "yearRelease": 2023,
+    "genre": [ " ACTION,", " CRIME,", " THRILLER" ],
+    "rating": 4.1,
+    "synopsis": "The head of a secret organization assembles a crew to steal back artwork plundered by Nazis during World War II.",
+    "starring": ["Cam Gigandet", "Jaina Lee Ortiz", "Lisa Vidal", "Carlos Miranda" , "Danube Hermosillo"  ],
+    "director": " Anthony Nardolillo",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt14740118/",
+
+    "movie.watch": "../../Hollywood/RighteousThieves-2023/RighteousThieves",
+
+    "movie.watchP1": "https://lvturbo.com/e/zu86xgmgyyi6.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/cw4gwn8qs672",
+    
+   
+    "download1": "../../Hollywood/RighteousThieves-2023/DownloadRGT1",
+
+    "down1link1": "https://lvturbo.com/d/zu86xgmgyyi6.html",
+
+    "download2": "../../Hollywood/RighteousThieves-2023/DownloadRGT2",
+    "down2link1": "https://dooood.com/d/cw4gwn8qs672",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Righteous_Thieves__2023_Movie__Official_Trailer_-_Lisa_Vidal__Jaina_Lee_Ortiz__Cam_Gigandet.mp4?updatedAt=1682482406926"
+
+  },
+   {
+    "id": "MAY",
+    "title": " MUDER, ANYONE ? ",
+    "name": " Murder, Anyone ? (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464976/murder-anyone-2023_ulloii.webp",
+    "yearRelease": 2023,
+    "genre": [ " HORROR,", " CRIME,", " COMEDY" ],
+    "rating": 6.3,
+    "synopsis": "Two playwrights, George and Charlie, are tasked with the challenge of creating the next avant-garde, surrealistic, mind-bending neo-noire thriller. As they write, the story comes to life in real time. However, their own emotions and arguments also begin to manifest on film, creating sharp twists and turns that affect the entire movie.",
+    "starring": ["Kristos Andrews", "Galadriel Stineman", "Maurice LaMarche", "Charles M. Howell IV" , "Carla Collins"  ],
+    "director": " James Cullen Bressack",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt13556744/",
+
+    "movie.watch": "../../Hollywood/MurderAnyone-2023/MurderAnyone",
+
+    "movie.watchP1": "https://lvturbo.com/e/2nvihqckwvri.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/td09epxn8yya",
+    
+   
+    "download1": "../../Hollywood/MurderAnyone-2023/DownloadMAY1",
+
+    "down1link1": "https://lvturbo.com/d/2nvihqckwvri.html",
+
+    "download2": "../../Hollywood/MurderAnyone-2023/DownloadMAY2",
+    "down2link1": "https://dooood.com/d/td09epxn8yya",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Murder__Anyone__-_Official_Trailer__2023__Kristos_Andrews__Galadriel_Stineman__Maurice_LaMarche.mp4?updatedAt=1682482384647"
+
+  },
+   {
+    "id": "WTP",
+    "title": " WINNIE THE POOH ",
+    "name": " Winnie the Pooh: Blood & Honey (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464977/winnie-the-pooh-blood-and-honey-2023_gvx0j0.webp",
+    "yearRelease": 2023,
+    "genre": [ " HORROR,", " MYSTERY,", " THRILLER" ],
+    "rating": 3.1,
+    "synopsis": "After Christopher Robin abandons them for college, Pooh and Piglet embark on a bloody rampage as they search for a new source of food.",
+    "starring": ["Nikolai Leon", "Maria Taylor", "Natasha Rose Mills", "Amber Doig-Thorne" , "Danielle Ronald"  ],
+    "director": "  Rhys Frake-Waterfield",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt19623240/",
+
+    "movie.watch": "../../Hollywood/WinniethePooh-2023/WinniethePooh",
+
+    "movie.watchP1": "https://lvturbo.com/e/7rdlhuf75j19.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/vyrets3tfqw0",
+    
+   
+    "download1": "../../Hollywood/WinniethePooh-2023/DownloadWTP1",
+
+    "down1link1": "https://lvturbo.com/d/7rdlhuf75j19.html",
+
+    "download2": "../../Hollywood/WinniethePooh-2023/DownloadWTP2",
+    "down2link1": "https://dooood.com/d/vyrets3tfqw0",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Winnie_the_Pooh_Blood_and_Honey.mp4?updatedAt=1682483240240"
+
+  },
+   {
+    "id": "SRC",
+    "title": " SCREAM VI ",
+    "name": " Scream VI (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464976/scream-VI-2023_zqmdz9.webp",
+    "yearRelease": 2023,
+    "genre": [ " HORROR,", " MYSTERY,", " THRILLER" ],
+    "rating": 7.1,
+    "synopsis": "In the next installment, the survivors of the Ghostface killings leave Woodsboro behind and start a fresh chapter in New York City.",
+    "starring": ["Courteney Cox", "Melissa Barrera", "Jenna Ortega", "Jasmin Savoy Brown" , "Mason Gooding"  ],
+    "director": "  Matt Bettinelli-Olpin, Tyler Gillett",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt17663992/",
+
+    "movie.watch": "../../Hollywood/ScreamVI-2023/ScreamVI",
+
+    "movie.watchP1": "https://lvturbo.com/e/z6l4ovlglpbv.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/najzvrr5e0a0",
+    
+   
+    "download1": "../../Hollywood/ScreamVI-2023/DownloadSRC1",
+
+    "down1link1": "https://lvturbo.com/d/z6l4ovlglpbv.html",
+
+    "download2": "../../Hollywood/ScreamVI-2023/DownloadSRC2",
+    "down2link1": "https://dooood.com/d/najzvrr5e0a0",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Scream_VI___Official_Trailer__2023_Movie_.mp4?updatedAt=1682482435368"
+
+  },
+   {
+    "id": "GRC",
+     "title": " THE COVENANT ",
+    "name": " The Covenant (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464975/guy-ritchie_s-the-covenant-2023_abksou.webp",
+    "yearRelease": 2023,
+    "genre": [ " ACTION,", " THRILLER" ],
+    "rating": 8.1,
+    "synopsis": "During the war in Afghanistan, a local interpreter risks his own life to carry an injured sergeant across miles of grueling terrain.",
+    "starring": ["Jake Gyllenhaal", "Dar Salim", "Sean Sagar", "Jason Wong" , "Rhys Yates"  ],
+    "director": "  Guy Ritchie",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt4873118/",
+
+    "movie.watch": "../../Hollywood/TheCovenant-2023/TheCovenant",
+
+    "movie.watchP1": "https://lvturbo.com/e/k57fb5z4hq01.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/g2whmwf8ba94",
+    
+   
+    "download1": "../../Hollywood/TheCovenant-2023/DownloadGRC1",
+
+    "down1link1": "https://lvturbo.com/d/k57fb5z4hq01.html",
+
+    "download2": "../../Hollywood/TheCovenant-2023/DownloadGRC2",
+    "down2link1": "https://dooood.com/d/g2whmwf8ba94",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/GUY_RITCHIE_S_THE_COVENANT___Only_In_Theaters_April_21.mp4?updatedAt=1682482344121"
+
+  },
+   {
+    "id": "BRK",
+    "title": "BREAKOUT ",
+    "name": "Breakout (2023)", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464975/breakout-2023_xs2vdd.webp",
+    "yearRelease": 2023,
+    "genre": [ " ACTION,", " CRIME,",  " THRILLER" ],
+    "rating": 5.0,
+    "synopsis": " Having taken control of a maximum security prison, a criminal mastermind faces off against a retired Black Ops agent who had been visiting his incarcerated son.",
+    "starring": ["Louis Mandylor", "Kristos Andrews", "Brian Krause", "Tom Sizemore" , "Noel Gugliemi"  ],
+    "director": " Brandon Slagle",
+    "country": "USA",
+    "status": "New Movie",
+    "link": "https://www.imdb.com/title/tt16154506/",
+
+    "movie.watch": "../../Hollywood/Breakout-2023/Breakout",
+
+    "movie.watchP1": "https://lvturbo.com/e/4bh9k2p9zsbe.html",
+  
+    "movie.watchSR1": "https://dooood.com/e/utckxm1c6hg2",
+    
+   
+    "download1": "../../Hollywood/Breakout-2023/DownloadBRK1",
+
+    "down1link1": "https://lvturbo.com/d/4bh9k2p9zsbe.html",
+
+    "download2": "../../Hollywood/Breakout-2023/DownloadBRK2",
+    "down2link1": "https://dooood.com/d/utckxm1c6hg2",
+    
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Breakout-Official_Trailer.mp4?updatedAt=1682483618298"
+
+  },
+   {
+    "id": "MAL",
+    "title": "MALPRATICE S01",
+    "name": "Malpractice S01", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682530121/malpractice-2023_d9yi3x.webp",
+    "yearRelease": 2023,
+    "genre": [  " MYSTERY," , " DRAMA" ],
+    "rating": 7.3,
+    "synopsis": "Dr Lucinda Edwards (Niamh Algar) is a smart, battle-hardened doctor, but we meet her on a nightmare shift that ends in the death of an opioid overdose victim, Edith Owusu. Despite the support of her medical supervisor, Dr Leo Harris, played by James Purefoy (A Discovery of Witches, Pennyworth, Sex Education), Edith's grieving father Sir Anthony Owusu, played by Brian Bovell (Crime, Strike), demands an enquiry into Lucinda's actions on the fateful night.",
+    "starring": ["Niamh Algar", "Lorne MacFadyen", "Scott Chambers" , "Priyanka Patel" , "Jordan Kouamé" ],
+    "director": " Grace Ofori-Attah ", 
+    "country": "USA",
+    "status": "Tv Series",
+    "link": "https://www.imdb.com/title/tt20918594/",
+
+    "movie.watch": "../../Hollywood/MalpracticeS01-2023/MalpracticeP1",
+
+    "movie.watchP1": "https://lvturbo.com/e/mw54q53sco4k.html",
+    "movie.watchP2": "https://lvturbo.com/e/ch7605vshjgn.html",
+    "movie.watchP3": "https://lvturbo.com/e/ut62nil2sqtk.html",
+    "movie.watchP4": "https://lvturbo.com/e/hiqnflrjp8t8.html",
+    "movie.watchP5": "https://lvturbo.com/e/q4cga4ppp1gx.html",
+   
+
+    "movie.watchSR1": "https://dood.yt/e/p75tootazyy7",
+    "movie.watchSR2": "https://dood.yt/e/bqzjodly339u",
+    "movie.watchSR3": "https://dood.yt/e/20qfmj5cth19",
+    "movie.watchSR4": "https://dood.yt/e/wu2kevryeamo",
+    "movie.watchSR5": "https://dood.yt/e/r0drz4hklvzt",
+   
+
+    "download1": "../../Hollywood/MalpracticeS01-2023/DownloadMAL1",
+
+    "down1link1": "https://lvturbo.com/d/mw54q53sco4k.html",
+    "down1link2": "https://lvturbo.com/d/ch7605vshjgn.html",
+    "down1link3": "https://lvturbo.com/d/ut62nil2sqtk.html",
+    "down1link4": "https://lvturbo.com/d/hiqnflrjp8t8.html",
+    "down1link5": "https://lvturbo.com/d/q4cga4ppp1gx.html",
+   
+   
+    "download2": "../../Hollywood/MalpracticeS01-2023/DownloadMAL2",
+    "down2link1": "https://dood.yt/d/p75tootazyy7",
+    "down2link2": "https://dood.yt/d/bqzjodly339u",
+    "down2link3": "https://dood.yt/d/20qfmj5cth19",
+    "down2link4": "https://dood.yt/d/wu2kevryeamo",
+    "down2link5": "https://dood.yt/d/r0drz4hklvzt",
+   
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Malpractice_-_Trailer.mp4?updatedAt=1682529585731"
+
+  },
+   {
+    "id": "STP03",
+    "title": "STAR TREK PICARD S03",
+    "name": "Star Trek Picard S03", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464977/star-trek-picard-s03_pez4s0.webp",
+    "yearRelease": 2023,
+    "genre": [ " ACTION," , " ADVENTURE," , " DRAMA" ],
+    "rating": 7.4,
+    "synopsis": "Follow-up series to Star Trek: The Next Generation (1987) and Star Trek: Nemesis (2002) that centers on Jean-Luc Picard in the next chapter of his life.",
+    "starring": ["Patrick Stewart", "Michelle Hurd", "Jeri Ryan" , "Alison Pill" , "Santiago Cabrera" ],
+    "director": " Kirsten Beyer, Michael Chabon, Akiva Goldsman ", 
+    "country": "USA",
+    "status": "Tv Series",
+    "link": "https://www.imdb.com/title/tt8806524/",
+
+    "movie.watch": "../../Hollywood/StarTrekPicardS03-2023/StarTrekPicardP1",
+
+    "movie.watchP1": "https://lvturbo.com/e/za609e7o941c.html",
+    "movie.watchP2": "https://lvturbo.com/e/kyfykus7rm2h.html",
+    "movie.watchP3": "https://lvturbo.com/e/y9xty2oehqqp.html",
+    "movie.watchP4": "https://lvturbo.com/e/oayut9q7thvw.html",
+    "movie.watchP5": "https://lvturbo.com/e/gzqwkgxqwrqo.html",
+    "movie.watchP6": "https://lvturbo.com/e/9skwhh7mhl20.html",
+    "movie.watchP7": "https://lvturbo.com/e/nnkdgne755di.html",
+    "movie.watchP8": "https://lvturbo.com/e/7npext596q5q.html",
+    "movie.watchP9": "https://lvturbo.com/e/n2fmz8wvxe48.html",
+    "movie.watchP10": "https://lvturbo.com/e/6ezxim5u4ci8.html",
+
+
+    "movie.watchSR1": "https://dood.yt/e/wvadudioy6ve",
+    "movie.watchSR2": "https://dood.yt/e/0ohjwy8d5tzy",
+    "movie.watchSR3": "https://dood.yt/e/zgb5vpcs75xx",
+    "movie.watchSR4": "https://dood.yt/e/2gto0eu4d9yo",
+    "movie.watchSR5": "https://dood.yt/e/v83fms677l95",
+    "movie.watchSR6": "https://dood.yt/e/3hauhj7453k2",
+    "movie.watchSR7": "https://dood.yt/e/9j6b108wm778",
+    "movie.watchSR8": "https://dood.yt/e/fkvdoprhryjg",
+    "movie.watchSR9": "https://dood.yt/e/73fw9v54yixf",
+    "movie.watchSR10": "https://dood.yt/e/069l4e4qc716",
+
+    "download1": "../../Hollywood/StarTrekPicardS03-2023/DownloadSTP1",
+
+    "down1link1": "https://lvturbo.com/d/za609e7o941c.html",
+    "down1link2": "https://lvturbo.com/d/kyfykus7rm2h.html",
+    "down1link3": "https://lvturbo.com/d/y9xty2oehqqp.html",
+    "down1link4": "https://lvturbo.com/d/oayut9q7thvw.html",
+    "down1link5": "https://lvturbo.com/d/gzqwkgxqwrqo.html",
+    "down1link6": "https://lvturbo.com/d/9skwhh7mhl20.html",
+    "down1link7": "https://lvturbo.com/d/nnkdgne755di.html",
+    "down1link8": "https://lvturbo.com/d/7npext596q5q.html",
+    "down1link9": "https://lvturbo.com/d/n2fmz8wvxe48.html",
+    "down1link10": "https://lvturbo.com/d/6ezxim5u4ci8.html",
+   
+    "download2": "../../Hollywood/StarTrekPicardS03-2023/DownloadSTP2",
+    "down2link1": "https://dood.yt/d/wvadudioy6ve",
+    "down2link2": "https://dood.yt/d/0ohjwy8d5tzy",
+    "down2link3": "https://dood.yt/d/zgb5vpcs75xx",
+    "down2link4": "https://dood.yt/d/2gto0eu4d9yo",
+    "down2link5": "https://dood.yt/d/v83fms677l95",
+    "down2link6": "https://dood.yt/d/3hauhj7453k2",
+    "down2link7": "https://dood.yt/d/9j6b108wm778",
+    "down2link8": "https://dood.yt/d/fkvdoprhryjg",
+    "down2link9": "https://dood.yt/d/73fw9v54yixf",
+    "down2link10": "https://dood.yt/d/069l4e4qc716",
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Star_Trek__Picard_Season_3_Trailer.mp4?updatedAt=1682482486057"
+
+  },
+   {
+    "id": "STP02",
+    "title": "STAR TREK PICARD S02",
+    "name": "Star Trek Picard S02", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464976/star-trek-picard-s02_bcgtfr.webp",
+    "yearRelease": 2022,
+    "genre": [ " ACTION," , " ADVENTURE," , " DRAMA" ],
+    "rating": 7.4,
+    "synopsis": "Follow-up series to Star Trek: The Next Generation (1987) and Star Trek: Nemesis (2002) that centers on Jean-Luc Picard in the next chapter of his life.",
+    "starring": ["Patrick Stewart", "Michelle Hurd", "Jeri Ryan" , "Alison Pill" , "Santiago Cabrera" ],
+    "director": " Kirsten Beyer, Michael Chabon, Akiva Goldsman ", 
+    "country": "USA",
+    "status": "Tv Series",
+    "link": "https://www.imdb.com/title/tt8806524/",
+
+    "movie.watch": "../../Hollywood/StarTrekPicardS02-2023/StarTrekPicardP1",
+
+ 
+    "movie.watchP1": "https://lvturbo.com/e/kn55u6z3j8q5.html",
+    "movie.watchP2": "https://lvturbo.com/e/ekqthatzsfn0.html",
+    "movie.watchP3": "https://lvturbo.com/e/lff8m8rk20fv.html",
+    "movie.watchP4": "https://lvturbo.com/e/0kmbehzmudrs.html",
+    "movie.watchP5": "https://lvturbo.com/e/u2iphe0q7bmg.html",
+    "movie.watchP6": "https://lvturbo.com/e/ttqzy20tn7wp.html",
+    "movie.watchP7": "https://lvturbo.com/e/izkn3jesyfw4.html",
+    "movie.watchP8": "https://lvturbo.com/e/gwjf2kbnekel.html",
+    "movie.watchP9": "https://lvturbo.com/e/cox41hprgqdv.html",
+    "movie.watchP10": "https://lvturbo.com/e/sidp01eijh5x.html",
+   
+
+    "movie.watchSR1": "https://dood.yt/e/maj1vmlf0zuk",
+    "movie.watchSR2": "https://dood.yt/e/ls8k0rbpbf2k",
+    "movie.watchSR3": "https://dood.yt/e/cbz2u56gtnwd",
+    "movie.watchSR4": "https://dood.yt/e/63nmg8992l2i",
+    "movie.watchSR5": "https://dood.yt/e/wfi5nx5r7ar8",
+    "movie.watchSR6": "https://dood.yt/e/svawxmh71gd7",
+    "movie.watchSR7": "https://dood.yt/e/dueawrj2fpn7",
+    "movie.watchSR8": "https://dood.yt/e/zgmx5auj77gp",
+    "movie.watchSR9": "https://dood.yt/e/bymzbr48oe7r",
+    "movie.watchSR10": "https://dood.yt/e/uwh3samvdui1",
+
+    "download1": "../../Hollywood/StarTrekPicardS02-2023/DownloadSTP1",
+
+    "down1link1": "https://lvturbo.com/d/kn55u6z3j8q5.html",
+    "down1link2": "https://lvturbo.com/d/ekqthatzsfn0.html",
+    "down1link3": "https://lvturbo.com/d/lff8m8rk20fv.html",
+    "down1link4": "https://lvturbo.com/d/0kmbehzmudrs.html",
+    "down1link5": "https://lvturbo.com/d/u2iphe0q7bmg.html",
+    "down1link6": "https://lvturbo.com/d/ttqzy20tn7wp.html",
+    "down1link7": "https://lvturbo.com/d/izkn3jesyfw4.html",
+    "down1link8": "https://lvturbo.com/d/gwjf2kbnekel.html",
+    "down1link9": "https://lvturbo.com/d/cox41hprgqdv.html",
+    "down1link10": "https://lvturbo.com/d/sidp01eijh5x.html",
+   
+    "download2": "../../Hollywood/StarTrekPicardS02-2023/DownloadSTP2",
+    "down2link1": "https://dood.yt/d/maj1vmlf0zuk",
+    "down2link2": "https://dood.yt/d/ls8k0rbpbf2k",
+    "down2link3": "https://dood.yt/d/cbz2u56gtnwd",
+    "down2link4": "https://dood.yt/d/63nmg8992l2i",
+    "down2link5": "https://dood.yt/d/wfi5nx5r7ar8",
+    "down2link6": "https://dood.yt/d/svawxmh71gd7",
+    "down2link7": "https://dood.yt/d/dueawrj2fpn7",
+    "down2link8": "https://dood.yt/d/zgmx5auj77gp",
+    "down2link9": "https://dood.yt/d/bymzbr48oe7r",
+    "down2link10": "https://dood.yt/d/uwh3samvdui1",
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Star_Trek__Picard_Season_2_-_Official_Trailer___New_Episode_Every_Friday___Amazon_Prime_Video.mp4?updatedAt=1682482466127"
+
+  },
+   {
+    "id": "STP01",
+    "title": "STAR TREK PICARD S01",
+    "name": "Star Trek Picard S01", 
+    "poster": "https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682464976/star-trek-picard-s01_vyb1jt.webp",
+    "yearRelease": 2020,
+    "genre": [ " ACTION," , " ADVENTURE," , " DRAMA" ],
+    "rating": 7.4,
+    "synopsis": "Follow-up series to Star Trek: The Next Generation (1987) and Star Trek: Nemesis (2002) that centers on Jean-Luc Picard in the next chapter of his life.",
+    "starring": ["Patrick Stewart", "Michelle Hurd", "Jeri Ryan" , "Alison Pill" , "Santiago Cabrera" ],
+    "director": " Kirsten Beyer, Michael Chabon, Akiva Goldsman ", 
+    "country": "USA",
+    "status": "Tv Series",
+    "link": "https://www.imdb.com/title/tt8806524/",
+
+    "movie.watch": "../../Hollywood/StarTrekPicardS01-2023/StarTrekPicardP1",
+
+    "movie.watchP1": "https://lvturbo.com/e/fgvodtnymdyz.html",
+    "movie.watchP2": "https://lvturbo.com/e/x2ssy7wzk34k.html",
+    "movie.watchP3": "https://lvturbo.com/e/cz2lpju00y4h.html",
+    "movie.watchP4": "https://lvturbo.com/e/pij01jkr8mrg.html",
+    "movie.watchP5": "https://lvturbo.com/e/3dt2ebd41vs8.html",
+    "movie.watchP6": "https://lvturbo.com/e/qdecfzbbi2vz.html",
+    "movie.watchP7": "https://lvturbo.com/e/n5pj2kpamtvg.html",
+    "movie.watchP8": "https://lvturbo.com/e/l7e3s4w1nd1n.html",
+    "movie.watchP9": "https://lvturbo.com/e/hvnrueo16yoh.html",
+    "movie.watchP10": "https://lvturbo.com/e/8goos600kmxg.html",
+   
+
+    "movie.watchSR1": "https://dood.yt/e/z3h42h8owis4",
+    "movie.watchSR2": "https://dood.yt/e/vjv9wrj7bv2z",
+    "movie.watchSR3": "https://dood.yt/e/7q4twgf4zirf",
+    "movie.watchSR4": "https://dood.yt/e/ufnqmugpp79l",
+    "movie.watchSR5": "https://dood.yt/e/og5940zq2gxo",
+    "movie.watchSR6": "https://dood.yt/e/au5cw0op006d",
+    "movie.watchSR7": "https://dood.yt/e/xsax1yklirn9",
+    "movie.watchSR8": "https://dood.yt/e/mcjmhsm199cb",
+    "movie.watchSR9": "https://dood.yt/e/29ggqzmk5rv7",
+    "movie.watchSR10": "https://dood.yt/e/8fo20318r1bu",
+
+    "download1": "../../Hollywood/StarTrekPicardS01-2023/DownloadSTP1",
+
+    "down1link1": "https://lvturbo.com/d/fgvodtnymdyz.html",
+    "down1link2": "https://lvturbo.com/d/x2ssy7wzk34k.html",
+    "down1link3": "https://lvturbo.com/d/cz2lpju00y4h.html",
+    "down1link4": "https://lvturbo.com/d/pij01jkr8mrg.html",
+    "down1link5": "https://lvturbo.com/d/3dt2ebd41vs8.html",
+    "down1link6": "https://lvturbo.com/d/qdecfzbbi2vz.html",
+    "down1link7": "https://lvturbo.com/d/n5pj2kpamtvg.html",
+    "down1link8": "https://lvturbo.com/d/l7e3s4w1nd1n.html",
+    "down1link9": "https://lvturbo.com/d/hvnrueo16yoh.html",
+    "down1link10": "https://lvturbo.com/d/8goos600kmxg.html",
+   
+    "download2": "../../Hollywood/StarTrekPicardS01-2023/DownloadSTP2",
+    "down2link1": "https://dood.yt/d/z3h42h8owis4",
+    "down2link2": "https://dood.yt/d/vjv9wrj7bv2z",
+    "down2link3": "https://dood.yt/d/7q4twgf4zirf",
+    "down2link4": "https://dood.yt/d/ufnqmugpp79l",
+    "down2link5": "https://dood.yt/d/og5940zq2gxo",
+    "down2link6": "https://dood.yt/d/au5cw0op006d",
+    "down2link7": "https://dood.yt/d/xsax1yklirn9",
+    "down2link8": "https://dood.yt/d/mcjmhsm199cb",
+    "down2link9": "https://dood.yt/d/29ggqzmk5rv7",
+    "down2link10": "https://dood.yt/d/8fo20318r1bu",
+
+    "movie.trailer": "https://ik.imagekit.io/lwkyvy5lo/Star_Trek_Picard_Season_1l.mp4?updatedAt=1682482735674"
+
+  },
    {
     "id": "KBK",
     "title": "KISI KA BHAI KISI KI JAAN  ",
@@ -204,7 +1003,7 @@
     "movie.watchP1": "https://lvturbo.com/e/f9edz2x8bhzv.html",
   
     "movie.watchSR1": "https://dood.yt/e/0145lnwltq9z",
-  
+    
    
     "download1": "../../Bollywood/KisiKaBhaiKisiKiJaan-2023/DownloadKBK1",
 

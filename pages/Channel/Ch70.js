@@ -21,7 +21,7 @@ const Ch70 = () => {
   return (
     <div>
        <Head>
-    <title>Go Movies™ | Watch Movies, TV-Series & Sports Live Online Free</title>
+    <title>Go Movies™ | Sky Sports Golf</title>
     <meta name="robots" content="index, follow" />  
     <meta name="revisit-after" content="1 days" />
    

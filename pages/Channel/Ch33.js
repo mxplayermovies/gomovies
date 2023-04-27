@@ -2,13 +2,9 @@
 
 import styles from '@styles/video-player.module.css'
 import Link from 'next/link'
-
-import Head from 'next/head'
-;
+import Head from 'next/head';
 import ShareButtons from '@components/ShareButtons';
 import Script from 'next/script';
-
-
 import WorldClock from '@components/WorldClock';
 
 const scrollSearch = myKey => {
@@ -21,7 +17,7 @@ const Ch33 = () => {
   return (
     <div>
        <Head>
-    <title>Go Movies™ | Watch Movies, TV-Series & Sports Live Online Free</title>
+    <title>Go Movies™ | BT Sport 3 UK</title>
     <meta name="robots" content="index, follow" />  
     <meta name="revisit-after" content="1 days" />
    

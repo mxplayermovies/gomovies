@@ -21,7 +21,7 @@ const Ch31 = () => {
   return (
     <div>
        <Head>
-    <title>Go Movies™ | Watch Movies, TV-Series & Sports Live Online Free</title>
+    <title>Go Movies™ | BT Sport 1 UK </title>
     <meta name="robots" content="index, follow" />  
     <meta name="revisit-after" content="1 days" />
    

@@ -21,7 +21,7 @@ const Ch34 = () => {
   return (
     <div>
        <Head>
-    <title>Go Movies™ | Watch Movies, TV-Series & Sports Live Online Free</title>
+    <title>Go Movies™ | BT Sport 4 UK</title>
     <meta name="robots" content="index, follow" />  
     <meta name="revisit-after" content="1 days" />
    
@@ -69,7 +69,7 @@ const Ch34 = () => {
 <WorldClock />
 
     <h1 className=" py-5 font-bold leading-none tracking-tight text-green-500  text-center text-3xl dark:text-white">
-      Watch BT Sport 4 Live
+      Watch BT Sport 3 HD Live
 
 
   </h1>
