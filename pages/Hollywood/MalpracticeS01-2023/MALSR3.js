@@ -90,7 +90,7 @@ function MALSR3({ movie }) {
   
   "publisher": {
       "@type": "Organization",
-      "name": "Go Movies",
+      "name": "Uwatchfree",
       "logo": {
         "@type": "ImageObject",
         "url": "https://gomoviesfree.vercel.app/og_image.jpg"
@@ -105,6 +105,15 @@ function MALSR3({ movie }) {
           "https://gomoviesfree.vercel.app/Hollywood/MalpracticeS01-2023/MalpracticeP1",
       },
     },
+    "additionalProperty": {
+      "@type": "PropertyValue",
+      "name": "Action Platform",
+      "value": [
+        "Desktop Web Platform",
+        "iOS Platform",
+        "Android Platform"
+      ]
+    }
   });
 
 
@@ -115,26 +124,26 @@ function MALSR3({ movie }) {
         dangerouslySetInnerHTML={{ __html: ldJsonData }}
       />
       <Head>
-     <title>Watch Malpractice S01 (2023) Full Movie Online Free | Go Movies™</title>
+     <title>Watch Malpractice S01 (2023) Full Movie Online Free | Uwatchfree™</title>
      <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-<meta name="keywords" content="Go Movies,watch free movies,full movie online free,hd movies,movie 2023,latest movie,dubbed movies,free movie download,watch malpractice s01 movie,index of malpractice s01 movie,malpractice s01 movie 2023,malpractice s01 movie online,watch malpractice s01 movie online free,malpractice s01 tv series,malpractice s01 movie download,malpractice s01 movie free download,malpractice s01 movie download" />
+<meta name="keywords" content="uwatchfree,watch free movies,full movie online free,hd movies,movie 2023,latest movie,dubbed movies,free movie download,watch malpractice s01 movie,index of malpractice s01 movie,malpractice s01 movie 2023,malpractice s01 movie online,watch malpractice s01 movie online free,malpractice s01 tv series,malpractice s01 movie download,malpractice s01 movie free download,malpractice s01 movie download" />
 <meta property="og:locale" content="en_US" />   
 
 <meta name="robots" content="index, follow" />  
 <meta name="revisit-after" content="1 days" />
-<meta property="og:site_name" content="Go Movies™ | Watch Movies, TV-Series & Sports Live Online Free" />
+<meta property="og:site_name" content="Uwatchfree™ | Watch Movies, TV-Series & Sports Live Online Free" />
 <meta property="og:type" content="movie" />
 
-<meta property="og:title" content="Watch Malpractice S01 (2023) | Go Movies™" />
+<meta property="og:title" content="Watch Malpractice S01 (2023) | Uwatchfree™" />
 <meta property="og:url" content="https://gomoviesfree.vercel.app/Hollywood/MalpracticeS01-2023/MalpracticeP1" />
 <meta property="og:image" content="https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682530121/malpractice-2023_d9yi3x.webp" />
 <meta property="og:image:secure_url" content="https://gomoviesfree.vercel.app/" />
 <meta property="og:image:width" content="1280" />
 <meta property="og:image:height" content="720" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Watch Malpractice S01 (2023) | Go Movies™" />
+<meta name="twitter:title" content="Watch Malpractice S01 (2023) | Uwatchfree™" />
 <meta name="twitter:image" content="https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682530121/malpractice-2023_d9yi3x.webp" />
-<meta name="description" content="Watch Malpractice S03 Full Movie Online on Go Movies™, You can also download Malpractice S01 (2023) in full HD quality to watch later offline." />
+<meta name="description" content="Watch Malpractice S03 Full Movie Online on Uwatchfree™, You can also download Malpractice S01 (2023) in full HD quality to watch later offline." />
 
 <link rel="canonical" href="https://gomoviesfree.vercel.app/Hollywood/MalpracticeS01-2023/" />  
        </Head>

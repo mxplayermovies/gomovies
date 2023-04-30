@@ -75,6 +75,11 @@ function SUSSR3({ movie }) {
         "@type": "TVEpisode",
         "name": "Succession Episode 4",
         "url": "https://gomoviesfree.vercel.app/Hollywood/SuccessionS04-2023/SUSSR4"
+      },
+      {
+        "@type": "TVEpisode",
+        "name": "Succession Episode 5",
+        "url": "https://gomoviesfree.vercel.app/Hollywood/SuccessionS04-2023/SUSSR5"
       }
     ],
     "author": [{
@@ -85,7 +90,7 @@ function SUSSR3({ movie }) {
   
   "publisher": {
       "@type": "Organization",
-      "name": "Go Movies",
+      "name": "Uwatchfree",
       "logo": {
         "@type": "ImageObject",
         "url": "https://gomoviesfree.vercel.app/og_image.jpg"
@@ -97,11 +102,18 @@ function SUSSR3({ movie }) {
         "@type": "EntryPoint",
         urlTemplate:
           "https://gomoviesfree.vercel.app/Hollywood/SuccessionS04-2023/SuccessionP1",
+        },
       },
-    },
-  });
- 
-
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Action Platform",
+        "value": [
+          "Desktop Web Platform",
+          "iOS Platform",
+          "Android Platform"
+        ]
+      }
+    });
 
   return (
     <div>
@@ -110,26 +122,26 @@ function SUSSR3({ movie }) {
         dangerouslySetInnerHTML={{ __html: ldJsonData }}
       />
       <Head>
-     <title>Watch Succession S04 (2023) Full Movie Online Free | Go Movies™</title>
+     <title>Watch Succession S04 (2023) Full Movie Online Free | Uwatchfree™</title>
      <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-<meta name="keywords" content="Go Movies,watch free movies,full movie online free,hd movies,movie 2023,latest movie,dubbed movies,free movie download,watch succession s04 movie,index of succession s04 movie,the giftedS01 movie 2023,succession s04 movie online,watch succession s04 movie online free,succession s04 tv series,succession s04 movie download,succession s04 movie free download,succession s04 movie download" />
+<meta name="keywords" content="uwatchfree,watch free movies,full movie online free,hd movies,movie 2023,latest movie,dubbed movies,free movie download,watch succession s04 movie,index of succession s04 movie,the giftedS01 movie 2023,succession s04 movie online,watch succession s04 movie online free,succession s04 tv series,succession s04 movie download,succession s04 movie free download,succession s04 movie download" />
 <meta property="og:locale" content="en_US" />   
 
 <meta name="robots" content="index, follow" />  
 <meta name="revisit-after" content="1 days" />
-<meta property="og:site_name" content="Go Movies™ | Watch Movies, TV-Series & Sports Live Online Free" />
+<meta property="og:site_name" content="Uwatchfree™ | Watch Movies, TV-Series & Sports Live Online Free" />
 <meta property="og:type" content="movie" />
 
-<meta property="og:title" content="Watch Succession S04 (2023) | Go Movies™" />
+<meta property="og:title" content="Watch Succession S04 (2023) | Uwatchfree™" />
 <meta property="og:url" content="https://gomoviesfree.vercel.app/Hollywood/SuccessionS04-2023/SuccessionP1" />
 <meta property="og:image" content="https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681682711/succession-s04-2023_bhepcw.webp" />
 <meta property="og:image:secure_url" content="https://gomoviesfree.vercel.app/" />
 <meta property="og:image:width" content="1280" />
 <meta property="og:image:height" content="720" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Watch Succession S04 (2023) | Go Movies™" />
+<meta name="twitter:title" content="Watch Succession S04 (2023) | Uwatchfree™" />
 <meta name="twitter:image" content="https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1681682711/succession-s04-2023_bhepcw.webp" />
-<meta name="description" content="Watch Succession S04 Full Movie Online on Go Movies™, You can also download Succession S04 (2023) in full HD quality to watch later offline." />
+<meta name="description" content="Watch Succession S04 Full Movie Online on Uwatchfree™, You can also download Succession S04 (2023) in full HD quality to watch later offline." />
 
 <link rel="canonical" href="https://gomoviesfree.vercel.app/Hollywood/SuccessionS04-2023/" />  
        </Head>
@@ -173,6 +185,12 @@ function SUSSR3({ movie }) {
     <Link href="../../Hollywood/SuccessionS04-2023/SUSSR4">
   <button className="relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-5 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-red-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dSUS:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dSUS:focus:ring-blue-800 scale-100 hover:scale-110  cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dSUS:bg-gray-900 group-hover:bg-opacity-0 ">
   Episode 4
+      </button></Link>
+      </div>
+      <div className="flex justify-center">
+    <Link href="../../Hollywood/SuccessionS04-2023/SUSSR5">
+  <button className="relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-5 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-red-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dSUS:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dSUS:focus:ring-blue-800 scale-100 hover:scale-110  cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dSUS:bg-gray-900 group-hover:bg-opacity-0 ">
+  Episode 5
       </button></Link>
       </div>
       </div>
