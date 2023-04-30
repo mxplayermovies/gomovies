@@ -87,7 +87,7 @@ function CitadelP1({ movie }) {
   
   "publisher": {
       "@type": "Organization",
-      "name": "Uwatchfree",
+      "name": "Go Movies",
       "logo": {
         "@type": "ImageObject",
         "url": "https://gomoviesfree.vercel.app/og_image.jpg"
@@ -120,25 +120,25 @@ function CitadelP1({ movie }) {
         dangerouslySetInnerHTML={{ __html: ldJsonData }}
       />
     <Head>
-     <title>Watch Citadel S01 (2023) Full Movie Online Free | Uwatchfree™</title>
+     <title>Watch Citadel S01 (2023) Full Movie Online Free | Go Movies™</title>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-<meta name="keywords" content="uwatchfree,watch free movies,full movie online free,hd movies,movie 2023,latest movie,dubbed movies,free movie download,watch citadel s01 movie,index of citadel s01 movie,citadel s01 movie 2023,citadel s01  movie online,watch citadel s01 movie online free,citadel s01 tv series,citadel s01 movie download,citadel s01  movie free download,citadel s01 movie download" />
+<meta name="keywords" content="Go Movies,watch free movies,full movie online free,hd movies,movie 2023,latest movie,dubbed movies,free movie download,watch citadel s01 movie,index of citadel s01 movie,citadel s01 movie 2023,citadel s01  movie online,watch citadel s01 movie online free,citadel s01 tv series,citadel s01 movie download,citadel s01  movie free download,citadel s01 movie download" />
 <meta property="og:locale" content="en_US" />   
 
 <meta name="robots" content="index, follow" />  
 <meta name="revisit-after" content="1 days" />
-<meta property="og:site_name" content="Uwatchfree™ | Watch Movies, TV-Series & Sports Live Online Free" />
+<meta property="og:site_name" content="Go Movies™ | Watch Movies, TV-Series & Sports Live Online Free" />
 <meta property="og:type" content="movie" />
-<meta property="og:title" content="Watch Citadel S01 (2023) | Uwatchfree™" />
+<meta property="og:title" content="Watch Citadel S01 (2023) | Go Movies™" />
 <meta property="og:url" content="https://gomoviesfree.vercel.app/Hollywood/CitadelS01-2023/CitadelP1" />
 <meta property="og:image" content="https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682771578/citadel-2023_ydg9yo.webp" />
 <meta property="og:image:secure_url" content="https://gomoviesfree.vercel.app/" />
 <meta property="og:image:width" content="1280" />
 <meta property="og:image:height" content="720" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Watch Citadel S01 (2023) | Uwatchfree™" />
+<meta name="twitter:title" content="Watch Citadel S01 (2023) | Go Movies™" />
 <meta name="twitter:image" content="https://res.cloudinary.com/dezf3wemk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1682771578/citadel-2023_ydg9yo.webp" />
-<meta name="description" content="Watch Citadel S01 Full Movie Online on Uwatchfree™, You can also download Citadel S01 (2023) in full HD quality to watch later offline." />
+<meta name="description" content="Watch Citadel S01 Full Movie Online on Go Movies™, You can also download Citadel S01 (2023) in full HD quality to watch later offline." />
 
 <link rel="canonical" href="https://gomoviesfree.vercel.app/Hollywood/CitadelS01-2023/" />
 
