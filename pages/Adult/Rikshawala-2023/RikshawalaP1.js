@@ -52,23 +52,13 @@ function RikshawalaP1({ movie }) {
       "target": [
         {
           "@type": "EntryPoint",
-          "name": "Rikshawala Part 1 Ullu Web Series (2023)",
+          "name": "Rikshawala Ullu Web Series (2023)",
           "urlTemplate": "https://gomoviesfree.vercel.app/Adult/RikshawalaPart1-2023/RikshawalaP1"
         },
         {
           "@type": "EntryPoint",
-          "name": "Rikshawala Part 1 Ullu Web Series (2023)",
+          "name": "Rikshawala Ullu Web Series (2023)",
           "urlTemplate": "https://gomoviesfree.vercel.app/Adult/RikshawalaPart1-2023/RKPSR1"
-        },
-        {
-          "@type": "EntryPoint",
-          "name": "Rikshawala Part 2 Ullu Web Series (2023)",
-          "urlTemplate": "https://gomoviesfree.vercel.app/Adult/RikshawalaPart1-2023/RikshawalaP2"
-        },
-        {
-          "@type": "EntryPoint",
-          "name": "Rikshawala Part 2 Ullu Web Series (2023)",
-          "urlTemplate": "https://gomoviesfree.vercel.app/Adult/RikshawalaPart1-2023/RKPSR2"
         },
       
       ]
@@ -141,7 +131,7 @@ function RikshawalaP1({ movie }) {
 
        <AdultSkipAds />
 
-       <h1 className="flex flex-col text-center py-5 font-bold text-3xl items-center justify-center" style={{ color: "#40D7BC", textShadow: "5px 5px 2px #000" }}>{movie.title} - 2023</h1>
+       <h1 className="flex flex-col text-center py-5 font-bold text-3xl items-center justify-center" style={{ color: "#40D7BC", textShadow: "5px 5px 2px #000" }}>{movie.title} -  Episode 1</h1>
        <div className={styles['iframe-container']}>
       <iframe className="  rounded-3xl  mr-8 flex  border-1 border-blue-600 bg-gray-600 p-2 "
         src={movie['movie.watchP1']}
@@ -168,6 +158,12 @@ function RikshawalaP1({ movie }) {
       Episode 2
       </button></Link>
     </div>
+    <div className="flex justify-center">
+    <Link href="../../Adult/Rikshawala-2023/RikshawalaP3">
+  <button className="relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-5 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-red-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110  cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0 ">
+      Episode 3
+      </button></Link>
+    </div>
     </div>
            <button className="relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-5 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-red-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110  cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0 ">
            <a href="../Rikshawala-2023/RKPSR1" >  
@@ -184,7 +180,7 @@ function RikshawalaP1({ movie }) {
   <p className="flex container flex-col items-center justify-center space-y-3 text-xl font-bold text-center text-text-white"style={{ textShadow: "0px 0px 2px #000" }}>Synopsis:{movie.synopsis}</p>
       </ul>
      
-           <img  src={movie.poster} alt={`Poster for ${movie.title}`} className="mx-auto my-10 rounded-3xl  " />
+          
        
    
       <div className="flex flex-col py-10  text-blue-600 text-center items-center justify-center">
@@ -239,6 +235,7 @@ function RikshawalaP1({ movie }) {
           }
         }
       `}</style>
+      <img src={movie.banner} alt={`Banner for ${movie.title}`} loading="lazy" className=" rounded-3xl  mx-auto my-10 "  />
   <div className="flex flex-col py-10  text-blue-600 text-center items-center justify-center">
  
  <h3  className="text-2xl font-bold leading-normal mt-0 mb-2 text-blue-600 ">{movie.name} (2023) </h3>

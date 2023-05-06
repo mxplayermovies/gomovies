@@ -4,5 +4,5 @@ module.exports = {
     changefreq: 'daily',
     priority: 0.90,
     generateRobotsTxt: true,
-    sitemapSize: 7000,
+    sitemapSize: 9000,
   }

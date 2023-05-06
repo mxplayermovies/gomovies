@@ -7,24 +7,29 @@ import Script from 'next/script';
 
 
 function Application({ Component, pageProps }) {
- 
 
   return ( 
     <>
+      
+      
      <div className="center">
+     <Script
+        src="https://js.wpadmngr.com/static/adManager.js"
+        data-admpid="82683"
+        strategy="afterInteractive"
+      />
         <GoogleAnalytics measurementId="G-4YRYZ4XKWN" />
-        <Script async data-id="101407379" src="//static.getclicky.com/js"></Script>
-
-     
+            
         <PageTransition>  
           <Hamburger />
-          <Component {...pageProps} />
+         <Component {...pageProps} />
           <Footer />
         </PageTransition>
      </div>
    </>
   );
 }
+
 
 
 
