@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://gomovies.vercel.app/
-
-# Sitemaps
-Sitemap: https://gomovies.vercel.app/sitemap.xml
