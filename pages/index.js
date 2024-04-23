@@ -236,6 +236,23 @@ const HomePage = () => {
             type='application/ld+json'
             dangerouslySetInnerHTML={{ __html: rankMathSchema }}
           />
+             {/* Webpushr tracking code */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            (function (w, d, s, id) {
+              if (typeof (w.webpushr) !== 'undefined') return;
+              w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) };
+              var js, fjs = d.getElementsByTagName(s)[0];
+              js = d.createElement(s); js.id = id; js.async = 1;
+              js.src = "https://cdn.webpushr.com/app.min.js";
+              fjs.parentNode.appendChild(js);
+            }(window, document, 'script', 'webpushr-jssdk'));
+
+            webpushr('setup', { 'key': 'BFiNtErWPSlY1EdDYECv3rzPp2d5bVs46-O6I4iILsKtA2USCyBEakKcLs7yooH4Gj36tIvYtQtpZ0qZVfhHyAU' });
+          `
+          }}
+        />
         </Head>
 
         <main className='max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
