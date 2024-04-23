@@ -171,8 +171,8 @@ const tvshowDetail = ({ tvshow }) => {
       },
       {
         '@type': 'WebPage',
-        '@id': `/${tvshow['tvshow.watch']}#webpage`,
-        url: `/${tvshow['tvshow.watch']}`,
+        '@id': `/${tvshow['movie.watch']}#webpage`,
+        url: `/${tvshow['movie.watch']}`,
         name: `${tvshow.name} | Watch Online Movies™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
@@ -197,7 +197,7 @@ const tvshowDetail = ({ tvshow }) => {
       },
       {
         '@type': 'Article',
-        '@id': `/${tvshow['tvshow.watch']}#article`,
+        '@id': `/${tvshow['movie.watch']}#article`,
         headline: `Watch ${tvshow.name} | Watch Online Movies™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
@@ -213,16 +213,16 @@ const tvshowDetail = ({ tvshow }) => {
         image: tvshow.image,
         name: `Watch ${tvshow.name} | Watch Online Movies™`,
         isPartOf: {
-          '@id': `/${tvshow['tvshow.watch']}#webpage`
+          '@id': `/${tvshow['movie.watch']}#webpage`
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': `/${tvshow['tvshow.watch']}#webpage`
+          '@id': `/${tvshow['movie.watch']}#webpage`
         }
       },
       {
         '@type': 'BlogPosting',
-        '@id': `/${tvshow['tvshow.watch']}#blogPost`,
+        '@id': `/${tvshow['movie.watch']}#blogPost`,
         headline: `Watch ${tvshow.name} | Watch Online Movies™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
@@ -237,13 +237,13 @@ const tvshowDetail = ({ tvshow }) => {
         description: `Watch Online Movies | ${tvshow.name} for free. Where you can find tvshows of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
         image: tvshow.image,
         name: `Watch ${tvshow.name} | Watch Online Movies™`,
-        '@id': `/${tvshow['tvshow.watch']}#richSnippet`,
+        '@id': `/${tvshow['movie.watch']}#richSnippet`,
         isPartOf: {
-          '@id': `/${tvshow['tvshow.watch']}#webpage`
+          '@id': `/${tvshow['movie.watch']}#webpage`
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': `/${tvshow['tvshow.watch']}#webpage`
+          '@id': `/${tvshow['movie.watch']}#webpage`
         }
       }
     ]
@@ -252,9 +252,9 @@ const tvshowDetail = ({ tvshow }) => {
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'TVSeries',
-    '@id': `${tvshow['tvshow.url']}`,
+    '@id': `${tvshow['movie.url']}`,
     name: tvshow.name,
-    url: `/${tvshow['tvshow.watch']}`,
+    url: `/${tvshow['movie.watch']}`,
     description: tvshow.synopsis,
     image: tvshow.poster,
     genre: tvshow.genre,
@@ -273,7 +273,7 @@ const tvshowDetail = ({ tvshow }) => {
         {
           '@type': 'EntryPoint',
           name: tvshow.name, // Removed unnecessary conditional
-          urlTemplate: `${tvshow['tvshow.url']}` // Updated to use tvshow.watch
+          urlTemplate: `${tvshow['movie.url']}` // Updated to use tvshow.watch
         }
       ]
     },
