@@ -171,9 +171,9 @@ const adultDetail = ({ adult }) => {
       },
       {
         '@type': 'WebPage',
-        '@id': `/${adult['adult.watch']}#webpage`,
-        url: `/${adult['adult.watch']}`,
-        name: `${adult.name} | Watch Online Movies™`,
+        '@id': `/${adult['movie.watch']}#webpage`,
+        url: `/${adult['movie.watch']}`,
+        name: `${adult.title} | Watch Online Movies™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         isPartOf: {
@@ -197,83 +197,99 @@ const adultDetail = ({ adult }) => {
       },
       {
         '@type': 'Article',
-        '@id': `/${adult['adult.watch']}#article`,
-        headline: `Watch ${adult.name} | Watch Online Movies™`,
+        '@id': `/${adult['movie.watch']}#article`,
+        headline: `Watch ${adult.title} | Watch Online Movies™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'Adult',
         author: {
-          '@id':
-            'https://watchonlineadults.vercel.app/author/watchadultsonline/'
+          '@id': 'https://watchonlineadults.vercel.app/author/watchadultsonline/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: `Watch Online Movies | ${adult.name} for free. Where you can find adults of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+        description: `Watch Online Movies | ${adult.title} for free. Where you can find adults of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
         image: adult.image,
-        name: `Watch ${adult.name} | Watch Online Movies™`,
+        name: `Watch ${adult.title} | Watch Online Movies™`,
         isPartOf: {
-          '@id': `/${adult['adult.watch']}#webpage`
+          '@id': `/${adult['movie.watch']}#webpage`
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': `/${adult['adult.watch']}#webpage`
+          '@id': `/${adult['movie.watch']}#webpage`
         }
       },
       {
         '@type': 'BlogPosting',
-        '@id': `/${adult['adult.watch']}#blogPost`,
-        headline: `Watch ${adult.name} | Watch Online Movies™`,
+        '@id': `/${adult['movie.watch']}#blogPost`,
+        headline: `Watch ${adult.title} | Watch Online Movies™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'Adult',
         author: {
-          '@id':
-            'https://watchonlineadults.vercel.app/author/watchadultsonline/'
+          '@id': 'https://watchonlineadults.vercel.app/author/watchadultsonline/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: `Watch Online Movies | ${adult.name} for free. Where you can find adults of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+        description: `Watch Online Movies | ${adult.title} for free. Where you can find adults of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
         image: adult.image,
-        name: `Watch ${adult.name} | Watch Online Movies™`,
-        '@id': `/${adult['adult.watch']}#richSnippet`,
+        name: `Watch ${adult.title} | Watch Online Movies™`,
+        '@id': `/${adult['movie.watch']}#richSnippet`,
         isPartOf: {
-          '@id': `/${adult['adult.watch']}#webpage`
+          '@id': `/${adult['movie.watch']}#webpage`
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': `/${adult['adult.watch']}#webpage`
+          '@id': `/${adult['movie.watch']}#webpage`
         }
       }
     ]
-  })
-
+  });
+  
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Movie',
-    '@id': `${adult && ['adult.url']}`,
-    name: adult.name,
-    url: `/${adult['adult.watch']}`,
+    '@id': `${adult['movie.url']}`,
+    name: adult.title,
+    url: `/${adult['movie.watch']}`,
     description: adult.synopsis,
     image: adult.poster,
     genre: adult.genre,
-    datePublished: adult.yearRelease,
+    datePublished: adult.startDate,
     director: {
       '@type': 'Person',
-      name: adult.director
+      name: adult.directorname
     },
-    actor: adult.starring.map(actor => ({
-      '@type': 'Person',
-      name: actor
-    })),
+    actor: [
+      {
+        '@type': 'Person',
+        name: adult.actor1
+      },
+      {
+        '@type': 'Person',
+        name: adult.actor2
+      },
+      {
+        '@type': 'Person',
+        name: adult.actor3
+      },
+      {
+        '@type': 'Person',
+        name: adult.actor4
+      },
+      {
+        '@type': 'Person',
+        name: adult.actor5
+      }
+    ],
     potentialAction: {
       '@type': 'WatchAction',
       target: [
         {
           '@type': 'EntryPoint',
-          name: adult.name, // Removed unnecessary conditional
-          urlTemplate: `${adult['adult.url']}` // Updated to use movie.watch
+          name: adult.title,
+          urlTemplate: `${adult['movie.url']}`
         }
       ]
     },
@@ -289,7 +305,7 @@ const adultDetail = ({ adult }) => {
       ratingCount: adult.aggregateRating.ratingCount
     },
     author: {
-      '@type': 'Person', // Updated to remove unnecessary array
+      '@type': 'Person',
       name: 'DrTrailer',
       url: 'https://gravatar.com/drtrailer2022'
     },
@@ -306,9 +322,8 @@ const adultDetail = ({ adult }) => {
       name: 'Action Platform',
       value: ['Desktop Web Platform', 'iOS Platform', 'Android Platform']
     }
-  })
-
-
+  });
+  
   const trailerSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
