@@ -11,7 +11,7 @@ class MyDocument extends Document {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='watchonlinemovies.vercel.app/sitemap.xml'
+            href='https://watchonlinemovies.vercel.app/sitemap.xml'
           />
         
           <link
@@ -51,7 +51,7 @@ class MyDocument extends Document {
             name='description'
             content='Watch free movies and TV shows online in HD on any device. We offer streaming movies in genres like Action, Horror, Sci-Fi, Crime and Comedy. Watch now !!!'
           />
-          <link rel='canonical' href='watchonlinemovies.vercel.app/' />
+          <link rel='canonical' href='https://watchonlinemovies.vercel.app/' />
           <meta property='og:locale' content='en_US' />
           <meta property='og:type' content='website' />
           <meta
@@ -64,7 +64,7 @@ class MyDocument extends Document {
           />
           <meta
             property='og:url'
-            content='watchonlinemovies.vercel.app/'
+            content='https://watchonlinemovies.vercel.app/'
           />
           <meta
             property='og:site_name'
@@ -72,7 +72,7 @@ class MyDocument extends Document {
           />
           <meta
             property='og:image'
-            content='watchonlinemovies.vercel.app/og_image.jpg'
+            content='https://watchonlinemovies.vercel.app/og_image.jpg'
             style={{ borderRadius: '10%' }}
           />
           <meta property='og:image:width' content='1280' />
@@ -88,7 +88,7 @@ class MyDocument extends Document {
             rel='sitemap'
             type='application/xml'
             title='Sitemap'
-            href='watchonlinemovies.vercel.app/sitemap.xml'
+            href='https://watchonlinemovies.vercel.app/sitemap.xml'
           />
           <meta name='twitter:card' content='summary_large_image' />
           <meta
@@ -97,7 +97,7 @@ class MyDocument extends Document {
           />
           <meta
             name='facebook-domain-verification'
-            content='4dFu4PUk1pc1IYqU6Brt84akCwNxaoUpKSO3gDW0kJ0'
+            content='du918bycikmo1jw78wcl9ih6ziphd7'
           />
           <meta
             name='dailymotion-domain-verification'

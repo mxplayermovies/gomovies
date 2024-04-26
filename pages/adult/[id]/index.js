@@ -152,6 +152,33 @@ const adultDetail = ({ adult }) => {
       alert('Video loading canceled.')
     }
   }
+
+  const uwatchfreeSchema = JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Watch Online Movies",
+      "url": "https://watchonlinemovies.vercel.app",
+      "image": ["https://watchonlinemovies.vercel.app/wp-content/uploads/2023/05/favicon.ico"],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://watchonlinemovies.vercel.app/logo.png",
+        "width": 280,
+        "height": 80
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://watchonlinemovies.vercel.app",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://watchonlinemovies.vercel.app/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]);
+
   const rankMathSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -315,7 +342,7 @@ const adultDetail = ({ adult }) => {
       name: 'Watch Online Movies™',
       logo: {
         '@type': 'ImageObject',
-        url: 'watchonlinemovies.vercel.app/og_image.jpg'
+        url: 'https://watchonlinemovies.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {
@@ -387,7 +414,7 @@ const adultDetail = ({ adult }) => {
         />
         <meta
           name='facebook-domain-verification'
-          content='4dFu4PUk1pc1IYqU6Brt84akCwNxaoUpKSO3gDW0kJ0'
+          content='du918bycikmo1jw78wcl9ih6ziphd7'
         />
         <meta
           name='dailymotion-domain-verification'
@@ -395,7 +422,10 @@ const adultDetail = ({ adult }) => {
         />
 
         {/* <script src='https://www.youtube.com/iframe_api' /> */}
-
+        <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{ __html: uwatchfreeSchema }}
+          />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: ldJsonData }}
@@ -468,11 +498,11 @@ Overall, "Watch Online Movies™ - The Best Movies Platform HD Movies" strives t
           <Image
             src={adult.image}
             alt={adult.title}
-            width={500}
+            width={300}
             height={500}
             priority
             style={{
-              maxWidth: '50%',
+              // maxWidth: '50%',
               margin: 'auto',
               marginBottom: '20px',
               borderRadius: '50px',
@@ -1509,7 +1539,7 @@ Overall, "Watch Online Movies™ - The Best Movies Platform HD Movies" strives t
             textShadow: '3px 5px 5px #000'
           }}
         >
-          &#x1F604;Trending adults &#128515;
+          &#x1F604;Trending Adult &#128515;
         </h2>
 
         <TrendingMovies />

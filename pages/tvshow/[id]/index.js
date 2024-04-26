@@ -145,6 +145,33 @@ const tvshowDetail = ({ tvshow }) => {
       alert('Video loading canceled.')
     }
   }
+
+  const uwatchfreeSchema = JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Watch Online Movies",
+      "url": "https://watchonlinemovies.vercel.app",
+      "image": ["https://watchonlinemovies.vercel.app/wp-content/uploads/2023/05/favicon.ico"],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://watchonlinemovies.vercel.app/logo.png",
+        "width": 280,
+        "height": 80
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://watchonlinemovies.vercel.app",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://watchonlinemovies.vercel.app/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]);
+
   const rankMathSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -155,8 +182,8 @@ const tvshowDetail = ({ tvshow }) => {
       },
       {
         '@type': 'WebSite',
-        '@id': 'watchonlinemovies.vercel.app/#website',
-        url: 'watchonlinemovies.vercel.app/',
+        '@id': 'https://watchonlinemovies.vercel.app/#website',
+        url: 'https://watchonlinemovies.vercel.app/',
         name: 'Watch Online Movies™',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -171,15 +198,15 @@ const tvshowDetail = ({ tvshow }) => {
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         isPartOf: {
-          '@id': 'watchonlinemovies.vercel.app/#website'
+          '@id': 'https://watchonlinemovies.vercel.app/#website'
         },
         inLanguage: 'en-US'
       },
       {
         '@type': 'Person',
-        '@id': 'watchonlinemovies.vercel.app/author/watchtvshowsonline/',
+        '@id': 'https://watchonlinemovies.vercel.app/author/watchtvshowsonline/',
         name: 'Dr Trailer',
-        url: 'watchonlinemovies.vercel.app/author/watchtvshowsonline/',
+        url: 'https://watchonlinemovies.vercel.app/author/watchtvshowsonline/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -187,7 +214,7 @@ const tvshowDetail = ({ tvshow }) => {
           caption: 'Dr Trailer',
           inLanguage: 'en-US'
         },
-        sameAs: ['watchonlinemovies.vercel.app/']
+        sameAs: ['https://watchonlinemovies.vercel.app/']
       },
       {
         '@type': 'Article',
@@ -198,7 +225,7 @@ const tvshowDetail = ({ tvshow }) => {
         articleSection: 'tvshow',
         author: {
           '@id':
-            'watchonlinemovies.vercel.app/author/watchtvshowsonline/'
+            'https://watchonlinemovies.vercel.app/author/watchtvshowsonline/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -223,7 +250,7 @@ const tvshowDetail = ({ tvshow }) => {
         articleSection: 'tvshow',
         author: {
           '@id':
-            'watchonlinemovies.vercel.app/author/watchtvshowsonline/'
+            'https://watchonlinemovies.vercel.app/author/watchtvshowsonline/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -266,8 +293,8 @@ const tvshowDetail = ({ tvshow }) => {
       target: [
         {
           '@type': 'EntryPoint',
-          name: tvshow.name, // Removed unnecessary conditional
-          urlTemplate: `${tvshow['tvshow.url']}` // Updated to use tvshow.watch
+          name: tvshow.name,
+          urlTemplate: `${tvshow['tvshow.url']}`
         }
       ]
     },
@@ -283,7 +310,7 @@ const tvshowDetail = ({ tvshow }) => {
       ratingCount: tvshow.aggregateRating.ratingCount
     },
     author: {
-      '@type': 'Person', // Updated to remove unnecessary array
+      '@type': 'Person',
       name: 'DrTrailer',
       url: 'https://gravatar.com/drtrailer2022'
     },
@@ -292,15 +319,28 @@ const tvshowDetail = ({ tvshow }) => {
       name: 'Watch Online Movies™',
       logo: {
         '@type': 'ImageObject',
-        url: 'watchonlinemovies.vercel.app/og_image.jpg'
+        url: 'https://watchonlinemovies.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {
       '@type': 'PropertyValue',
       name: 'Action Platform',
       value: ['Desktop Web Platform', 'iOS Platform', 'Android Platform']
+    },
+    numberOfEpisodes: tvshow.episodes.length,
+    containsSeason: {
+      '@type': 'TVSeason',
+      seasonNumber: 1,
+      numberOfEpisodes: 7,
+      episodes: tvshow.episodes.map(episode => ({
+        '@type': 'TVEpisode',
+        episodeNumber: episode.episodeNumber,
+        name: episode.name,
+        description: episode.description
+      }))
     }
-  })
+  });
+  
 
   const trailerSchema = JSON.stringify({
     '@context': 'https://schema.org',
@@ -365,7 +405,7 @@ const tvshowDetail = ({ tvshow }) => {
         />
         <meta
           name='facebook-domain-verification'
-          content='4dFu4PUk1pc1IYqU6Brt84akCwNxaoUpKSO3gDW0kJ0'
+          content='du918bycikmo1jw78wcl9ih6ziphd7'
         />
         <meta
           name='dailymotion-domain-verification'
@@ -373,7 +413,10 @@ const tvshowDetail = ({ tvshow }) => {
         />
 
         {/* <script src='https://www.youtube.com/iframe_api' /> */}
-
+        <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{ __html: uwatchfreeSchema }}
+          />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: ldJsonData }}
@@ -431,26 +474,26 @@ const tvshowDetail = ({ tvshow }) => {
             className='flex flex-col text-center py-5 font-bold text-3xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           >
-            Watch Online Movies™ - The Best tvshows Platform HD tvshows.  </h2>
+            Watch Online Movies™ - Best Movie & TV Show Platform HD.  </h2>
          <p className='flex flex-col text-center py-5 font-bold text-xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           > 
-"Watch Online Movies™ - The Best tvshows Platform HD tvshows" is a platform that provides access to a wide range of high-definition tvshows for streaming online. With this platform, users can enjoy a diverse selection of tvshows spanning various genres, including action, drama, comedy, thriller, romance, and more.
+"Watch Online Movies™ - Best Movie & TV Show Platform HD" is a platform that provides access to a wide range of high-definition tvshows for streaming online. With this platform, users can enjoy a diverse selection of tvshows spanning various genres, including action, drama, comedy, thriller, romance, and more.
 
 The platform aims to offer a seamless and enjoyable tvshow-watching experience, allowing users to browse through a vast collection of films and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new tvshows tailored to their preferences.
 
-Overall, "Watch Online Movies™ - The Best tvshows Platform HD tvshows" strives to be a go-to destination for tvshow enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
+Overall, "Watch Online Movies™ - Best Movie & TV Show Platform HD" strives to be a go-to destination for tvshow enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
 
 </p>
         <div style={{ maxWidth: '800px', width: '100%', marginBottom: '20px' }}>
           <img
             src={tvshow.image}
             alt={tvshow.title}
-            width={500}
+            width={300}
             height={500}
             priority
             style={{
-              maxWidth: '50%',
+              // maxWidth: '50%',
               margin: 'auto',
               marginBottom: '20px',
               borderRadius: '50px',
@@ -1486,7 +1529,7 @@ Overall, "Watch Online Movies™ - The Best tvshows Platform HD tvshows" strives
             textShadow: '3px 5px 5px #000'
           }}
         >
-          &#x1F604;Trending tvshows &#128515;
+          &#x1F604;Trending TvShow &#128515;
         </h2>
 
         <TrendingMovies />

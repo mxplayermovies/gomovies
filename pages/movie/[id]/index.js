@@ -152,6 +152,33 @@ const MovieDetail = ({ movie }) => {
       alert('Video loading canceled.')
     }
   }
+
+  const uwatchfreeSchema = JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Watch Online Movies",
+      "url": "https://watchonlinemovies.vercel.app",
+      "image": ["https://watchonlinemovies.vercel.app/wp-content/uploads/2023/05/favicon.ico"],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://watchonlinemovies.vercel.app/logo.png",
+        "width": 280,
+        "height": 80
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://watchonlinemovies.vercel.app",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://watchonlinemovies.vercel.app/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]);
+
   const rankMathSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -162,8 +189,8 @@ const MovieDetail = ({ movie }) => {
       },
       {
         '@type': 'WebSite',
-        '@id': 'watchonlinemovies.vercel.app/#website',
-        url: 'watchonlinemovies.vercel.app/',
+        '@id': 'https://watchonlinemovies.vercel.app/#website',
+        url: 'https://watchonlinemovies.vercel.app/',
         name: 'Watch Online Movies™',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -178,15 +205,15 @@ const MovieDetail = ({ movie }) => {
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         isPartOf: {
-          '@id': 'watchonlinemovies.vercel.app/#website'
+          '@id': 'https://watchonlinemovies.vercel.app/#website'
         },
         inLanguage: 'en-US'
       },
       {
         '@type': 'Person',
-        '@id': 'watchonlinemovies.vercel.app/author/watchmoviesonline/',
+        '@id': 'https://watchonlinemovies.vercel.app/author/watchmoviesonline/',
         name: 'Dr Trailer',
-        url: 'watchonlinemovies.vercel.app/author/watchmoviesonline/',
+        url: 'https://watchonlinemovies.vercel.app/author/watchmoviesonline/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
@@ -194,7 +221,7 @@ const MovieDetail = ({ movie }) => {
           caption: 'Dr Trailer',
           inLanguage: 'en-US'
         },
-        sameAs: ['watchonlinemovies.vercel.app/']
+        sameAs: ['https://watchonlinemovies.vercel.app/']
       },
       {
         '@type': 'Article',
@@ -205,7 +232,7 @@ const MovieDetail = ({ movie }) => {
         articleSection: 'Movie',
         author: {
           '@id':
-            'watchonlinemovies.vercel.app/author/watchmoviesonline/'
+            'https://watchonlinemovies.vercel.app/author/watchmoviesonline/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -230,7 +257,7 @@ const MovieDetail = ({ movie }) => {
         articleSection: 'Movie',
         author: {
           '@id':
-            'watchonlinemovies.vercel.app/author/watchmoviesonline/'
+            'https://watchonlinemovies.vercel.app/author/watchmoviesonline/'
         },
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
@@ -299,7 +326,7 @@ const MovieDetail = ({ movie }) => {
       name: 'Watch Online Movies™',
       logo: {
         '@type': 'ImageObject',
-        url: 'watchonlinemovies.vercel.app/og_image.jpg'
+        url: 'https://watchonlinemovies.vercel.app/og_image.jpg'
       }
     },
     additionalProperty: {
@@ -371,7 +398,7 @@ const MovieDetail = ({ movie }) => {
         />
         <meta
           name='facebook-domain-verification'
-          content='4dFu4PUk1pc1IYqU6Brt84akCwNxaoUpKSO3gDW0kJ0'
+          content='du918bycikmo1jw78wcl9ih6ziphd7'
         />
         <meta
           name='dailymotion-domain-verification'
@@ -379,7 +406,10 @@ const MovieDetail = ({ movie }) => {
         />
 
         {/* <script src='https://www.youtube.com/iframe_api' /> */}
-
+        <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{ __html: uwatchfreeSchema }}
+          />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: ldJsonData }}
@@ -452,11 +482,11 @@ Overall, "Watch Online Movies™ - The Best Movies Platform HD Movies" strives t
           <Image
             src={movie.image}
             alt={movie.title}
-            width={500}
+            width={300}
             height={500}
             priority
             style={{
-              maxWidth: '50%',
+              // maxWidth: '50%',
               margin: 'auto',
               marginBottom: '20px',
               borderRadius: '50px',
