@@ -449,7 +449,7 @@ const tvshowDetail = ({ tvshow }) => {
               fjs.parentNode.appendChild(js);
             }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': 'BE7nJtBNDdnHROheP35JwxbD_bYWc6Bl61DGE66CggOuCevUvW4LyjGVbUQAwj7ZKlYupLJAf13_G0OBQ_Ne7Eg' });
+            webpushr('setup', { 'key': 'BFiNtErWPSlY1EdDYECv3rzPp2d5bVs46-O6I4iILsKtA2USCyBEakKcLs7yooH4Gj36tIvYtQtpZ0qZVfhHyAU' });
           `
           }}
         />
