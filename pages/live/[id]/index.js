@@ -184,7 +184,7 @@ const liveDetail = ({ live }) => {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Uwatchfree Online",
+      "name": "Watch Online Movies",
       "url": "https://watchonlinemovies.vercel.app",
       "image": ["https://watchonlinemovies.vercel.app/wp-content/uploads/2023/05/favicon.ico"],
       "logo": {
@@ -218,7 +218,7 @@ const liveDetail = ({ live }) => {
   //       '@type': 'WebSite',
   //       '@id': 'https://watchonlinemovies.vercel.app/#website',
   //       url: 'https://watchonlinemovies.vercel.app/',
-  //       name: 'Uwatchfree Online™',
+  //       name: 'Watch Online Movies™',
   //       publisher: {
   //         '@id': 'https://gravatar.com/drtrailer2022/#person'
   //       },
@@ -228,7 +228,7 @@ const liveDetail = ({ live }) => {
   //       '@type': 'WebPage',
   //       '@id': `/${live['live.watch']}#webpage`,
   //       url: `/${live['live.watch']}`,
-  //       name: `${live.name} | Uwatchfree Online™`,
+  //       name: `${live.name} | Watch Online Movies™`,
   //       datePublished: '2024-01-13T13:00:00+00:00',
   //       dateModified: '2024-01-13T13:13:00+00:00',
   //       isPartOf: {
@@ -253,7 +253,7 @@ const liveDetail = ({ live }) => {
   //     {
   //       '@type': 'Article',
   //       '@id': `/${live['live.watch']}#article`,
-  //       headline: `Watch ${live.name} | Uwatchfree Online™`,
+  //       headline: `Watch ${live.name} | Watch Online Movies™`,
   //       datePublished: '2024-01-13T13:00:00+00:00',
   //       dateModified: '2024-01-13T13:13:00+00:00',
   //       articleSection: 'live',
@@ -264,9 +264,9 @@ const liveDetail = ({ live }) => {
   //       publisher: {
   //         '@id': 'https://gravatar.com/drtrailer2022/#person'
   //       },
-  //       description: `Uwatchfree Online | ${live.name} for free. Where you can find lives of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+  //       description: `Watch Online Movies | ${live.name} for free. Where you can find lives of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
   //       image: live.image,
-  //       name: `Watch ${live.name} | Uwatchfree Online™`,
+  //       name: `Watch ${live.name} | Watch Online Movies™`,
   //       isPartOf: {
   //         '@id': `/${live['live.watch']}#webpage`
   //       },
@@ -278,7 +278,7 @@ const liveDetail = ({ live }) => {
   //     {
   //       '@type': 'BlogPosting',
   //       '@id': `/${live['live.watch']}#blogPost`,
-  //       headline: `Watch ${live.name} | Uwatchfree Online™`,
+  //       headline: `Watch ${live.name} | Watch Online Movies™`,
   //       datePublished: '2024-01-13T13:00:00+00:00',
   //       dateModified: '2024-01-13T13:13:00+00:00',
   //       articleSection: 'live',
@@ -289,9 +289,9 @@ const liveDetail = ({ live }) => {
   //       publisher: {
   //         '@id': 'https://gravatar.com/drtrailer2022/#person'
   //       },
-  //       description: `Uwatchfree Online | ${live.name} for free. Where you can find lives of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+  //       description: `Watch Online Movies | ${live.name} for free. Where you can find lives of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
   //       image: live.image,
-  //       name: `Watch ${live.name} | Uwatchfree Online™`,
+  //       name: `Watch ${live.name} | Watch Online Movies™`,
   //       '@id': `/${live['live.watch']}#richSnippet`,
   //       isPartOf: {
   //         '@id': `/${live['live.watch']}#webpage`
@@ -350,7 +350,7 @@ const liveDetail = ({ live }) => {
   //   },
   //   publisher: {
   //     '@type': 'Organization',
-  //     name: 'Uwatchfree Online™',
+  //     name: 'Watch Online Movies™',
   //     logo: {
   //       '@type': 'ImageObject',
   //       url: 'https://watchonlinemovies.vercel.app/og_image.jpg'
@@ -366,7 +366,7 @@ const liveDetail = ({ live }) => {
   // const trailerSchema = JSON.stringify({
   //   '@context': 'https://schema.org',
   //   '@type': 'VideoObject',
-  //   name: `${live.name} | Uwatchfree Online™`,
+  //   name: `${live.name} | Watch Online Movies™`,
   //   description: live.trailer.description,
   //   uploadDate: live.trailer.uploadDate,
   //   thumbnailUrl: live.trailer.thumbnail.contentUrl,
@@ -381,7 +381,7 @@ const liveDetail = ({ live }) => {
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
         />
-        <title> Watch { live && live.name} | Uwatchfree Online™</title>
+        <title> Watch { live && live.name} | Watch Online Movies™</title>
         <link rel='canonical' href={live && live.url} />
         <meta name='robots' content='index, follow' />
         <meta name='googlebot' content='index,follow' />
@@ -390,7 +390,7 @@ const liveDetail = ({ live }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
-          content={`${live && live.name} - Uwatchfree Online™`}
+          content={`${live && live.name} - Watch Online Movies™`}
         />
         <meta
           property='og:description'
@@ -402,7 +402,7 @@ const liveDetail = ({ live }) => {
           />
         <meta property='og:url' content={`${live && live.url}`} />
         <meta name='keywords' content={`${live && live.keywords}`} />
-        <meta property='og:site_name' content='Uwatchfree Online' />
+        <meta property='og:site_name' content='Watch Online Movies' />
         <meta property='og:type' content='article' />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta property='article:section' content='live' />
@@ -494,15 +494,15 @@ const liveDetail = ({ live }) => {
             className='flex flex-col text-center py-5 font-bold text-3xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           >
-            Uwatchfree Online™ - For Movies, TV Show & live.  </h2>
+            Watch Online Movies™ - For Movies, TV Show & live.  </h2>
          <p className='flex flex-col text-center py-5 font-bold text-xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           > 
-"Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" is a platform that provides access to a wide range of high-definition movies, tv shows & live Live streaming online. With this platform, users can enjoy a diverse selection of movies, tv shows & live Live spanning various genres, including action, drama, comedy, thriller, romance, live and more.
+"Watch Online Movies™ - For Movies, Tv Shows & Sports Live" is a platform that provides access to a wide range of high-definition movies, tv shows & live Live streaming online. With this platform, users can enjoy a diverse selection of movies, tv shows & live Live spanning various genres, including action, drama, comedy, thriller, romance, live and more.
 
 The platform aims to offer a seamless and enjoyable watching experience, allowing users to browse through a vast collection of movies, tv shows & live Live and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new movies, tv shows & live Live tailored to their preferences.
 
-Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to be a go-to destination for enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
+Overall, "Watch Online Movies™ - For Movies, Tv Shows & Sports Live" strives to be a go-to destination for enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
 
 
 </p>

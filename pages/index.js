@@ -36,7 +36,7 @@ const HomePage = () => {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Uwatchfree Online",
+      "name": "Watch Online Movies",
       "url": "https://watchonlinemovies.vercel.app",
       "image": ["https://watchonlinemovies.vercel.app/wp-content/uploads/2023/05/favicon.ico"],
       "logo": {
@@ -77,14 +77,14 @@ const HomePage = () => {
       {
         '@type': 'Organization',
         '@id': 'https://watchonlinemovies.vercel.app/#organization',
-        name: 'Uwatchfree Online™',
+        name: 'Watch Online Movies™',
         url: 'https://watchonlinemovies.vercel.app'
       },
       {
         '@type': 'WebSite',
         '@id': 'https://watchonlinemovies.vercel.app/#website',
         url: 'https://watchonlinemovies.vercel.app',
-        name: 'Uwatchfree Online™',
+        name: 'Watch Online Movies™',
         publisher: {
           '@type': 'Organization',
           '@id': 'https://watchonlinemovies.vercel.app/#organization'
@@ -143,7 +143,7 @@ const HomePage = () => {
             publisher: {
               '@type': 'Organization',
               '@id': 'https://watchonlinemovies.vercel.app/#organization',
-              name: 'Uwatchfree Online™',
+              name: 'Watch Online Movies™',
               url: 'https://watchonlinemovies.vercel.app'
             }
           }
@@ -172,7 +172,7 @@ const HomePage = () => {
         <Head>
         <title>
             {' '}
-            Uwatchfree Online™ - Best Movie & TV Show Platform HD{' '}
+            Watch Online Movies™ - Best Movie & TV Show Platform HD{' '}
           </title>
           <link
             rel='sitemap'
@@ -215,7 +215,7 @@ const HomePage = () => {
           />
           <meta
             name='keywords'
-            content='uwatchfree, uwatchfree latest movies, free movies, films, free movies online, free movies online, online movies, watch online movie free sites, watch free movies online free, free online movies, watch movies online, watch online movies, watch movies free online, online watch movie, free new movies online, watch movies online free, movies 2 watch, free full movies, online movie watch, movies online watch, online movies for free, online watch movies, 2024 Latest Movies, 2024 Latest Movies online'
+            content='watch online movies, latest movies, free movies, films, free movies online, free movies online, online movies, watch online movie free sites, watch free movies online free, free online movies, watch movies online, watch online movies, watch movies free online, online watch movie, free new movies online, watch movies online free, movies 2 watch, free full movies, online movie watch, movies online watch, online movies for free, online watch movies, 2024 Latest Movies, 2024 Latest Movies online'
           />
           <meta
             name='description'
@@ -226,7 +226,7 @@ const HomePage = () => {
           <meta property='og:type' content='website' />
           <meta
             property='og:title'
-            content='Uwatchfree Online™ - Best Movie & TV Show Platform HD'
+            content='Watch Online Movies™ - Best Movie & TV Show Platform HD'
           />
           <meta
             property='og:description'
@@ -235,7 +235,7 @@ const HomePage = () => {
           <meta property='og:url' content='https://watchonlinemovies.vercel.app/' />
           <meta
             property='og:site_name'
-            content='Uwatchfree Online™ - Best Movie & TV Show Platform HD'
+            content='Watch Online Movies™ - Best Movie & TV Show Platform HD'
           />
           <meta
             property='og:image'
@@ -246,7 +246,7 @@ const HomePage = () => {
           <meta property='og:image:type' content='image/webp' />
           <meta
             name='application-name'
-            content='Uwatchfree Online™ - Best Movie & TV Show Platform HD'
+            content='Watch Online Movies™ - Best Movie & TV Show Platform HD'
           />
           <meta
             property='article:modified_time'
@@ -304,15 +304,15 @@ const HomePage = () => {
             className=' text-center py-5 font-bold text-3xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           >
-            Uwatchfree Online™ - For Movies, TV Show & Sports live.  </h1>
+            Watch Online Movies™ - For Movies, TV Show & Sports live.  </h1>
          <p className=' text-center  font-bold text-lg items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           > 
-"Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" is a platform that provides access to a wide range of high-definition movies, tv shows & live Live streaming online. With this platform, users can enjoy a diverse selection of movies, tv shows & live Live spanning various genres, including action, drama, comedy, thriller, romance, live and more.
+"Watch Online Movies™ - For Movies, Tv Shows & Sports Live" is a platform that provides access to a wide range of high-definition movies, tv shows & live Live streaming online. With this platform, users can enjoy a diverse selection of movies, tv shows & live Live spanning various genres, including action, drama, comedy, thriller, romance, live and more.
 
 The platform aims to offer a seamless and enjoyable watching experience, allowing users to browse through a vast collection of movies, tv shows & live Live and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new movies, tv shows & live Live tailored to their preferences.
 
-Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to be a go-to destination for enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
+Overall, "Watch Online Movies™ - For Movies, Tv Shows & Sports Live" strives to be a go-to destination for enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
 
 </p>
 <p className=' text-center font-bold text-lg items-center justify-center'

@@ -157,7 +157,7 @@ const adultDetail = ({ adult }) => {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Uwatchfree Online",
+      "name": "Watch Online Movies",
       "url": "https://watchonlinemovies.vercel.app",
       "image": ["https://watchonlinemovies.vercel.app/wp-content/uploads/2023/05/favicon.ico"],
       "logo": {
@@ -191,7 +191,7 @@ const adultDetail = ({ adult }) => {
         '@type': 'WebSite',
         '@id': 'https://watchonlineadults.vercel.app/#website',
         url: 'https://watchonlineadults.vercel.app/',
-        name: 'Uwatchfree Online™',
+        name: 'Watch Online Movies™',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
@@ -201,7 +201,7 @@ const adultDetail = ({ adult }) => {
         '@type': 'WebPage',
         '@id': `/${adult['adult.watch']}#webpage`,
         url: `/${adult['adult.watch']}`,
-        name: `${adult.title} | Uwatchfree Online™`,
+        name: `${adult.title} | Watch Online Movies™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         isPartOf: {
@@ -226,7 +226,7 @@ const adultDetail = ({ adult }) => {
       {
         '@type': 'Article',
         '@id': `/${adult['adult.watch']}#article`,
-        headline: `Watch ${adult.title} | Uwatchfree Online™`,
+        headline: `Watch ${adult.title} | Watch Online Movies™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'Adult',
@@ -238,7 +238,7 @@ const adultDetail = ({ adult }) => {
         },
         description: `Watch free Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!`,
         image: adult.image,
-        name: `Watch ${adult.title} | Uwatchfree Online™`,
+        name: `Watch ${adult.title} | Watch Online Movies™`,
         isPartOf: {
           '@id': `/${adult['adult.watch']}#webpage`
         },
@@ -250,7 +250,7 @@ const adultDetail = ({ adult }) => {
       {
         '@type': 'BlogPosting',
         '@id': `/${adult['adult.watch']}#blogPost`,
-        headline: `Watch ${adult.title} | Uwatchfree Online™`,
+        headline: `Watch ${adult.title} | Watch Online Movies™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'Adult',
@@ -262,7 +262,7 @@ const adultDetail = ({ adult }) => {
         },
         description: `Watch free Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!`,
         image: adult.image,
-        name: `Watch ${adult.title} | Uwatchfree Online™`,
+        name: `Watch ${adult.title} | Watch Online Movies™`,
         '@id': `/${adult['adult.watch']}#richSnippet`,
         isPartOf: {
           '@id': `/${adult['adult.watch']}#webpage`
@@ -339,7 +339,7 @@ const adultDetail = ({ adult }) => {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Uwatchfree Online™',
+      name: 'Watch Online Movies™',
       logo: {
         '@type': 'ImageObject',
         url: 'https://watchonlinemovies.vercel.app/og_image.jpg'
@@ -355,7 +355,7 @@ const adultDetail = ({ adult }) => {
   const trailerSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
-    name: `${adult.name} | Uwatchfree Online™`,
+    name: `${adult.name} | Watch Online Movies™`,
     description: adult.trailer.description,
     uploadDate: adult.trailer.uploadDate,
     thumbnailUrl: adult.trailer.thumbnail.contentUrl,
@@ -370,7 +370,7 @@ const adultDetail = ({ adult }) => {
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
         />
-        <title> Watch {adult && adult.name} | Uwatchfree Online™</title>
+        <title> Watch {adult && adult.name} | Watch Online Movies™</title>
         <link rel='canonical' href={adult && adult.url} />
         <meta name='robots' content='index, follow' />
         <meta name='googlebot' content='index,follow' />
@@ -379,7 +379,7 @@ const adultDetail = ({ adult }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
-          content={`${adult && adult.name} - Uwatchfree Online™`}
+          content={`${adult && adult.name} - Watch Online Movies™`}
         />
         <meta
           property='og:description'
@@ -391,7 +391,7 @@ const adultDetail = ({ adult }) => {
           />
         <meta property='og:url' content={`${adult && adult.url}`} />
         <meta name='keywords' content={`${adult && adult.keywords}`} />
-        <meta property='og:site_name' content='Uwatchfree Online' />
+        <meta property='og:site_name' content='Watch Online Movies' />
         <meta property='og:type' content='article' />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta property='article:section' content='adult' />
@@ -483,15 +483,15 @@ const adultDetail = ({ adult }) => {
             className='flex flex-col text-center py-5 font-bold text-3xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           >
-            Uwatchfree Online™ - For Movies, TV Show & Sports.  </h2>
+            Watch Online Movies™ - For Movies, TV Show & Sports.  </h2>
          <p className='flex flex-col text-center py-5 font-bold text-xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           > 
-"Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" is a platform that provides access to a wide range of high-definition movies, tv shows & sports Live streaming online. With this platform, users can enjoy a diverse selection of movies, tv shows & sports Live spanning various genres, including action, drama, comedy, thriller, romance, live and more.
+"Watch Online Movies™ - For Movies, Tv Shows & Sports Live" is a platform that provides access to a wide range of high-definition movies, tv shows & sports Live streaming online. With this platform, users can enjoy a diverse selection of movies, tv shows & sports Live spanning various genres, including action, drama, comedy, thriller, romance, live and more.
 
 The platform aims to offer a seamless and enjoyable watching experience, allowing users to browse through a vast collection of movies, tv shows & sports Live and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new movies, tv shows & sports Live tailored to their preferences.
 
-Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to be a go-to destination for enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
+Overall, "Watch Online Movies™ - For Movies, Tv Shows & Sports Live" strives to be a go-to destination for enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
 </p>
         <div style={{ maxWidth: '800px', width: '100%', marginBottom: '20px' }}>
           <Image

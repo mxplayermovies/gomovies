@@ -7,12 +7,12 @@ const contact = () => {
   return (
     <div>
         <Head>
-        <title>Uwatchfree Online™ Contact Us</title>
+        <title>Watch Online Movies™ Contact Us</title>
       
 	<meta name="description" content="Watch
  now the Best TV shows and Movies " />
 	<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-	<meta name="keywords" content="Uwatchfree Online,streaming,latest movies,online tv,latest free movies,watch latest movies online,latest full movies online" />
+	<meta name="keywords" content="Watch Online Movies,streaming,latest movies,online tv,latest free movies,watch latest movies online,latest full movies online" />
 	<meta name="revisit-after" content="1 days" />
 	<meta property="og:locale" content="en_US" />   
 
@@ -21,18 +21,18 @@ const contact = () => {
   <meta name="robots" content="index, follow" />
 	
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
-	<meta property="og:site_name" content="Uwatchfree Online™ | Watch Movies, TV-Series & Sports Live Online Free " />
+	<meta property="og:site_name" content="Watch Online Movies™ | Watch Movies, TV-Series & Sports Live Online Free " />
 	<meta property="og:type" content="website" />
 	<meta property="og:image:height" content="1280"/>
 	<meta property="og:image:width" content="720"/>
-	<meta property="og:title" content="Uwatchfree Online™ | Watch Movies, TV-Series & Sports Live Online Free " />
+	<meta property="og:title" content="Watch Online Movies™ | Watch Movies, TV-Series & Sports Live Online Free " />
 	<meta property="og:description" content="Watch Movies, TV-Series & Sports Live Online Free " />
 	<meta property="og:url" content="https://watchonlinemovies.vercel.app/" />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property='og:image' content="https://watchonlinemovies.vercel.app/og_image.jpg" />
 	<meta property="og:image:secure_url" content="https://watchonlinemovies.vercel.app/og_image.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Uwatchfree Online™ " />
+	<meta name="twitter:title" content="Watch Online Movies™ " />
 	<meta name="twitter:description" content=" Watch Movies, TV-Series & Sports Live Online Free " />
 	<meta name="twitter:image" content="https://watchonlinemovies.vercel.app/og_image.jpg" />
   
