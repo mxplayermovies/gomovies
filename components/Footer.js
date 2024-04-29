@@ -92,7 +92,7 @@ export default function Footer() {
 
   <div className="bg-black">
     <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p className="text-gray-500 text-sm text-center sm:text-left">© 2024 Watch Online Movies™ —
+      <p className="text-gray-500 text-sm text-center sm:text-left">© 2024 Uwatchfree Online™ —
         <a href="https://twitter.com/MxplayerMovies" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">The Best Movies Platform HD Movies. All rights reserved.</a>
       </p>
       

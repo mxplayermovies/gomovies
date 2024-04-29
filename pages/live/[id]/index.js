@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import moviesData from '../../../public/movie.json'
+import livesData from '../../../public/live.json'
 import { useEffect, useState, useRef } from 'react'
 import Styles from '@styles/video-player.module.css'
 import Head from 'next/head'
@@ -10,11 +10,12 @@ import HomeStyles from '@styles/styles.module.css'
 import ShareButtons from '@components/ShareButtons'
 import Rating from '@components/Rating'
 import TrendingMovies from '@components/TrendingMovies'
+import ExtensionInstallation from '@components/ExtensionInstallation';
 // import DailyMotionBackground from '@components/DailyMotionBackground'
 import Max from '@components/Max'
 import Script from 'next/script'
 
-const MovieDetail = ({ movie }) => {
+const liveDetail = ({ live }) => {
   const router = useRouter()
   const { id } = router.query
 
@@ -23,7 +24,22 @@ const MovieDetail = ({ movie }) => {
   const [showPopup1, setShowPopup1] = useState(false)
   const [showPopup2, setShowPopup2] = useState(false)
   const [showPopup3, setShowPopup3] = useState(false)
+  const [showPopup4, setShowPopup4] = useState(false)
+  const [showPopup5, setShowPopup5] = useState(false)
+  const [showPopup6, setShowPopup6] = useState(false)
   const [showPopupTrailer, setShowPopupTrailer] = useState(false)
+  const [flashing, setFlashing] = useState(true);
+
+  useEffect(() => {
+    // Flashing effect interval (toggle flashing state every 500ms)
+    const interval = setInterval(() => {
+      setFlashing((prevFlashing) => !prevFlashing);
+    }, 500);
+
+    return () => {
+      clearInterval(interval); // Clean up interval on component unmount
+    };
+  }, []);
 
   const togglePopup = () => {
     setShowPopup(!showPopup)
@@ -38,19 +54,30 @@ const MovieDetail = ({ movie }) => {
   }
 
   const togglePopup3 = () => {
-    setShowPopup3(!showPopup3)
+    setShowPopup3(!showPopup3)  
   }
 
+  const togglePopup4 = () => {
+    setShowPopup4(!showPopup4)
+  }
+
+  const togglePopup5 = () => {
+    setShowPopup5(!showPopup5)
+  }
+
+  const togglePopup6 = () => {
+    setShowPopup6(!showPopup6)
+  }
   const togglePopupTrailer = () => {
     setShowPopupTrailer(!showPopupTrailer)
   }
 
-  const [adultMovies, setAdultMovies] = useState([])
+  const [adultlives, setAdultlives] = useState([])
 
   useEffect(() => {
-    // Filter adult movies from the moviesData
-    const filteredMovies = moviesData.filter(movie => movie.group === 'adult')
-    setAdultMovies(filteredMovies)
+    // Filter adult lives from the livesData
+    const filteredlives = livesData.filter(live => live.group === 'adult')
+    setAdultlives(filteredlives)
   }, [])
 
   const audioIframeRef = useRef(null)
@@ -120,14 +147,14 @@ const MovieDetail = ({ movie }) => {
         audioIframeRef.current.removeEventListener('load', loadAudioProcessing)
       }
     }
-  }, [movie, enableNoiseCancellation])
+  }, [live, enableNoiseCancellation])
 
   const loadVideo = (videoPage, contentType, server) => {
     const videoIframe = document.getElementById('videoIframe')
 
     const userResponse = confirm(
       `Do you want to load ${
-        contentType === 'tvshow' ? 'TV Show Episode' : 'Movie'
+        contentType === 'tvshow' ? 'TV Show Episode' : 'live'
       } from Server ${server}?`
     )
 
@@ -137,7 +164,7 @@ const MovieDetail = ({ movie }) => {
         // Display a message (only if it hasn't been shown before)
         alert(
           `Loading ${
-            contentType === 'tvshow' ? 'TV Show Episode' : 'Movie'
+            contentType === 'tvshow' ? 'TV Show Episode' : 'live'
           } - Selected Server ${server}`
         )
         setMessageShown(true) // Update messageShown state
@@ -179,173 +206,173 @@ const MovieDetail = ({ movie }) => {
     }
   ]);
 
-  const rankMathSchema = JSON.stringify({
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': ['Person', 'Organization'],
-        '@id': 'https://gravatar.com/drtrailer2022/#person',
-        name: 'Dr Trailer'
-      },
-      {
-        '@type': 'WebSite',
-        '@id': 'https://watchonlinemovies.vercel.app/#website',
-        url: 'https://watchonlinemovies.vercel.app/',
-        name: 'Uwatchfree Online™',
-        publisher: {
-          '@id': 'https://gravatar.com/drtrailer2022/#person'
-        },
-        inLanguage: 'en-US'
-      },
-      {
-        '@type': 'WebPage',
-        '@id': `/${movie['movie.watch']}#webpage`,
-        url: `/${movie['movie.watch']}`,
-        name: `${movie.name} | Uwatchfree Online™`,
-        datePublished: '2024-01-13T13:00:00+00:00',
-        dateModified: '2024-01-13T13:13:00+00:00',
-        isPartOf: {
-          '@id': 'https://watchonlinemovies.vercel.app/#website'
-        },
-        inLanguage: 'en-US'
-      },
-      {
-        '@type': 'Person',
-        '@id': 'https://watchonlinemovies.vercel.app/author/watchmoviesonline/',
-        name: 'Dr Trailer',
-        url: 'https://watchonlinemovies.vercel.app/author/watchmoviesonline/',
-        image: {
-          '@type': 'ImageObject',
-          '@id': 'https://gravatar.com/drtrailer2022',
-          url: 'https://gravatar.com/drtrailer2022',
-          caption: 'Dr Trailer',
-          inLanguage: 'en-US'
-        },
-        sameAs: ['https://watchonlinemovies.vercel.app/']
-      },
-      {
-        '@type': 'Article',
-        '@id': `/${movie['movie.watch']}#article`,
-        headline: `Watch ${movie.name} | Uwatchfree Online™`,
-        datePublished: '2024-01-13T13:00:00+00:00',
-        dateModified: '2024-01-13T13:13:00+00:00',
-        articleSection: 'Movie',
-        author: {
-          '@id':
-            'https://watchonlinemovies.vercel.app/author/watchmoviesonline/'
-        },
-        publisher: {
-          '@id': 'https://gravatar.com/drtrailer2022/#person'
-        },
-        description: `Watch free Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!`,
-        image: movie.image,
-        name: `Watch ${movie.name} | Uwatchfree Online™`,
-        isPartOf: {
-          '@id': `/${movie['movie.watch']}#webpage`
-        },
-        inLanguage: 'en-US',
-        mainEntityOfPage: {
-          '@id': `/${movie['movie.watch']}#webpage`
-        }
-      },
-      {
-        '@type': 'BlogPosting',
-        '@id': `/${movie['movie.watch']}#blogPost`,
-        headline: `Watch ${movie.name} | Uwatchfree Online™`,
-        datePublished: '2024-01-13T13:00:00+00:00',
-        dateModified: '2024-01-13T13:13:00+00:00',
-        articleSection: 'Movie',
-        author: {
-          '@id':
-            'https://watchonlinemovies.vercel.app/author/watchmoviesonline/'
-        },
-        publisher: {
-          '@id': 'https://gravatar.com/drtrailer2022/#person'
-        },
-        description: `Watch free Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!`,
-        image: movie.image,
-        name: `Watch ${movie.name} | Uwatchfree Online™`,
-        '@id': `/${movie['movie.watch']}#richSnippet`,
-        isPartOf: {
-          '@id': `/${movie['movie.watch']}#webpage`
-        },
-        inLanguage: 'en-US',
-        mainEntityOfPage: {
-          '@id': `/${movie['movie.watch']}#webpage`
-        }
-      }
-    ]
-  })
+  // const rankMathSchema = JSON.stringify({
+  //   '@context': 'https://schema.org',
+  //   '@graph': [
+  //     {
+  //       '@type': ['Person', 'Organization'],
+  //       '@id': 'https://gravatar.com/drtrailer2022/#person',
+  //       name: 'Dr Trailer'
+  //     },
+  //     {
+  //       '@type': 'WebSite',
+  //       '@id': 'https://watchonlinemovies.vercel.app/#website',
+  //       url: 'https://watchonlinemovies.vercel.app/',
+  //       name: 'Uwatchfree Online™',
+  //       publisher: {
+  //         '@id': 'https://gravatar.com/drtrailer2022/#person'
+  //       },
+  //       inLanguage: 'en-US'
+  //     },
+  //     {
+  //       '@type': 'WebPage',
+  //       '@id': `/${live['live.watch']}#webpage`,
+  //       url: `/${live['live.watch']}`,
+  //       name: `${live.name} | Uwatchfree Online™`,
+  //       datePublished: '2024-01-13T13:00:00+00:00',
+  //       dateModified: '2024-01-13T13:13:00+00:00',
+  //       isPartOf: {
+  //         '@id': 'https://watchonlinemovies.vercel.app/#website'
+  //       },
+  //       inLanguage: 'en-US'
+  //     },
+  //     {
+  //       '@type': 'Person',
+  //       '@id': 'https://watchonlinemovies.vercel.app/author/watchlivesonline/',
+  //       name: 'Dr Trailer',
+  //       url: 'https://watchonlinemovies.vercel.app/author/watchlivesonline/',
+  //       image: {
+  //         '@type': 'ImageObject',
+  //         '@id': 'https://gravatar.com/drtrailer2022',
+  //         url: 'https://gravatar.com/drtrailer2022',
+  //         caption: 'Dr Trailer',
+  //         inLanguage: 'en-US'
+  //       },
+  //       sameAs: ['https://watchonlinemovies.vercel.app/']
+  //     },
+  //     {
+  //       '@type': 'Article',
+  //       '@id': `/${live['live.watch']}#article`,
+  //       headline: `Watch ${live.name} | Uwatchfree Online™`,
+  //       datePublished: '2024-01-13T13:00:00+00:00',
+  //       dateModified: '2024-01-13T13:13:00+00:00',
+  //       articleSection: 'live',
+  //       author: {
+  //         '@id':
+  //           'https://watchonlinemovies.vercel.app/author/watchlivesonline/'
+  //       },
+  //       publisher: {
+  //         '@id': 'https://gravatar.com/drtrailer2022/#person'
+  //       },
+  //       description: `Uwatchfree Online | ${live.name} for free. Where you can find lives of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+  //       image: live.image,
+  //       name: `Watch ${live.name} | Uwatchfree Online™`,
+  //       isPartOf: {
+  //         '@id': `/${live['live.watch']}#webpage`
+  //       },
+  //       inLanguage: 'en-US',
+  //       mainEntityOfPage: {
+  //         '@id': `/${live['live.watch']}#webpage`
+  //       }
+  //     },
+  //     {
+  //       '@type': 'BlogPosting',
+  //       '@id': `/${live['live.watch']}#blogPost`,
+  //       headline: `Watch ${live.name} | Uwatchfree Online™`,
+  //       datePublished: '2024-01-13T13:00:00+00:00',
+  //       dateModified: '2024-01-13T13:13:00+00:00',
+  //       articleSection: 'live',
+  //       author: {
+  //         '@id':
+  //           'https://watchonlinemovies.vercel.app/author/watchlivesonline/'
+  //       },
+  //       publisher: {
+  //         '@id': 'https://gravatar.com/drtrailer2022/#person'
+  //       },
+  //       description: `Uwatchfree Online | ${live.name} for free. Where you can find lives of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+  //       image: live.image,
+  //       name: `Watch ${live.name} | Uwatchfree Online™`,
+  //       '@id': `/${live['live.watch']}#richSnippet`,
+  //       isPartOf: {
+  //         '@id': `/${live['live.watch']}#webpage`
+  //       },
+  //       inLanguage: 'en-US',
+  //       mainEntityOfPage: {
+  //         '@id': `/${live['live.watch']}#webpage`
+  //       }
+  //     }
+  //   ]
+  // })
 
-  const ldJsonData = JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'Movie',
-    '@id': `/${movie['movie.watch']}`,
-    name: movie.name,
-    url: `/${movie['movie.watch']}`,
-    description: movie.synopsis,
-    image: movie.poster,
-    genre: movie.genre,
-    datePublished: movie.yearRelease,
-    director: {
-      '@type': 'Person',
-      name: movie.director
-    },
-    actor: movie.starring.map(actor => ({
-      '@type': 'Person',
-      name: actor
-    })),
-    potentialAction: {
-      '@type': 'WatchAction',
-      target: [
-        {
-          '@type': 'EntryPoint',
-          name: movie.name, // Removed unnecessary conditional
-          urlTemplate: `${movie['movie.url']}` // Updated to use movie.watch
-        }
-      ]
-    },
-    locationCreated: {
-      '@type': 'Place',
-      name: movie.country
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: movie.aggregateRating.ratingValue,
-      bestRating: movie.aggregateRating.bestRating,
-      worstRating: movie.aggregateRating.worstRating,
-      ratingCount: movie.aggregateRating.ratingCount
-    },
-    author: {
-      '@type': 'Person', // Updated to remove unnecessary array
-      name: 'DrTrailer',
-      url: 'https://gravatar.com/drtrailer2022'
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Uwatchfree Online™',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://watchonlinemovies.vercel.app/og_image.jpg'
-      }
-    },
-    additionalProperty: {
-      '@type': 'PropertyValue',
-      name: 'Action Platform',
-      value: ['Desktop Web Platform', 'iOS Platform', 'Android Platform']
-    }
-  })
+  // const ldJsonData = JSON.stringify({
+  //   '@context': 'https://schema.org',
+  //   '@type': 'live',
+  //   '@id': `/${live['live.watch']}`,
+  //   name: live.name,
+  //   url: `/${live['live.watch']}`,
+  //   description: live.synopsis,
+  //   image: live.poster,
+  //   genre: live.genre,
+  //   datePublished: live.yearRelease,
+  //   director: {
+  //     '@type': 'Person',
+  //     name: live.director
+  //   },
+  //   actor: live.starring.map(actor => ({
+  //     '@type': 'Person',
+  //     name: actor
+  //   })),
+  //   potentialAction: {
+  //     '@type': 'WatchAction',
+  //     target: [
+  //       {
+  //         '@type': 'EntryPoint',
+  //         name: live.name, 
+  //         urlTemplate: `${live['live.url']}` 
+  //       }
+  //     ]
+  //   },
+  //   locationCreated: {
+  //     '@type': 'Place',
+  //     name: live.country
+  //   },
+  //   aggregateRating: {
+  //     '@type': 'AggregateRating',
+  //     ratingValue: live.aggregateRating.ratingValue,
+  //     bestRating: live.aggregateRating.bestRating,
+  //     worstRating: live.aggregateRating.worstRating,
+  //     ratingCount: live.aggregateRating.ratingCount
+  //   },
+  //   author: {
+  //     '@type': 'Person', 
+  //     name: 'DrTrailer',
+  //     url: 'https://gravatar.com/drtrailer2022'
+  //   },
+  //   publisher: {
+  //     '@type': 'Organization',
+  //     name: 'Uwatchfree Online™',
+  //     logo: {
+  //       '@type': 'ImageObject',
+  //       url: 'https://watchonlinemovies.vercel.app/og_image.jpg'
+  //     }
+  //   },
+  //   additionalProperty: {
+  //     '@type': 'PropertyValue',
+  //     name: 'Action Platform',
+  //     value: ['Desktop Web Platform', 'iOS Platform', 'Android Platform']
+  //   }
+  // })
 
-  const trailerSchema = JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'VideoObject',
-    name: `${movie.name} | Uwatchfree Online™`,
-    description: movie.trailer.description,
-    uploadDate: movie.trailer.uploadDate,
-    thumbnailUrl: movie.trailer.thumbnail.contentUrl,
-    duration: movie.trailer.duration,
-    embedUrl: movie.trailer.embedUrl
-  })
+  // const trailerSchema = JSON.stringify({
+  //   '@context': 'https://schema.org',
+  //   '@type': 'VideoObject',
+  //   name: `${live.name} | Uwatchfree Online™`,
+  //   description: live.trailer.description,
+  //   uploadDate: live.trailer.uploadDate,
+  //   thumbnailUrl: live.trailer.thumbnail.contentUrl,
+  //   duration: live.trailer.duration,
+  //   embedUrl: live.trailer.embedUrl
+  // })
 
   return (
     <div>
@@ -354,8 +381,8 @@ const MovieDetail = ({ movie }) => {
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
         />
-        <title> Watch { movie && movie.name} | Uwatchfree Online™</title>
-        <link rel='canonical' href={movie && movie.url} />
+        <title> Watch { live && live.name} | Uwatchfree Online™</title>
+        <link rel='canonical' href={live && live.url} />
         <meta name='robots' content='index, follow' />
         <meta name='googlebot' content='index,follow' />
         <meta name='revisit-after' content='1 days' />
@@ -363,28 +390,28 @@ const MovieDetail = ({ movie }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
-          content={`${movie && movie.name} - Uwatchfree Online™`}
+          content={`${live && live.name} - Uwatchfree Online™`}
         />
         <meta
           property='og:description'
-          content={`${ movie && movie.name} | For Movies, TV Show & Sports`}
+          content={`${ live && live.name} | For Movies, TV Show & live`}
         />
        <meta
             property='og:description'
-            content='Watch free Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!'
+            content='Watch Sky live Cricket HD Live Streaming, Sky live Cricket Live, Watch Sky live Cricket live stream online free with the best quality and no registration or download - Watch TV Channels online from anywhere, on any device.'
           />
-        <meta property='og:url' content={`${movie && movie.url}`} />
-        <meta name='keywords' content={`${movie && movie.keywords}`} />
+        <meta property='og:url' content={`${live && live.url}`} />
+        <meta name='keywords' content={`${live && live.keywords}`} />
         <meta property='og:site_name' content='Uwatchfree Online' />
         <meta property='og:type' content='article' />
         <meta name='mobile-web-app-capable' content='yes' />
-        <meta property='article:section' content='Movie' />
+        <meta property='article:section' content='live' />
         <meta name='author' content='admin' />
         <meta
           property='article:modified_time'
           content='2024-01-01T13:13:13+00:00'
         />
-        <meta property='og:image' content={`${movie && movie.backimage}`}  />
+        <meta property='og:image' content={`${live && live.backimage}`}  />
 
         <meta property='og:image:width' content='1080px' />
         <meta property='og:image:height' content='720px' />
@@ -410,7 +437,7 @@ const MovieDetail = ({ movie }) => {
             type='application/ld+json'
             dangerouslySetInnerHTML={{ __html: uwatchfreeSchema }}
           />
-        <script
+        {/* <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: ldJsonData }}
         />
@@ -421,7 +448,7 @@ const MovieDetail = ({ movie }) => {
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: trailerSchema }}
-        />
+        /> */}
         <link
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'
@@ -448,7 +475,7 @@ const MovieDetail = ({ movie }) => {
         />
       </Head>
       <Script src='../../propler/ads.js' defer />
-
+      <ExtensionInstallation />
       <div
         className={`w-full bg-gray-600 shadow`}
         style={{
@@ -467,22 +494,39 @@ const MovieDetail = ({ movie }) => {
             className='flex flex-col text-center py-5 font-bold text-3xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           >
-            Uwatchfree Online™ - For Movies, TV Show & Sports.  </h2>
+            Uwatchfree Online™ - For Movies, TV Show & live.  </h2>
          <p className='flex flex-col text-center py-5 font-bold text-xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           > 
-"Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" is a platform that provides access to a wide range of high-definition movies, tv shows & sports Live streaming online. With this platform, users can enjoy a diverse selection of movies, tv shows & sports Live spanning various genres, including action, drama, comedy, thriller, romance, live and more.
+"Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" is a platform that provides access to a wide range of high-definition movies, tv shows & live Live streaming online. With this platform, users can enjoy a diverse selection of movies, tv shows & live Live spanning various genres, including action, drama, comedy, thriller, romance, live and more.
 
-The platform aims to offer a seamless and enjoyable watching experience, allowing users to browse through a vast collection of movies, tv shows & sports Live and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new movies, tv shows & sports Live tailored to their preferences.
+The platform aims to offer a seamless and enjoyable watching experience, allowing users to browse through a vast collection of movies, tv shows & live Live and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new movies, tv shows & live Live tailored to their preferences.
 
 Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to be a go-to destination for enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
 
 
 </p>
+<p className=' text-center font-bold text-lg items-center justify-center'
+            style={{ color: '#FF0000',  textShadow: '5px 5px 2px #000', marginBottom:'20px' }}>
+        To enhance your experience on our website, please install the SquareX - Be Secure & Anonymous Chrome extension from the Chrome Web Store:
+        <br />
+        <button
+  className={`btn btn-success ${flashing ? 'btn-flashing' : ''}`}
+  onClick={() => {
+    // Handle button click event
+  }}
+>
+        <a href="https://chrome.google.com/webstore/detail/squarex-be-secure-anonymo/kapjaoifikajdcdehfdlmojlepfpkpoe" className=' text-center font-bold text-lg items-center justify-center'
+            style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000', marginBottom:'20px' }} target="_blank" rel="noopener noreferrer">
+          Install SquareX 
+        </a></button>
+      </p>
+
+
         <div style={{ maxWidth: '800px', width: '100%', marginBottom: '20px' }}>
           <Image
-            src={movie.image}
-            alt={movie.title}
+            src={live.image}
+            alt={live.title}
             width={300}
             height={500}
             priority
@@ -497,7 +541,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
             }}
           />
 
-          <h2
+          <h1
             style={{
               fontFamily: 'Poppins, sans-serif',
               fontSize: '34px',
@@ -507,325 +551,17 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
               textShadow: '2px 5px 5px #000000'
             }}
           >
-            {movie.title}
-          </h2>
+            {live.title}
+          </h1>
 
-          <p
-            style={{
-              marginTop: '20px',
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            {' '}
-            Genre: {movie.genre.join(', ')}{' '}
-          </p>
-          <p
-            style={{
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            Synopsis: {movie.synopsis}
-          </p>
-          <p
-            style={{
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '25px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            Director: {movie.directorname}
-          </p>
-
-          <p
-            style={{
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            <a href={movie.imdbLink}>IMDb Rating: {movie.imdbRating}</a>
-          </p>
-
-          <p
-            style={{
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            Average Time: {movie.avgTime}
-          </p>
-
-          <p
-            style={{
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            Country: {movie.country}
-          </p>
-          <p
-            style={{
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            Start Date: {movie.startDate}
-          </p>
-          <p
-            style={{
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            Content Rating: {movie.contentRating}
-          </p>
-          <p
-            style={{
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            Original Network: {movie.Originalnetwork}
-          </p>
-          <p
-            style={{
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            Language: {movie.language}
-          </p>
-          <p
-            style={{
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            Time: {movie.time}
-          </p>
-          <p
-            style={{
-              marginBottom: '10px',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '20px',
-              fontWeight: 'bold',
-              color: '#fff',
-              textShadow: '2px 5px 5px #000000'
-            }}
-          >
-            Starring: {movie.starring.join(', ')}
-          </p>
-        </div>
-        <Rating />
-
-        <div className={HomeStyles.movieDetails}>
-          {movie && (
-            <div>
-              <div className={`${HomeStyles.imageGrid} mt-5`}>
-                <img
-                  className={`${HomeStyles.image} img-fluid lazyload `}
-                  src={movie.directorimg}
-                  alt={movie.directorname}
-                  title={movie.directorname}
-                  style={{
-                    width: '200px',
-                    height: '200px',
-                    objectFit: 'cover',
-                    filter: 'contrast(1.2) saturate(1.2)',
-                    boxShadow: '0 0 10px 0 #C0C0C0' // Shadow effect with black color
-                  }}
-                  loading='lazy'
-                  layout='responsive'
-                />
-                <img
-                  className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={movie.actor1img}
-                  alt={movie.actor1}
-                  title={movie.actor1}
-                  style={{
-                    width: '200px',
-                    height: '200px',
-                    objectFit: 'cover',
-                    boxShadow: '0 0 10px 0 #C0C0C0', // Shadow effect with black color
-                    filter: 'contrast(1.2) saturate(1.2)'
-                  }}
-                  loading='lazy'
-                  layout='responsive'
-                />
-                <img
-                  className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={movie.actor2img}
-                  alt={movie.actor2}
-                  title={movie.actor2}
-                  style={{
-                    width: '200px',
-                    height: '200px',
-                    objectFit: 'cover',
-                    boxShadow: '0 0 10px 0 #C0C0C0', // Shadow effect with black color
-                    filter: 'contrast(1.2) saturate(1.2)'
-                  }}
-                  loading='lazy'
-                  layout='responsive'
-                />
-                <img
-                  className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={movie.actor3img}
-                  alt={movie.actor3}
-                  title={movie.actor3}
-                  style={{
-                    width: '200px',
-                    height: '200px',
-                    objectFit: 'cover',
-                    boxShadow: '0 0 10px 0 #C0C0C0', // Shadow effect with black color
-                    filter: 'contrast(1.2) saturate(1.2)'
-                  }}
-                  loading='lazy'
-                  layout='responsive'
-                />
-                <img
-                  className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={movie.actor4img}
-                  alt={movie.actor4}
-                  title={movie.actor4}
-                  style={{
-                    width: '200px',
-                    height: '200px',
-                    objectFit: 'cover',
-                    boxShadow: '0 0 10px 0 #C0C0C0', // Shadow effect with black color
-                    filter: 'contrast(1.2) saturate(1.2)'
-                  }}
-                  loading='lazy'
-                  layout='responsive'
-                />
-                <img
-                  className={`${HomeStyles.image} img-fluid lazyload`}
-                  src={movie.actor5img}
-                  alt={movie.actor5}
-                  title={movie.actor5}
-                  style={{
-                    width: '200px',
-                    height: '200px',
-                    objectFit: 'cover',
-                    boxShadow: '0 0 10px 0 #C0C0C0', // Shadow effect with black color
-                    filter: 'contrast(1.2) saturate(1.2)'
-                  }}
-                  loading='lazy'
-                  layout='responsive'
-                />
-              </div>
-            </div>
-          )}
-        </div>
-        {/* <DailyMotionBackground videoId={movie.video} /> */}
-
-        <h1
+          </div>
+        {/* <h1
           className='flex flex-col text-center py-5 font-bold text-3xl items-center justify-center'
           style={{ color: '#40D7BC', textShadow: '5px 5px 2px #000' }}
         >
-          Watch Online Movie {movie && movie.title}{' '}
-        </h1>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <span
-            className='rating-no ml-15 rating-left'
-            style={{
-              color: '#1e06fa',
-              justifyContent: 'center',
-              alignItems: 'center',
-              textShadow: '3px 5px 5px #1e06fa',
-              fontSize: '20px'
-            }}
-          >
-            <i className='fas fa-video animate-blink '></i>{' '}
-            <span className='animate-blink'> Full HD 1080P </span>
-          </span>
-          <span style={{ marginLeft: '25px' }}></span>{' '}
-          {/* This creates a gap between the spans */}
-          <span
-            className='rating-no ml-15 rating-left'
-            style={{
-              color: '#fae206',
-              justifyContent: 'center',
-              alignItems: 'center',
-              textShadow: '3px 5px 5px #fae206',
-              fontSize: '20px'
-            }}
-          >
-            <i className='fas fa-video'></i>
-            <span> HD 720P </span>
-          </span>
-        </div>
+          Watch Online live {live && live.title}{' '}
+        </h1> */}
 
-        <style jsx>{`
-          .animate-blink {
-            animation: blink 1s infinite;
-            color: #1e06fa;
-            justify-content: center;
-            align-items: center;
-            text-shadow: 3px 5px 5px #1e06fa;
-          }
-
-          @keyframes blink {
-            0% {
-              opacity: 1;
-            }
-            50% {
-              opacity: 0;
-            }
-            100% {
-              opacity: 1;
-            }
-          }
-        `}</style>
-
-        {/* <div className={Styles['iframe-container']}>
-  <iframe id="videoIframe" className="embed-responsive-item rounded-2xl"
-    src={movie.server1} frameborder="0" scrolling="no"
-    allowFullScreen mozRequestFullScreen webkitRequestFullscreen style={{ marginTop: '10px' }}></iframe>
- </div> */}
 
         <h3
           style={{
@@ -889,7 +625,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
               >
                 {Array.from({ length: 10 }, (_, episodeNumber) => {
                   const episodeKey = `episode${episodeNumber + 1}sa1ser1`
-                  const episodeUrl = movie[episodeKey]
+                  const episodeUrl = live[episodeKey]
                   if (!episodeUrl) return null
                   return (
                     <div
@@ -933,7 +669,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
                                 textShadow: '3px 5px 5px #000'
                               }}
                             >
-                              Watch Online Movie {movie && movie.name}
+                              Watch Online  {live && live.title}
                             </h2>
                             <div className={Styles['iframe-container']}>
                               <iframe
@@ -961,8 +697,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
                                 fontWeight: 'bold'
                               }}
                             >
-                              *Note: Use Setting in Player to improve the
-                              Quality of video to HD Quality 1080p.
+                              *Note: Please Use VPN Services for your devices to get the channel to work.
                             </p>
                           </div>
                         </div>
@@ -983,7 +718,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
               >
                 {Array.from({ length: 10 }, (_, episodeNumber) => {
                   const episodeKey = `episode${episodeNumber + 1}sa1ser2`
-                  const episodeUrl = movie[episodeKey]
+                  const episodeUrl = live[episodeKey]
                   if (!episodeUrl) return null
                   return (
                     <div
@@ -1028,7 +763,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
                                 textShadow: '3px 5px 5px #000'
                               }}
                             >
-                              Watch Online Movie {movie && movie.name}
+                              Watch Online {live && live.title}
                             </h2>
                             <div className={Styles['iframe-container']}>
                               <iframe
@@ -1056,8 +791,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
                                 fontWeight: 'bold'
                               }}
                             >
-                              *Note: Use Setting in Player to improve the
-                              Quality of video to HD Quality 1080p.
+                              *Note: Please Use VPN Services for your devices to get the channel to work.
                             </p>
                           </div>
                         </div>
@@ -1078,7 +812,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
               >
                 {Array.from({ length: 10 }, (_, episodeNumber) => {
                   const episodeKey = `episode${episodeNumber + 1}sa1ser3`
-                  const episodeUrl = movie[episodeKey]
+                  const episodeUrl = live[episodeKey]
                   if (!episodeUrl) return null
                   return (
                     <div
@@ -1123,7 +857,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
                                 textShadow: '3px 5px 5px #000'
                               }}
                             >
-                              Watch Online Movie {movie && movie.name}
+                              Watch Online {live && live.title}
                             </h2>
                             <div className={Styles['iframe-container']}>
                               <iframe
@@ -1151,8 +885,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
                                 fontWeight: 'bold'
                               }}
                             >
-                              *Note: Use Setting in Player to improve the
-                              Quality of video to HD Quality 1080p.
+                              *Note: Please Use VPN Services for your devices to get the channel to work.
                             </p>
                           </div>
                         </div>
@@ -1212,7 +945,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
                   textShadow: '2px 5px 5px #000000'
                 }}
               >
-                server1
+                server 4
               </Tab>
               <Tab
                 className={`${HomeStyles.tab} ${HomeStyles.server2}`}
@@ -1222,7 +955,7 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
                   textShadow: '2px 5px 5px #000000'
                 }}
               >
-                server2
+                server 5
               </Tab>
               <Tab
                 className={`${HomeStyles.tab} ${HomeStyles.server3}`}
@@ -1232,247 +965,294 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
                   textShadow: '2px 5px 5px #000000'
                 }}
               >
-                server3
+                server 6
               </Tab>
             </TabList>
-            {movie && (
+            {live && (
               <>
                 {/* Server 01 content */}
                 <TabPanel>
-                  <div className='row mx-auto' style={{ marginTop: '5px' }}>
-                    <div
-                      className='button-container'
-                      style={{
-                        marginTop: '10px',
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center'
-                      }}
-                    >
-                      {Array.from({ length: 10 }, (_, episodeNumber) => {
+              <div
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  justifyContent: 'center'
+                }}
+              >
+                 {Array.from({ length: 10 }, (_, episodeNumber) => {
                         const downloadKey = `download${episodeNumber + 1}s1ser1`
-                        const downloadLink = movie[downloadKey]
+                        const downloadLink = live && live[downloadKey] // Check if live exists
                         if (!downloadLink) return null
                         return (
                           <div
                             className='mb-5 mr-3'
                             key={`episode${episodeNumber + 1}`}
                           >
-                            <a
-                              href={downloadLink}
-                              target='_blank'
-                              rel='noopener noreferrer'
+                      <button
+                        className='episode-button relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110 cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0'
+                        onClick={togglePopup4}
+                      >
+                        <span
+                          style={{
+                            color: '#15f4ee',
+                            fontSize: '24px',
+                            textShadow: '3px 5px 5px #000'
+                          }}
+                        >
+                          {' '}
+                          <i
+                            className='fa fa-play-circle'
+                            aria-hidden='true'
+                          ></i>{' '}
+                          Watch Now
+                        </span>
+                      </button>
+                      {showPopup4 && (
+                        <div className='popup-overlay'>
+                          <div className='popup'>
+                            <button
+                              className='close-button'
+                              onClick={togglePopup4}
                             >
-                              <button className='episode-button relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110 cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0'>
-                                <span
-                                  style={{
-                                    color: '#15f4ee',
-                                    fontSize: '24px',
-                                    textShadow: '3px 5px 5px #000'
-                                  }}
-                                >
-                                  <i
-                                    className='fa fa-download'
-                                    aria-hidden='true'
-                                  ></i>{' '}
-                                  Download Now
-                                </span>
-                              </button>
-                            </a>
+                              <h2 className='relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-5 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-red-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110  cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0'>
+                                Close
+                              </h2>
+                            </button>
+                            <h2
+                              className='text-2xl font-bold'
+                              style={{
+                                color: '#40D7BC',
+                                textShadow: '3px 5px 5px #000'
+                              }}
+                            >
+                              Watch Online {live && live.title}
+                            </h2>
+                            <div className={Styles['iframe-container']}>
+                              <iframe
+                                className='rounded-3xl mr-8 flex border-1 border-blue-600 bg-gray-600 p-2'
+                                webkitallowFullScreen
+                                mozallowFullScreen
+                                allowFullScreen
+                                ref={audioIframeRef}
+                                id='audioIframe'
+                                src={downloadLink}
+                                style={{
+                                  filter:
+                                    'contrast(1.2) saturate(1.5) brightness(1.3) hue-rotate(0deg)'
+                                }}
+                              />
+                            </div>
+                            <p
+                              style={{
+                                color: '#40D7BC',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                textShadow: '3px 5px 5px #000',
+                                fontSize: '15px',
+                                fontWeight: 'bold'
+                              }}
+                            >
+                              *Note: Please Use VPN Services for your devices to get the channel to work.    </p>
                           </div>
-                        )
-                      })}
+                        </div>
+                      )}
                     </div>
-                  </div>
-                </TabPanel>
-
+                  )
+                })}
+              </div>
+            </TabPanel>
                 <TabPanel>
-                  <div className='row mx-auto' style={{ marginTop: '5px' }}>
-                    <div
-                      className='button-container'
-                      style={{
-                        marginTop: '10px',
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center'
-                      }}
-                    >
-                      {Array.from({ length: 10 }, (_, episodeNumber) => {
+              <div
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  justifyContent: 'center'
+                }}
+              >
+               {Array.from({ length: 10 }, (_, episodeNumber) => {
                         const downloadKey = `download${episodeNumber + 1}s1ser2`
-                        const downloadLink = movie && movie[downloadKey] // Check if movie exists
+                        const downloadLink = live && live[downloadKey] // Check if live exists
                         if (!downloadLink) return null
                         return (
                           <div
                             className='mb-5 mr-3'
                             key={`episode${episodeNumber + 1}`}
                           >
-                            <a
-                              href={downloadLink}
-                              target='_blank'
-                              rel='noopener noreferrer'
+                      <button
+                        className='episode-button relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110 cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0'
+                        onClick={togglePopup5}
+                      >
+                        <span
+                          style={{
+                            color: '#0efa06',
+                            fontSize: '24px',
+                            textShadow: '3px 5px 5px #000'
+                          }}
+                        >
+                          {' '}
+                          <i
+                            className='fa fa-play-circle'
+                            aria-hidden='true'
+                          ></i>{' '}
+                          Watch Now
+                        </span>
+                      </button>
+
+                      {showPopup5 && (
+                        <div className='popup-overlay'>
+                          <div className='popup'>
+                            <button
+                              className='close-button'
+                              onClick={togglePopup5}
                             >
-                              <button className='episode-button relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110 cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0'>
-                                <span
-                                  style={{
-                                    color: '#0efa06',
-                                    fontSize: '24px',
-                                    textShadow: '3px 5px 5px #000'
-                                  }}
-                                >
-                                  <i
-                                    className='fa fa-download'
-                                    aria-hidden='true'
-                                  >
-                                    {' '}
-                                  </i>{' '}
-                                  Download Now
-                                </span>
-                              </button>
-                            </a>
+                              <h2 className='relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-5 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-red-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110  cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0'>
+                                Close
+                              </h2>
+                            </button>
+                            <h2
+                              className='text-2xl font-bold'
+                              style={{
+                                color: '#40D7BC',
+                                textShadow: '3px 5px 5px #000'
+                              }}
+                            >
+                              Watch Online {live && live.title}
+                            </h2>
+                            <div className={Styles['iframe-container']}>
+                              <iframe
+                                className='  rounded-3xl  mr-8 flex  border-1 border-blue-600 bg-gray-600 p-2 '
+                                webkitallowFullScreen
+                                mozallowFullScreen
+                                allowFullScreen
+                                ref={audioIframeRef}
+                                id='audioIframe'
+                                src={downloadLink}
+                                style={{
+                                  filter:
+                                    'contrast(1.2) saturate(1.5) brightness(1.3) hue-rotate(0deg)'
+                                }}
+                              />
+                            </div>
+                            <p
+                              style={{
+                                color: '#40D7BC',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                textShadow: '3px 5px 5px #000',
+                                fontSize: '15px',
+                                fontWeight: 'bold'
+                              }}
+                            >
+                              *Note: Please Use VPN Services for your devices to get the channel to work.
+                            </p>
                           </div>
-                        )
-                      })}
+                        </div>
+                      )}
                     </div>
-                  </div>
-                </TabPanel>
+                  )
+                })}
+              </div>
+            </TabPanel>
                 {/* Server 03 content */}
                 <TabPanel>
-                  <div className='row mx-auto' style={{ marginTop: '5px' }}>
-                    <div
-                      className='button-container'
-                      style={{
-                        marginTop: '10px',
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center'
-                      }}
-                    >
-                      {Array.from({ length: 10 }, (_, episodeNumber) => {
+              <div
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  justifyContent: 'center'
+                }}
+              >
+                {Array.from({ length: 10 }, (_, episodeNumber) => {
                         const downloadKey = `download${episodeNumber + 1}s1ser3`
-                        const downloadLink = movie && movie[downloadKey]
+                        const downloadLink = live && live[downloadKey] // Check if live exists
                         if (!downloadLink) return null
                         return (
                           <div
                             className='mb-5 mr-3'
                             key={`episode${episodeNumber + 1}`}
                           >
-                            <a
-                              href={downloadLink}
-                              target='_blank'
-                              rel='noopener noreferrer'
+                      <button
+                        className='episode-button relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110 cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0'
+                        onClick={togglePopup6}
+                      >
+                        <span
+                          style={{
+                            color: '#f80303',
+                            fontSize: '24px',
+                            textShadow: '3px 5px 5px #000'
+                          }}
+                        >
+                          {' '}
+                          <i
+                            className='fa fa-play-circle'
+                            aria-hidden='true'
+                          ></i>{' '}
+                          Watch Now
+                        </span>
+                      </button>
+
+                      {showPopup6 && (
+                        <div className='popup-overlay'>
+                          <div className='popup'>
+                            <button
+                              className='close-button'
+                              onClick={togglePopup6}
                             >
-                              <button className='episode-button relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110 cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0'>
-                                <span
-                                  style={{
-                                    color: '#f80303',
-                                    fontSize: '24px',
-                                    textShadow: '3px 5px 5px #000'
-                                  }}
-                                >
-                                  Download Now{' '}
-                                  <i
-                                    className='fa fa-magnet'
-                                    aria-hidden='true'
-                                  ></i>
-                                </span>
-                              </button>
-                            </a>
+                              <h2 className='relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-5 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-red-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110  cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0'>
+                                Close
+                              </h2>
+                            </button>
+                            <h2
+                              className='text-2xl font-bold'
+                              style={{
+                                color: '#40D7BC',
+                                textShadow: '3px 5px 5px #000'
+                              }}
+                            >
+                              Watch Online {live && live.title}
+                            </h2>
+                            <div className={Styles['iframe-container']}>
+                              <iframe
+                                className='  rounded-3xl  mr-8 flex  border-1 border-blue-600 bg-gray-600 p-2 '
+                                webkitallowFullScreen
+                                mozallowFullScreen
+                                allowFullScreen
+                                ref={audioIframeRef}
+                                id='audioIframe'
+                                src={downloadLink}
+                                style={{
+                                  filter:
+                                    'contrast(1.2) saturate(1.5) brightness(1.3) hue-rotate(0deg)'
+                                }}
+                              />
+                            </div>
+                            <p
+                              style={{
+                                color: '#40D7BC',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                textShadow: '3px 5px 5px #000',
+                                fontSize: '15px',
+                                fontWeight: 'bold'
+                              }}
+                            >
+                              *Note: Please Use VPN Services for your devices to get the channel to work.
+                            </p>
                           </div>
-                        )
-                      })}
+                        </div>
+                      )}
                     </div>
-                  </div>
-                </TabPanel>
+                  )
+                })}
+              </div>
+            </TabPanel>
               </>
             )}
           </Tabs>
         </div>
-        <div className='flex flex-col py-10 text-blue-600 text-center items-center justify-center'>
-          <button
-            className='episode-button relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110 cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0'
-            onClick={togglePopup}
-          >
-            <h2 style={{ color: '#15f4ee', textShadow: '3px 5px 5px #000' }}>
-              Watch Official Trailer
-            </h2>
-          </button>
-        </div>
-        {showPopup && (
-          <div className='popup-overlay'>
-            <div className='popup'>
-              <button className='close-button' onClick={togglePopup}>
-                <h2 className='relative inline-flex items-center rounded-3xl my-5 justify-center p-0.5 mb-5 mr-2 overflow-hidden text-xl font-bold text-gray-900 group bg-gradient-to-br from-red-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 scale-100 hover:scale-110  cursor-pointer px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0'>
-                  Close
-                </h2>
-              </button>
-              <h2
-                className='text-2xl font-bold'
-                style={{
-                  color: '#40D7BC',
-                  textShadow: '3px 5px 5px #000'
-                }}
-              >
-                Official Trailer {movie && movie.name}
-              </h2>
-              {/* <div
-                id='player'
-                style={{
-                  filter:
-                    'contrast(1.2) saturate(1.5) brightness(1.3) hue-rotate(0deg)'
-                }}
-              ></div> */}
-              <div
-                style={{
-                  position: 'relative',
-                  paddingBottom: '56.25%',
-                  height: 0,
-                  overflow: 'hidden'
-                }}
-              >
-                <iframe
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    position: 'absolute',
-                    left: '0px',
-                    top: '0px',
-                    overflow: 'hidden',
-                    filter:
-                      'contrast(1.2) saturate(1.5) brightness(1.3) hue-rotate(0deg)'
-                  }}
-                  className='  rounded-3xl  mr-8 flex  border-1 border-blue-600 bg-gray-600 p-2 '
-                  frameborder='0'
-                  type='text/html'
-                  ref={audioIframeRef}
-                  id='audioIframe'
-                  src={`https://geo.dailymotion.com/player/xjrxe.html?video=${
-                    movie && movie.video
-                  }`}
-                  width='100%'
-                  height='100%'
-                  allowfullscreen
-                  title='Dailymotion Video Player'
-                  allow='autoplay'
-                ></iframe>
-              </div>
-
-              <p
-                style={{
-                  color: '#40D7BC',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  textShadow: '3px 5px 5px #000',
-                  fontSize: '15px',
-                  fontWeight: 'bold'
-                }}
-              >
-                *Note: Use Setting in Player to improve the Quality of video to
-                HD Quality 1080p.
-              </p>
-            </div>
-          </div>
-        )}
         <style jsx>{`
           .popup-overlay {
             position: fixed;
@@ -1507,9 +1287,10 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
             }
           }
         `}</style>
+        
 
         <div class='container1'>
-       <ShareButtons image={movie && movie.url} />
+       <ShareButtons image={live && live.url} />
 
 
         </div>
@@ -1527,10 +1308,11 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
           &#x1F604;Trending Movies &#128515;
         </h2>
 
+
         <TrendingMovies />
         <Max />
         <div class='container1'>
-       <ShareButtons image={movie && movie.url} />
+       <ShareButtons image={live && live.url} />
 
         </div>
       </div>
@@ -1539,21 +1321,29 @@ Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to 
 }
 
 export async function getStaticPaths () {
-  const paths = moviesData.map(movie => ({
-    params: { id: movie.id } // Assuming each movie object has an "id" field
+  const paths = livesData.map(live => ({
+    params: { id: live.id } // Assuming each live object has an "id" field
   }))
   return { paths, fallback: false }
 }
 
 export async function getStaticProps ({ params }) {
-  // Fetch the movie data based on the provided id
-  const movie = moviesData.find(m => m.id === params.id)
+  // Fetch the live data based on the provided id
+  const live = livesData.find(m => m.id === params.id)
 
   return {
     props: {
-      movie
+      live
     }
   }
 }
 
-export default MovieDetail
+export default liveDetail;
+
+
+// "episode1sa1ser1": "https://d.daddylivehd.sx/embed/stream-65.php",
+// "episode1sa1ser2": "https://daddylivehd.sx/embed/stream-267.php",
+// "episode1sa1ser3": "https://daddylivehd.sx/embed/stream-500.php",
+// "download1s1ser1": "https://d.daddylivehd.sx/embed/stream-35.php",
+// "download1s1ser2": "https://daddylivehd.sx/embed/stream-40.php",
+// "download3s1ser3": "https://daddylivehd.sx/embed/stream-33.php"

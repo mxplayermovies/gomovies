@@ -150,7 +150,7 @@ const tvshowDetail = ({ tvshow }) => {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Watch Online Movies",
+      "name": "Uwatchfree Online",
       "url": "https://watchonlinemovies.vercel.app",
       "image": ["https://watchonlinemovies.vercel.app/wp-content/uploads/2023/05/favicon.ico"],
       "logo": {
@@ -184,7 +184,7 @@ const tvshowDetail = ({ tvshow }) => {
         '@type': 'WebSite',
         '@id': 'https://watchonlinemovies.vercel.app/#website',
         url: 'https://watchonlinemovies.vercel.app/',
-        name: 'Watch Online Movies™',
+        name: 'Uwatchfree Online™',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
@@ -194,7 +194,7 @@ const tvshowDetail = ({ tvshow }) => {
         '@type': 'WebPage',
          '@id': `/${tvshow['tvshow.watch']}#webpage`,
         url: `/${tvshow['tvshow.watch']}`,
-        name: `${tvshow.name} | Watch Online Movies™`,
+        name: `${tvshow.name} | Uwatchfree Online™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         isPartOf: {
@@ -219,7 +219,7 @@ const tvshowDetail = ({ tvshow }) => {
       {
         '@type': 'Article',
          '@id': `/${tvshow['tvshow.watch']}#article`,
-        headline: `Watch ${tvshow.name} | Watch Online Movies™`,
+        headline: `Watch ${tvshow.name} | Uwatchfree Online™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'tvshow',
@@ -230,9 +230,9 @@ const tvshowDetail = ({ tvshow }) => {
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: `Watch Online Movies | ${tvshow.name} for free. Where you can find tvshows of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+        description: `Watch free Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!`,
         image: tvshow.image,
-        name: `Watch ${tvshow.name} | Watch Online Movies™`,
+        name: `Watch ${tvshow.name} | Uwatchfree Online™`,
         isPartOf: {
            '@id': `/${tvshow['tvshow.watch']}#webpage`
         },
@@ -244,7 +244,7 @@ const tvshowDetail = ({ tvshow }) => {
       {
         '@type': 'BlogPosting',
          '@id': `/${tvshow['tvshow.watch']}#blogPost`,
-        headline: `Watch ${tvshow.name} | Watch Online Movies™`,
+        headline: `Watch ${tvshow.name} | Uwatchfree Online™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'tvshow',
@@ -255,9 +255,9 @@ const tvshowDetail = ({ tvshow }) => {
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: `Watch Online Movies | ${tvshow.name} for free. Where you can find tvshows of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+        description: `Watch free Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!`,
         image: tvshow.image,
-        name: `Watch ${tvshow.name} | Watch Online Movies™`,
+        name: `Watch ${tvshow.name} | Uwatchfree Online™`,
          '@id': `/${tvshow['tvshow.watch']}#richSnippet`,
         isPartOf: {
            '@id': `/${tvshow['tvshow.watch']}#webpage`
@@ -316,7 +316,7 @@ const tvshowDetail = ({ tvshow }) => {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Watch Online Movies™',
+      name: 'Uwatchfree Online™',
       logo: {
         '@type': 'ImageObject',
         url: 'https://watchonlinemovies.vercel.app/og_image.jpg'
@@ -345,7 +345,7 @@ const tvshowDetail = ({ tvshow }) => {
   const trailerSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
-    name: `${tvshow.name} | Watch Online Movies™`,
+    name: `${tvshow.name} | Uwatchfree Online™`,
     description: tvshow.trailer.description,
     uploadDate: tvshow.trailer.uploadDate,
     thumbnailUrl: tvshow.trailer.thumbnail.contentUrl,
@@ -360,7 +360,7 @@ const tvshowDetail = ({ tvshow }) => {
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
         />
-        <title> Watch {tvshow && tvshow.name} | Watch Online Movies™</title>
+        <title> Watch {tvshow && tvshow.name} | Uwatchfree Online™</title>
         <link rel='canonical' href={tvshow && tvshow.url} />
         <meta name='robots' content='index, follow' />
         <meta name='googlebot' content='index,follow' />
@@ -369,20 +369,20 @@ const tvshowDetail = ({ tvshow }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
-          content={`${tvshow && tvshow.name} - Watch Online Movies™`}
+          content={`${tvshow && tvshow.name} - Uwatchfree Online™`}
         />
         <meta
           property='og:description'
-          content={`${tvshow && tvshow.name} | Best Movie & TV Show Platform HD`}
+          content={`${tvshow && tvshow.name} | For Movies, TV Show & Sports`}
         />
             <meta
             property='og:description'
-            content='Watch free Movie and TV shows online in HD on any device. We offer streaming Movie in genres like Action, Horror, Sci-Fi, Crime and Comedy. Watch now !!!'
+            content='Watch free Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!'
           />
       
         <meta property='og:url' content={`${tvshow && tvshow.url}`} />
         <meta name='keywords' content={`${tvshow && tvshow.keywords}`} />
-        <meta property='og:site_name' content='Watch Online Movies' />
+        <meta property='og:site_name' content='Uwatchfree Online' />
         <meta property='og:type' content='article' />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta property='article:section' content='tvshow' />
@@ -449,7 +449,7 @@ const tvshowDetail = ({ tvshow }) => {
               fjs.parentNode.appendChild(js);
             }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': 'BFiNtErWPSlY1EdDYECv3rzPp2d5bVs46-O6I4iILsKtA2USCyBEakKcLs7yooH4Gj36tIvYtQtpZ0qZVfhHyAU' });
+            webpushr('setup', { 'key': 'BE7nJtBNDdnHROheP35JwxbD_bYWc6Bl61DGE66CggOuCevUvW4LyjGVbUQAwj7ZKlYupLJAf13_G0OBQ_Ne7Eg' });
           `
           }}
         />
@@ -474,15 +474,16 @@ const tvshowDetail = ({ tvshow }) => {
             className='flex flex-col text-center py-5 font-bold text-3xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           >
-            Watch Online Movies™ - Best Movie & TV Show Platform HD.  </h2>
+            Uwatchfree Online™ - For Movies, TV Show & Sports.  </h2>
          <p className='flex flex-col text-center py-5 font-bold text-xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           > 
-"Watch Online Movies™ - Best Movie & TV Show Platform HD" is a platform that provides access to a wide range of high-definition tvshows for streaming online. With this platform, users can enjoy a diverse selection of tvshows spanning various genres, including action, drama, comedy, thriller, romance, and more.
+"Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" is a platform that provides access to a wide range of high-definition movies, tv shows & sports Live streaming online. With this platform, users can enjoy a diverse selection of movies, tv shows & sports Live spanning various genres, including action, drama, comedy, thriller, romance, live and more.
 
-The platform aims to offer a seamless and enjoyable tvshow-watching experience, allowing users to browse through a vast collection of films and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new tvshows tailored to their preferences.
+The platform aims to offer a seamless and enjoyable watching experience, allowing users to browse through a vast collection of movies, tv shows & sports Live and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new movies, tv shows & sports Live tailored to their preferences.
 
-Overall, "Watch Online Movies™ - Best Movie & TV Show Platform HD" strives to be a go-to destination for tvshow enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
+Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to be a go-to destination for enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
+
 
 </p>
         <div style={{ maxWidth: '800px', width: '100%', marginBottom: '20px' }}>

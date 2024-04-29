@@ -1,28 +1,42 @@
-// import homeData from '../public/home.json'
+import liveData from '../public/live.json'
 import movieData from '../public/movie.json'
 import tvshowData from '../public/tvshow.json'
 import adultData from '../public/adult.json'
 import Head from 'next/head'
 import ShareButtons from '@components/ShareButtons'
+// import ExtensionInstallation from '@components/ExtensionInstallation';
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Script from 'next/script'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
+// For example, in styles/globals.css
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HomePage = () => {
-  // const [home, sethome] = useState(homeData)
+  const [live, setlive] = useState(liveData)
   const [movie, setmovie] = useState(movieData)
   const [tvshow, settvshow] = useState(tvshowData)
   const [adult, setadult] = useState(adultData)
+  const [flashing, setFlashing] = useState(true);
 
+  useEffect(() => {
+    // Flashing effect interval (toggle flashing state every 500ms)
+    const interval = setInterval(() => {
+      setFlashing((prevFlashing) => !prevFlashing);
+    }, 500);
+
+    return () => {
+      clearInterval(interval); // Clean up interval on component unmount
+    };
+  }, []);
 
   const uwatchfreeSchema = JSON.stringify([
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Watch Online Movies",
+      "name": "Uwatchfree Online",
       "url": "https://watchonlinemovies.vercel.app",
       "image": ["https://watchonlinemovies.vercel.app/wp-content/uploads/2023/05/favicon.ico"],
       "logo": {
@@ -63,14 +77,14 @@ const HomePage = () => {
       {
         '@type': 'Organization',
         '@id': 'https://watchonlinemovies.vercel.app/#organization',
-        name: 'Watch Online Movies™',
+        name: 'Uwatchfree Online™',
         url: 'https://watchonlinemovies.vercel.app'
       },
       {
         '@type': 'WebSite',
         '@id': 'https://watchonlinemovies.vercel.app/#website',
         url: 'https://watchonlinemovies.vercel.app',
-        name: 'Watch Online Movies™',
+        name: 'Uwatchfree Online™',
         publisher: {
           '@type': 'Organization',
           '@id': 'https://watchonlinemovies.vercel.app/#organization'
@@ -129,7 +143,7 @@ const HomePage = () => {
             publisher: {
               '@type': 'Organization',
               '@id': 'https://watchonlinemovies.vercel.app/#organization',
-              name: 'Watch Online Movies™',
+              name: 'Uwatchfree Online™',
               url: 'https://watchonlinemovies.vercel.app'
             }
           }
@@ -158,7 +172,7 @@ const HomePage = () => {
         <Head>
         <title>
             {' '}
-            Watch Online Movies™ - Best Movie & TV Show Platform HD{' '}
+            Uwatchfree Online™ - Best Movie & TV Show Platform HD{' '}
           </title>
           <link
             rel='sitemap'
@@ -212,7 +226,7 @@ const HomePage = () => {
           <meta property='og:type' content='website' />
           <meta
             property='og:title'
-            content='Watch Online Movies™ - Best Movie & TV Show Platform HD'
+            content='Uwatchfree Online™ - Best Movie & TV Show Platform HD'
           />
           <meta
             property='og:description'
@@ -221,7 +235,7 @@ const HomePage = () => {
           <meta property='og:url' content='https://watchonlinemovies.vercel.app/' />
           <meta
             property='og:site_name'
-            content='Watch Online Movies™ - Best Movie & TV Show Platform HD'
+            content='Uwatchfree Online™ - Best Movie & TV Show Platform HD'
           />
           <meta
             property='og:image'
@@ -232,7 +246,7 @@ const HomePage = () => {
           <meta property='og:image:type' content='image/webp' />
           <meta
             name='application-name'
-            content='Watch Online Movies™ - Best Movie & TV Show Platform HD'
+            content='Uwatchfree Online™ - Best Movie & TV Show Platform HD'
           />
           <meta
             property='article:modified_time'
@@ -278,43 +292,55 @@ const HomePage = () => {
               fjs.parentNode.appendChild(js);
             }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': 'BFiNtErWPSlY1EdDYECv3rzPp2d5bVs46-O6I4iILsKtA2USCyBEakKcLs7yooH4Gj36tIvYtQtpZ0qZVfhHyAU' });
+            webpushr('setup', { 'key': 'BE7nJtBNDdnHROheP35JwxbD_bYWc6Bl61DGE66CggOuCevUvW4LyjGVbUQAwj7ZKlYupLJAf13_G0OBQ_Ne7Eg' });
           `
           }}
         />
         </Head>
+        {/* <ExtensionInstallation /> */}
         <ShareButtons  />
         <main className='max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
         <h1
-            className='flex flex-col text-center py-5 font-bold text-3xl items-center justify-center'
+            className=' text-center py-5 font-bold text-3xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           >
-            Watch Online Movies™ - The Best Movies Platform HD Movies.  </h1>
-         <p className='flex flex-col text-center py-5 font-bold text-xl items-center justify-center'
+            Uwatchfree Online™ - For Movies, TV Show & Sports live.  </h1>
+         <p className=' text-center  font-bold text-lg items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           > 
-"Watch Online Movies™ - The Best Movies Platform HD Movies" is a platform that provides access to a wide range of high-definition movies for streaming online. With this platform, users can enjoy a diverse selection of movies spanning various genres, including action, drama, comedy, thriller, romance, and more.
+"Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" is a platform that provides access to a wide range of high-definition movies, tv shows & live Live streaming online. With this platform, users can enjoy a diverse selection of movies, tv shows & live Live spanning various genres, including action, drama, comedy, thriller, romance, live and more.
 
-The platform aims to offer a seamless and enjoyable movie-watching experience, allowing users to browse through a vast collection of films and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new movies tailored to their preferences.
+The platform aims to offer a seamless and enjoyable watching experience, allowing users to browse through a vast collection of movies, tv shows & live Live and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new movies, tv shows & live Live tailored to their preferences.
 
-Overall, "Watch Online Movies™ - The Best Movies Platform HD Movies" strives to be a go-to destination for movie enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
+Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to be a go-to destination for enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
 
 </p>
+<p className=' text-center font-bold text-lg items-center justify-center'
+            style={{ color: '#FF0000',  textShadow: '5px 5px 2px #000', marginTop:'20px' }}>
+        To enhance your experience on our website, please install the SquareX - Be Secure & Anonymous Chrome extension from the Chrome Web Store:
+        <br />
+        <button
+  className={`btn btn-success ${flashing ? 'btn-flashing' : ''}`}
+  onClick={() => {
+    // Handle button click event
+  }}
+>
+        <a href="https://chrome.google.com/webstore/detail/squarex-be-secure-anonymo/kapjaoifikajdcdehfdlmojlepfpkpoe" className=' text-center font-bold text-lg items-center justify-center'
+            style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000', marginTop:'20px' }} target="_blank" rel="noopener noreferrer">
+          Install SquareX 
+        </a></button>
+      </p>
+
+
+
+
           <div className='py-8'>
          
           </div>
           <div className='container mt-0 '>
             <Tabs>
               <TabList className={styles.tabList}>
-                {/* <Tab
-                  className={`${styles.tab} ${styles.home}`}
-                  style={{
-                    fontWeight: 'bold',
-                    textShadow: '2px 5px 5px #000000'
-                  }}
-                >
-                  Home
-                </Tab> */}
+               
                 <Tab
                   className={`${styles.tab} ${styles.movie}`}
                   style={{
@@ -342,58 +368,18 @@ Overall, "Watch Online Movies™ - The Best Movies Platform HD Movies" strives t
                 >
                   Adult
                 </Tab>
+                 <Tab
+                  className={`${styles.tab} ${styles.live}`}
+                  style={{
+                    fontWeight: 'bold',
+                    textShadow: '2px 5px 5px #000000'
+                  }}
+                >
+                  Live
+                </Tab>
               </TabList>
 
-              {/* <TabPanel>
-  <div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
-    
-
-    {home.map(homeItem => (
-      <div key={homeItem.id} className='flex flex-col justify-between'>
-        <a href={`/home/${homeItem.id}`}>
-          <div className='relative'>
-            <img
-              src={homeItem.image}
-              alt={homeItem.title}
-              className='w-full '
-              loading='lazy'
-              style={{
-                maxWidth: '100%',
-                margin: 'auto',
-                marginBottom: '20px',
-                borderRadius: '25px',
-                // boxShadow: '0 0 10px 0 #40D7BC',
-                filter:
-                  'contrast(1.2) saturate(1.5) brightness(1.4) hue-rotate(0deg)'
-              }}
-            />
-
-            <div
-              style={{
-                position: 'absolute',
-                top: '10px',
-                right: '10px',
-                backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                fontWeight: 'bold',
-                color: '#40D7BC',
-                padding: '2px',
-                borderRadius: '5px',
-                // fontSize: '12px',
-                textShadow: '3px 3px 3px #000'
-              }}
-            >
-              {homeItem.badge}
-            </div>
-          
-            <h2 className="text-white text-lg font-semibold mt-2">{homeItem.title}</h2>
-          </div>
-        </a>
-       
-      </div>
-    ))}
-  </div>
-</TabPanel> */}
-
+            
 {/* Repeat the above structure for other categories like 'live' and 'market' */}
 
 
@@ -603,6 +589,62 @@ Overall, "Watch Online Movies™ - The Best Movies Platform HD Movies" strives t
               {newsItem.genre}
             </div> */}
             <h2 className="text-white text-lg font-semibold mt-2">{adultItem.title}</h2>
+          </div>
+        </a>
+        {/* <h2 className="text-center text-xl mt-2">{movie.title}</h2> */}
+      </div>
+    ))}
+  </div>
+</TabPanel>
+  <TabPanel>
+  <h2
+            className='flex flex-col text-center py-5 font-bold text-3xl items-center justify-center'
+            style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
+          >
+           Monday 29th April 2024 - Schedule Time UK GMT </h2>
+
+  <div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
+ 
+    {live.map(liveItem => (
+      <div key={liveItem.id} className='flex flex-col justify-between'>
+        <a href={`/live/${liveItem.id}`}>
+          <div className='relative'>
+            <Image
+              src={liveItem.image}
+              alt={liveItem.title}
+              className='w-full '
+              width={500}
+              height={500}
+              priority
+              style={{
+                maxWidth: '100%',
+                margin: 'auto',
+                marginBottom: '20px',
+                borderRadius: '25px',
+                // boxShadow: '0 0 10px 0 #40D7BC',
+                filter:
+                  'contrast(1.2) saturate(1.5) brightness(1.4) hue-rotate(0deg)'
+              }}
+            />
+
+            <div
+              style={{
+                position: 'absolute',
+                top: '10px',
+                right: '10px',
+                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                fontWeight: 'bold',
+                color: '#40D7BC',
+                padding: '2px',
+                borderRadius: '5px',
+                // fontSize: '12px',
+                textShadow: '3px 3px 3px #000'
+              }}
+            >
+              {liveItem.badge}
+            </div>
+          
+            <h2 className="text-white text-lg font-semibold mt-2" >{liveItem.name}</h2>
           </div>
         </a>
         {/* <h2 className="text-center text-xl mt-2">{movie.title}</h2> */}

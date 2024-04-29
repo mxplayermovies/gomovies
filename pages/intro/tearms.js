@@ -6,12 +6,12 @@ const Tearms = () => {
   return (
     <div>
         <Head>
-        <title>Watch Online Movies™ Terms of Service</title>
+        <title>Uwatchfree Online™ Terms of Service</title>
       
 	<meta name="description" content="Watch
  now the Best TV shows and Movies " />
 	<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-	<meta name="keywords" content="Watch Online Movies,streaming,latest movies,online tv,latest free movies,watch latest movies online,latest full movies online" />
+	<meta name="keywords" content="Uwatchfree Online,streaming,latest movies,online tv,latest free movies,watch latest movies online,latest full movies online" />
 	<meta name="revisit-after" content="1 days" />
 	<meta property="og:locale" content="en_US" />   
 
@@ -20,18 +20,18 @@ const Tearms = () => {
   <meta name="robots" content="index, follow" />
 	
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
-	<meta property="og:site_name" content="Watch Online Movies™ | Watch Movies, TV-Series & Sports Live Online Free " />
+	<meta property="og:site_name" content="Uwatchfree Online™ | Watch Movies, TV-Series & Sports Live Online Free " />
 	<meta property="og:type" content="website" />
 	<meta property="og:image:height" content="1280"/>
 	<meta property="og:image:width" content="720"/>
-	<meta property="og:title" content="Watch Online Movies™ | Watch Movies, TV-Series & Sports Live Online Free " />
+	<meta property="og:title" content="Uwatchfree Online™ | Watch Movies, TV-Series & Sports Live Online Free " />
 	<meta property="og:description" content="Watch Movies, TV-Series & Sports Live Online Free " />
 	<meta property="og:url" content="https://watchonlinemovies.vercel.app/" />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property='og:image' content="https://watchonlinemovies.vercel.app/og_image.jpg" />
 	<meta property="og:image:secure_url" content="https://watchonlinemovies.vercel.app/og_image.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Watch Online Movies™ " />
+	<meta name="twitter:title" content="Uwatchfree Online™ " />
 	<meta name="twitter:description" content=" Watch Movies, TV-Series & Sports Live Online Free " />
 	<meta name="twitter:image" content="https://watchonlinemovies.vercel.app/og_image.jpg" />
   
@@ -55,25 +55,25 @@ const Tearms = () => {
   <div className="flex flex-wrap">
     <div className="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full  px-3 lg:px-6">
       <h1 className="text-3xl font-bold mb-6">Terms of Service</h1>
-      <p className="font-bold mb-2">Using Watch Online Movies</p>
+      <p className="font-bold mb-2">Using Uwatchfree Online</p>
       <p className="text-gray-500 mb-6">
-      When you enter Watch Online Movies you automatically agree to all our rules and regulations!
+      When you enter Uwatchfree Online you automatically agree to all our rules and regulations!
       </p>
       <p className="font-bold mb-2">Hosting and Legal Issues</p>
       <p className="text-gray-500 mb-6">
-      Watch Online Movies is not hosting or uploading any copyrighted content or media of any kind, we only store links to third-party websites that carry their own legal responsibility for their content. If you want to remove content from these websites, please contact these media hosts directly.
-      Watch Online Movies is working according to DMCA, so if you need to remove any content from the website, you can contact us @ <a className="font-bold text-blue-500 mb-6" href="mailto:drtrailer2022@gmail.com">drtrailer2022@gmail.com</a>.
+      Uwatchfree Online is not hosting or uploading any copyrighted content or media of any kind, we only store links to third-party websites that carry their own legal responsibility for their content. If you want to remove content from these websites, please contact these media hosts directly.
+      Uwatchfree Online is working according to DMCA, so if you need to remove any content from the website, you can contact us @ <a className="font-bold text-blue-500 mb-6" href="mailto:drtrailer2022@gmail.com">drtrailer2022@gmail.com</a>.
       </p>
       <p className="font-bold mb-2">
       Responsibilities.
       </p>
       <p className="text-gray-500 mb-6">
-      Watch Online Movies is not responsible for anything that might happen on third-party websites. We are not responsible for the accuracy, compliance, copyright, legality, decency, or any other aspect of the content of other linked sites. Please, be careful when you install, download or submit any personal or CC information!
+      Uwatchfree Online is not responsible for anything that might happen on third-party websites. We are not responsible for the accuracy, compliance, copyright, legality, decency, or any other aspect of the content of other linked sites. Please, be careful when you install, download or submit any personal or CC information!
       </p>
 
      
       <p className="text-gray-500">
-      Watch Online Movies holds no responsibility for any legal or copyright issues that may occur due to the use of Watch Online Moviesmovie. Please check local copyright laws or the rules of your provider to avoid legal problems.
+      Uwatchfree Online holds no responsibility for any legal or copyright issues that may occur due to the use of Uwatchfree Onlinemovie. Please check local copyright laws or the rules of your provider to avoid legal problems.
       </p>
     </div>
 

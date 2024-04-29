@@ -157,7 +157,7 @@ const adultDetail = ({ adult }) => {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Watch Online Movies",
+      "name": "Uwatchfree Online",
       "url": "https://watchonlinemovies.vercel.app",
       "image": ["https://watchonlinemovies.vercel.app/wp-content/uploads/2023/05/favicon.ico"],
       "logo": {
@@ -191,7 +191,7 @@ const adultDetail = ({ adult }) => {
         '@type': 'WebSite',
         '@id': 'https://watchonlineadults.vercel.app/#website',
         url: 'https://watchonlineadults.vercel.app/',
-        name: 'Watch Online Movies™',
+        name: 'Uwatchfree Online™',
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
@@ -201,7 +201,7 @@ const adultDetail = ({ adult }) => {
         '@type': 'WebPage',
         '@id': `/${adult['adult.watch']}#webpage`,
         url: `/${adult['adult.watch']}`,
-        name: `${adult.title} | Watch Online Movies™`,
+        name: `${adult.title} | Uwatchfree Online™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         isPartOf: {
@@ -226,7 +226,7 @@ const adultDetail = ({ adult }) => {
       {
         '@type': 'Article',
         '@id': `/${adult['adult.watch']}#article`,
-        headline: `Watch ${adult.title} | Watch Online Movies™`,
+        headline: `Watch ${adult.title} | Uwatchfree Online™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'Adult',
@@ -236,9 +236,9 @@ const adultDetail = ({ adult }) => {
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: `Watch Online Movies | ${adult.title} for free. Where you can find adults of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+        description: `Watch free Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!`,
         image: adult.image,
-        name: `Watch ${adult.title} | Watch Online Movies™`,
+        name: `Watch ${adult.title} | Uwatchfree Online™`,
         isPartOf: {
           '@id': `/${adult['adult.watch']}#webpage`
         },
@@ -250,7 +250,7 @@ const adultDetail = ({ adult }) => {
       {
         '@type': 'BlogPosting',
         '@id': `/${adult['adult.watch']}#blogPost`,
-        headline: `Watch ${adult.title} | Watch Online Movies™`,
+        headline: `Watch ${adult.title} | Uwatchfree Online™`,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         articleSection: 'Adult',
@@ -260,9 +260,9 @@ const adultDetail = ({ adult }) => {
         publisher: {
           '@id': 'https://gravatar.com/drtrailer2022/#person'
         },
-        description: `Watch Online Movies | ${adult.title} for free. Where you can find adults of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+        description: `Watch free Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!`,
         image: adult.image,
-        name: `Watch ${adult.title} | Watch Online Movies™`,
+        name: `Watch ${adult.title} | Uwatchfree Online™`,
         '@id': `/${adult['adult.watch']}#richSnippet`,
         isPartOf: {
           '@id': `/${adult['adult.watch']}#webpage`
@@ -339,7 +339,7 @@ const adultDetail = ({ adult }) => {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Watch Online Movies™',
+      name: 'Uwatchfree Online™',
       logo: {
         '@type': 'ImageObject',
         url: 'https://watchonlinemovies.vercel.app/og_image.jpg'
@@ -355,7 +355,7 @@ const adultDetail = ({ adult }) => {
   const trailerSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
-    name: `${adult.name} | Watch Online Movies™`,
+    name: `${adult.name} | Uwatchfree Online™`,
     description: adult.trailer.description,
     uploadDate: adult.trailer.uploadDate,
     thumbnailUrl: adult.trailer.thumbnail.contentUrl,
@@ -370,7 +370,7 @@ const adultDetail = ({ adult }) => {
           name='robots'
           content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
         />
-        <title> Watch {adult && adult.name} | Watch Online Movies™</title>
+        <title> Watch {adult && adult.name} | Uwatchfree Online™</title>
         <link rel='canonical' href={adult && adult.url} />
         <meta name='robots' content='index, follow' />
         <meta name='googlebot' content='index,follow' />
@@ -379,7 +379,7 @@ const adultDetail = ({ adult }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
-          content={`${adult && adult.name} - Watch Online Movies™`}
+          content={`${adult && adult.name} - Uwatchfree Online™`}
         />
         <meta
           property='og:description'
@@ -387,11 +387,11 @@ const adultDetail = ({ adult }) => {
         />
       <meta
             property='og:description'
-            content='Watch free Movie and TV shows online in HD on any device. We offer streaming Movie in genres like Action, Horror, Sci-Fi, Crime and Comedy. Watch now !!!'
+            content='Watch free Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!'
           />
         <meta property='og:url' content={`${adult && adult.url}`} />
         <meta name='keywords' content={`${adult && adult.keywords}`} />
-        <meta property='og:site_name' content='Watch Online Movies' />
+        <meta property='og:site_name' content='Uwatchfree Online' />
         <meta property='og:type' content='article' />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta property='article:section' content='adult' />
@@ -458,7 +458,7 @@ const adultDetail = ({ adult }) => {
               fjs.parentNode.appendChild(js);
             }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': 'BFiNtErWPSlY1EdDYECv3rzPp2d5bVs46-O6I4iILsKtA2USCyBEakKcLs7yooH4Gj36tIvYtQtpZ0qZVfhHyAU' });
+            webpushr('setup', { 'key': 'BE7nJtBNDdnHROheP35JwxbD_bYWc6Bl61DGE66CggOuCevUvW4LyjGVbUQAwj7ZKlYupLJAf13_G0OBQ_Ne7Eg' });
           `
           }}
         />
@@ -483,16 +483,15 @@ const adultDetail = ({ adult }) => {
             className='flex flex-col text-center py-5 font-bold text-3xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           >
-            Watch Online Movies™ - The Best Movies Platform HD Movies.  </h2>
+            Uwatchfree Online™ - For Movies, TV Show & Sports.  </h2>
          <p className='flex flex-col text-center py-5 font-bold text-xl items-center justify-center'
             style={{ color: '#40D7BC',  textShadow: '5px 5px 2px #000' }}
           > 
-"Watch Online Movies™ - The Best Movies Platform HD Movies" is a platform that provides access to a wide range of high-definition movies for streaming online. With this platform, users can enjoy a diverse selection of movies spanning various genres, including action, drama, comedy, thriller, romance, and more.
+"Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" is a platform that provides access to a wide range of high-definition movies, tv shows & sports Live streaming online. With this platform, users can enjoy a diverse selection of movies, tv shows & sports Live spanning various genres, including action, drama, comedy, thriller, romance, live and more.
 
-The platform aims to offer a seamless and enjoyable movie-watching experience, allowing users to browse through a vast collection of films and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new movies tailored to their preferences.
+The platform aims to offer a seamless and enjoyable watching experience, allowing users to browse through a vast collection of movies, tv shows & sports Live and watch them instantly without the need for downloading. Additionally, it may provide features such as personalized recommendations, user ratings, and reviews to help users discover new movies, tv shows & sports Live tailored to their preferences.
 
-Overall, "Watch Online Movies™ - The Best Movies Platform HD Movies" strives to be a go-to destination for movie enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
-
+Overall, "Uwatchfree Online™ - For Movies, Tv Shows & Sports Live" strives to be a go-to destination for enthusiasts looking for convenient and high-quality streaming options for their entertainment needs.
 </p>
         <div style={{ maxWidth: '800px', width: '100%', marginBottom: '20px' }}>
           <Image
