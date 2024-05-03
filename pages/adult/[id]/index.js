@@ -160,11 +160,11 @@ const adultDetail = ({ adult }) => {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Watch Online Movies",
-      "url": "https://watchonlinemovies.vercel.app",
-      "image": ["https://watchonlinemovies.vercel.appwp-content/uploads/2023/05/favicon.ico"],
+      "url": "https://watchonlinemovies.vercel.app/",
+      "image": ["https://watchonlinemovies.vercel.app/wp-content/uploads/2023/05/favicon.ico"],
       "logo": {
         "@type": "ImageObject",
-        "url": "https://watchonlinemovies.vercel.applogo.png",
+        "url": "https://watchonlinemovies.vercel.app/logo.png",
         "width": 280,
         "height": 80
       }
@@ -172,14 +172,18 @@ const adultDetail = ({ adult }) => {
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "url": "https://watchonlinemovies.vercel.app",
+      "url": "https://watchonlinemovies.vercel.app/",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://watchonlinemovies.vercel.appsearch?q={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://watchonlinemovies.vercel.app/search?q={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
       }
     }
   ]);
+  
 
   const rankMathSchema = JSON.stringify({
     '@context': 'https://schema.org',

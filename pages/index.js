@@ -54,7 +54,10 @@ const HomePage = () => {
       "url": "https://watchonlinemovies.vercel.app/",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://watchonlinemovies.vercel.app/search?q={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://watchonlinemovies.vercel.app/search?q={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
       }
     }
