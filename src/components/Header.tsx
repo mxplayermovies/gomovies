@@ -3,7 +3,13 @@ import Link from 'next/link'
 import GenreDropDown from './GenreDropDown'
 import SearchInput from './SearchInput'
 import ThemeToggler from './ThemeToggler'
-import { FaTwitter, FaFacebook, FaInstagram, FaYoutube, FaTelegram } from 'react-icons/fa';
+import {
+  FaTwitter,
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+  FaTelegram
+} from 'react-icons/fa'
 
 const Header = () => {
   return (
@@ -35,38 +41,16 @@ const Header = () => {
               <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-600 mx-2">
                 <FaInstagram className="w-6 h-6" />
               </a>
+              <a
+            href='https://t.me/watchmovietvshow'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-gray-500 hover:text-gray-600 mx-2'
+          >
+            <FaTelegram className='w-6 h-6' />
+          </a>
             </div>
-      <Link
-        rel='sitemap'
-        type='application/xml'
-        title='Sitemap'
-        href='https://watchonlinemovies.vercel.app/sitemap.xml'
-      />
-      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-      <Link
-        rel='icon'
-        type='image/x-icon'
-        href='/favicon.ico'
-      />
-      <Link
-        rel='apple-touch-icon'
-        sizes='180x180'
-        href='/apple-touch-icon.png'
-      />
-      <Link
-        rel='icon'
-        type='image/png'
-        sizes='32x32'
-        href='/favicon-32x32.png'
-      />
-      <Link
-        rel='icon'
-        type='image/png'
-        sizes='16x16'
-        href='/favicon-16x16.png'
-      />
-      <Link rel='manifest' href='/site.webmanifest' />
-
+    
       {/* Others */}
       <div className='text-white flex space-x-2 items-center'>
         {/* Genre */}
