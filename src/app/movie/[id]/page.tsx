@@ -15,7 +15,7 @@ import Image from "next/image";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Movie Studio Clone || Movie Details page",
+  title: " Watch Online Movies™ - The Best Movies Platform HD Movies.",
 };
 
 interface Props {
