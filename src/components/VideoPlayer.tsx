@@ -19,10 +19,13 @@ const VideoPlayer = ({ videos }: Videos) => {
             key={video?.id}
             className="border border-gray-600 rounded-md w-full overflow-hidden relative"
           >
-            <p className="text-sm font-medium px-6 py-3">
+            <p className="text-xl font-bold px-6 py-3 text-center justify-center " style={{ color: '#40D7BC', textShadow: '1px 2px 2px #000' }}>
               Type: {video?.type} - {video?.official ? "Offical" : "General"}
             </p>
-            <YouTube videoId={video?.key} onReady={onPlayerReady} opts={opts} />
+            <YouTube videoId={video?.key} onReady={onPlayerReady} opts={opts}style={{
+  filter: 'contrast(1.2) saturate(1.5) brightness(1.3) hue-rotate(0deg)',
+
+}}/>
           </div>
         ))}
       </div>

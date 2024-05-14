@@ -353,7 +353,7 @@ const MovieDetails = async ({ params: { id } }: Props) => {
           />
         </Head>
         <Script src='../../../propler/ads.js' defer />
-      <div className="px-10">
+      <div className="px-10 ">
         <div className="py-10 flex flex-col lg:flex-row items-center gap-5">
           <div className="w-full lg:w-1/2 min-h-96 rounded-md overflow-hidden group">
             <Image
@@ -415,6 +415,12 @@ const MovieDetails = async ({ params: { id } }: Props) => {
             </p>
           </div>
         </div>
+        <h1
+          className='flex flex-col text-center py-5 font-bold text-3xl items-center justify-center'
+          style={{ color: '#40D7BC', textShadow: '1px 2px 2px #000' }}
+        >
+          Watch Online Movie  {details?.original_title}{' '}
+        </h1>
         <div className={Styles['iframe-container']}>
          {embedUrl && (
         <div className="w-full lg:w-1/2 min-h-96 flex justify-center items-center mt-6">
