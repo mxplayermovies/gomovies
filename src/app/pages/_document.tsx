@@ -1,5 +1,134 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
+
+const uwatchfreeSchema = JSON.stringify([
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Watch Online Movies',
+    url: 'https://watchonlinemovies.vercel.app/',
+    image: [
+      'https://watchonlinemovies.vercel.app/wp-content/uploads/2023/05/favicon.ico'
+    ],
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://watchonlinemovies.vercel.app/logo.png',
+      width: 280,
+      height: 80
+    }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    url: 'https://watchonlinemovies.vercel.app/',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate:
+          'https://watchonlinemovies.vercel.app/search?q={search_term_string}'
+      },
+      'query-input': 'required name=search_term_string'
+    }
+  }
+])
+
+const rankMathSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': 'https://watchonlinemovies.vercel.app/author/watchnewsonline/',
+      name: 'Dr Trailer',
+      url: 'https://watchonlinemovies.vercel.app/author/watchnewsonline/',
+      image: {
+        '@type': 'ImageObject',
+        '@id': 'https://gravatar.com/drtrailer2022',
+        url: 'https://gravatar.com/drtrailer2022',
+        caption: 'Dr Trailer',
+        inLanguage: 'en-US'
+      }
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://watchonlinemovies.vercel.app/#organization',
+      name: 'Watch Online Movies™',
+      url: 'https://watchonlinemovies.vercel.app/'
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://watchonlinemovies.vercel.app/#website',
+      url: 'https://watchonlinemovies.vercel.app/',
+      name: 'Watch Online Movies™',
+      publisher: {
+        '@type': 'Organization',
+        '@id': 'https://watchonlinemovies.vercel.app/#organization'
+      },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://watchonlinemovies.vercel.app/?s={search_term_string}',
+        'query-input': 'required name=search_term_string'
+      }
+    },
+    {
+      '@type': 'WebPage',
+      '@id': 'https://watchonlinemovies.vercel.app/#webpage',
+      url: 'https://watchonlinemovies.vercel.app/',
+      name: 'Movie',
+      datePublished: '2024-01-13T13:00:00+00:00',
+      dateModified: '2024-01-13T13:13:00+00:00',
+      about: {
+        '@type': 'Person',
+        '@id': 'https://watchonlinemovies.vercel.app/author/uwatchfreeonline/',
+        name: 'Dr Trailer',
+        url: 'https://watchonlinemovies.vercel.app/author/uwatchfreeonline/',
+        image: {
+          '@type': 'ImageObject',
+          '@id': 'https://gravatar.com/drtrailer2022',
+          url: 'https://gravatar.com/drtrailer2022',
+          caption: 'Dr Trailer',
+          inLanguage: 'en-US'
+        }
+      },
+      isPartOf: {
+        '@id': 'https://watchonlinemovies.vercel.app/#website'
+      },
+      inLanguage: 'en-US',
+      mainEntity: [
+        {
+          '@type': 'Article',
+          '@id': 'https://watchonlinemovies.vercel.app/',
+          url: 'https://watchonlinemovies.vercel.app/',
+          headline: 'Movie',
+          datePublished: '2024-01-13T13:00:00+00:00',
+          dateModified: '2024-01-13T13:13:00+00:00',
+          author: {
+            '@type': 'Person',
+            '@id':
+              'https://watchonlinemovies.vercel.app/author/watchnewsonline/',
+            name: 'Dr Trailer',
+            url: 'https://watchonlinemovies.vercel.app/author/watchnewsonline/',
+            image: {
+              '@type': 'ImageObject',
+              '@id': 'https://gravatar.com/drtrailer2022',
+              url: 'https://gravatar.com/drtrailer2022',
+              caption: 'Dr Trailer',
+              inLanguage: 'en-US'
+            }
+          },
+          publisher: {
+            '@type': 'Organization',
+            '@id': 'https://watchonlinemovies.vercel.app/#organization',
+            name: 'Watch Online Movies™',
+            url: 'https://watchonlinemovies.vercel.app/'
+          }
+        }
+      ]
+      // "sameAs": ["https://www.your-social-media-profile1.com", "https://www.your-social-media-profile2.com"]
+    }
+  ]
+})
+
 class MyDocument extends Document {
   render() {
     return (
