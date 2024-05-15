@@ -27,7 +27,9 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ title, description, image }
     // Additional logic for share success
   };
 
-  const handleShareError = (error: Error) => {
+  // Error handling function compatible with React's event handler type
+  const handleShareError: React.ReactEventHandler<HTMLButtonElement> = (event) => {
+    const error = new Error('Share button error');
     console.error('Share error:', error);
     // Additional logic for share error
   };
@@ -39,7 +41,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ title, description, image }
         quote={description || title}
         hashtag="#drtrailer"
         onClick={handleShareSuccess}
-        onError={(error: Error) => handleShareError(error)}
+        onError={handleShareError}
       >
         <FacebookIcon size={48} round />
       </FacebookShareButton>
@@ -48,7 +50,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ title, description, image }
         url={url}
         title={description || title}
         onClick={handleShareSuccess}
-        onError={(error: Error) => handleShareError(error)}
+        onError={handleShareError}
       >
         <TwitterIcon size={48} round />
       </TwitterShareButton>
@@ -57,7 +59,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ title, description, image }
         url={url}
         title={description || title}
         onClick={handleShareSuccess}
-        onError={(error: Error) => handleShareError(error)}
+        onError={handleShareError}
       >
         <LinkedinIcon size={48} round />
       </LinkedinShareButton>
@@ -66,7 +68,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ title, description, image }
         url={url}
         title={description || title}
         onClick={handleShareSuccess}
-        onError={(error: Error) => handleShareError(error)}
+        onError={handleShareError}
       >
         <WhatsappIcon size={48} round />
       </WhatsappShareButton>
@@ -76,7 +78,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ title, description, image }
         subject={title}
         body={description || "Check this out!"}
         onClick={handleShareSuccess}
-        onError={(error: Error) => handleShareError(error)}
+        onError={handleShareError}
       >
         <EmailIcon size={48} round />
       </EmailShareButton>
@@ -85,3 +87,4 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ title, description, image }
 };
 
 export default ShareButtons;
+
