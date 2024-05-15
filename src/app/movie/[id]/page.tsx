@@ -425,7 +425,7 @@ const MovieDetails = async ({ params: { id } }: Props) => {
             </div>
           )}
         </div>
-        <div class='container1'  style={{
+        <div className='container1'  style={{
           marginTop: '30px',
          
           justifyContent: 'center'
@@ -439,7 +439,7 @@ const MovieDetails = async ({ params: { id } }: Props) => {
          </div>
       
         <VideoPlayer videos={videos} />
-        <div class='container1'  style={{
+        <div className='container1'  style={{
           marginTop: '30px',
          
           justifyContent: 'center'
