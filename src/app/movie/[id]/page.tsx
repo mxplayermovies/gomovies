@@ -216,6 +216,8 @@ const MovieDetails = async ({ params: { id } }: Props) => {
 
   return (
     <div>
+      <title>{details?.original_title}</title>
+
       <link
         rel='sitemap'
         type='application/xml'

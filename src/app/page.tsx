@@ -20,6 +20,7 @@ export default async function Home() {
  
   return (
     <main>
+      <title> Uwatchfree Online™ - For Movies & TV Show.     </title>
        <meta
           property='og:image'
           content='https://watchonlinemovies.vercel.app/og_image.jpg'
