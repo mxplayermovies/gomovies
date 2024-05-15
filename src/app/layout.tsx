@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 import Head from 'next/head'
 import Script from 'next/script'
 import GoogleTagManager from '@/components/GoogleTagManager'
-
+import WebpushrComponent from '@/components/WebpushrComponent';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -282,6 +282,7 @@ export default function RootLayout ({
      
         <Script src='../../propler/ads.js' defer />
         <GoogleTagManager gtmId={gtmId} />
+        <WebpushrComponent />
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
