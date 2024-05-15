@@ -20,6 +20,15 @@ const metadata: Metadata = {
   viewportSettings: 'width=device-width, initial-scale=1.0',
 };
 
+export interface Metadata {
+  title: string;
+  description: string;
+  ogImage?: string; // Optional ogImage property
+  url: string;
+  keywords: string;
+  viewportSettings?: string;
+}
+
 export default async function Home () {
   const nowPlayingMovies = await getNowPlayingMovies()
   const upcomingMovies = await getUpcomingMovies()
