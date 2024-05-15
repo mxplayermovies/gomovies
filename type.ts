@@ -13,6 +13,11 @@ export type Movie = {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  description: string;
+  ogImage?: string; // Optional ogImage property
+  url: string;
+  keywords: string;
+  viewportSettings?: string;
 };
 
 export type SearchResults = {
