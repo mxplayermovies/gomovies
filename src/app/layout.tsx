@@ -1,4 +1,4 @@
-import { Metadata as NextMetadata } from 'next'
+// import { Metadata as NextMetadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
@@ -141,15 +141,15 @@ const rankMathSchema = JSON.stringify({
   ]
 })
 
-export const metadata: Metadata = {
-  title: 'Watch Online Movies™',
-  description:
-    ' Watch free movie, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!',
-  keywords:
-    'watch online movie, watch online movie latest movie, free movie, films, free movie online, free movie online, online movie, watch online movie free sites, watch free movie online free, free online movie, watch movie online, watch online movie, watch movie free online, online watch movie, free new movie online, watch movie online free, movie 2 watch, free full movie, online movie watch, movie online watch, online movie for free, online watch movie, 2024 Latest movie, 2024 latest movie online',
-    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-    canonicalUrl: 'https://watchonlinemovies.vercel.app',
-}
+// export const metadata: Metadata = {
+//   title: 'Watch Online Movies™',
+//   description:
+//     ' Watch free movie, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!',
+//   keywords:
+//     'watch online movie, watch online movie latest movie, free movie, films, free movie online, free movie online, online movie, watch online movie free sites, watch free movie online free, free online movie, watch movie online, watch online movie, watch movie free online, online watch movie, free new movie online, watch movie online free, movie 2 watch, free full movie, online movie watch, movie online watch, online movie for free, online watch movie, 2024 Latest movie, 2024 latest movie online',
+//     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+//     canonicalUrl: 'https://watchonlinemovies.vercel.app',
+// }
 
 export default function RootLayout ({
   children
