@@ -34,7 +34,11 @@ export default async function Home() {
         <Script src='../../propler/ads.js' defer />
       <CaroselBanner />
       <div className="flex flex-col space-y-2">
-      <div className='container1'>
+      <div className='container1'  style={{
+          marginTop: '30px',
+         
+          justifyContent: 'center'
+        }}>
         <ShareButtons
         title="Watch Online Movies™"
         description="For Movies & TV Show "
