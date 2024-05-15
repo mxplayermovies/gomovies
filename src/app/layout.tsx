@@ -18,7 +18,7 @@ import {
 //   getMovieDetails,
 //  } from '@/lib/getImagePath'
 
- const details: any = await getMovieDetails
+ const details = await getMovieDetails
 const inter = Inter({ subsets: ['latin'] })
 
 const gtmId = 'G-REYHDZZ5K8'
