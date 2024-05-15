@@ -2,39 +2,38 @@
 import React from 'react';
 import {
   FacebookShareButton,
-  PinterestShareButton,
-  RedditShareButton,
-  TelegramShareButton,
+  LinkedinShareButton,
   TwitterShareButton,
   WhatsappShareButton,
-  LinkedinShareButton,
-  FacebookMessengerShareButton,
   EmailShareButton,
   FacebookIcon,
-  PinterestIcon,
-  RedditIcon,
-  TelegramIcon,
+  LinkedinIcon,
   TwitterIcon,
   WhatsappIcon,
-  LinkedinIcon,
-  FacebookMessengerIcon,
   EmailIcon,
 } from 'next-share';
 
-const ShareButtons = ({ title, description, image }) => {
+interface ShareButtonsProps {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const ShareButtons: React.FC<ShareButtonsProps> = ({ title, description, image }) => {
   const url = typeof window !== 'undefined' ? window.location.href : '';
 
   const handleShareSuccess = () => {
     console.log('Share successful!');
+    // Additional logic for share success
   };
 
-  const handleShareError = (error) => {
-    console.error('Share failed:', error);
+  const handleShareError = (error: Error) => {
+    console.error('Share error:', error);
+    // Additional logic for share error
   };
 
   return (
-    <div className="bg-transparent flex gap-4 justify-center p-4">
-      {/* Facebook Share Button */}
+    <div className="bg-transparent flex gap-2 justify-center p-2">
       <FacebookShareButton
         url={url}
         quote={description || title}
@@ -42,87 +41,48 @@ const ShareButtons = ({ title, description, image }) => {
         onClick={handleShareSuccess}
         onError={handleShareError}
       >
-        <FacebookIcon size={32} round />
+        <FacebookIcon size={48} round />
       </FacebookShareButton>
 
-      {/* Pinterest Share Button */}
-      <PinterestShareButton
-        url={url}
-        media={image}
-        onClick={handleShareSuccess}
-        onError={handleShareError}
-      >
-        <PinterestIcon size={32} round />
-      </PinterestShareButton>
-
-      {/* Reddit Share Button */}
-      <RedditShareButton
-        url={url}
-        title={title}
-        onClick={handleShareSuccess}
-        onError={handleShareError}
-      >
-        <RedditIcon size={32} round />
-      </RedditShareButton>
-
-      {/* Telegram Share Button */}
-      <TelegramShareButton
-        url={url}
-        title={title}
-        onClick={handleShareSuccess}
-        onError={handleShareError}
-      >
-        <TelegramIcon size={32} round />
-      </TelegramShareButton>
-
-      {/* Twitter Share Button */}
       <TwitterShareButton
         url={url}
         title={description || title}
         onClick={handleShareSuccess}
         onError={handleShareError}
       >
-        <TwitterIcon size={32} round />
+        <TwitterIcon size={48} round />
       </TwitterShareButton>
 
-      {/* WhatsApp Share Button */}
+      <LinkedinShareButton
+        url={url}
+        title={description || title}
+        onClick={handleShareSuccess}
+        onError={handleShareError}
+      >
+        <LinkedinIcon size={48} round />
+      </LinkedinShareButton>
+
       <WhatsappShareButton
         url={url}
         title={description || title}
-        separator="::"
         onClick={handleShareSuccess}
         onError={handleShareError}
       >
-        <WhatsappIcon size={32} round />
+        <WhatsappIcon size={48} round />
       </WhatsappShareButton>
 
-      {/* LinkedIn Share Button */}
-      <LinkedinShareButton url={url}>
-        <LinkedinIcon size={32} round />
-      </LinkedinShareButton>
-
-      {/* Facebook Messenger Share Button */}
-      <FacebookMessengerShareButton
-        url={url}
-        appId={''} // Add your Facebook App ID here
-        onClick={handleShareSuccess}
-        onError={handleShareError}
-      >
-        <FacebookMessengerIcon size={32} round />
-      </FacebookMessengerShareButton>
-
-      {/* Email Share Button */}
       <EmailShareButton
         url={url}
         subject={title}
-        body={description || 'Check this out!'}
+        body={description || "Check this out!"}
         onClick={handleShareSuccess}
         onError={handleShareError}
       >
-        <EmailIcon size={32} round />
+        <EmailIcon size={48} round />
       </EmailShareButton>
     </div>
   );
 };
 
 export default ShareButtons;
+
