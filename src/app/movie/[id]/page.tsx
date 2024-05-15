@@ -75,99 +75,98 @@ const MovieDetails = async ({ params: { id } }: Props) => {
     '@context': 'https://schema.org',
     '@graph': [
       {
+        '@type': ['Person', 'Organization'],
+        '@id': 'https://gravatar.com/drtrailer2022/#person',
+        name: 'Dr Trailer'
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://watchonlinemovies.vercel.app#website',
+        url: 'https://watchonlinemovies.vercel.app',
+        name: 'Watch Online Movies™',
+        publisher: {
+          '@id': 'https://gravatar.com/drtrailer2022/#person'
+        },
+        inLanguage: 'en-US'
+      },
+      {
+        '@type': 'WebPage',
+        '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/',
+        url: details ? details.embedUrl : '/',
+        name: details?.original_title,
+        datePublished: '2024-01-13T13:00:00+00:00',
+        dateModified: '2024-01-13T13:13:00+00:00',
+        isPartOf: {
+          '@id': 'https://watchonlinemovies.vercel.app#website'
+        },
+        inLanguage: 'en-US'
+      },
+      {
         '@type': 'Person',
-        '@id': 'https://watchonlinemovies.vercel.app/author/watchnewsonline/',
+        '@id': 'https://watchonlinemovies.vercel.app/author/watchmoviesonline/',
         name: 'Dr Trailer',
-        url: 'https://watchonlinemovies.vercel.app/author/watchnewsonline/',
+        url: 'https://watchonlinemovies.vercel.app/author/watchmoviesonline/',
         image: {
           '@type': 'ImageObject',
           '@id': 'https://gravatar.com/drtrailer2022',
           url: 'https://gravatar.com/drtrailer2022',
           caption: 'Dr Trailer',
           inLanguage: 'en-US'
-        }
-      },
-      {
-        '@type': 'Organization',
-        '@id': 'https://watchonlinemovies.vercel.app/#organization',
-        name: 'Watch Online Movies™',
-        url: 'https://watchonlinemovies.vercel.app/'
-      },
-      {
-        '@type': 'WebSite',
-        '@id': 'https://watchonlinemovies.vercel.app/#website',
-        url: 'https://watchonlinemovies.vercel.app/',
-        name: 'Watch Online Movies™',
-        publisher: {
-          '@type': 'Organization',
-          '@id': 'https://watchonlinemovies.vercel.app/#organization'
         },
-        potentialAction: {
-          '@type': 'SearchAction',
-          target:
-            'https://watchonlinemovies.vercel.app/?s={search_term_string}',
-          'query-input': 'required name=search_term_string'
-        }
+        sameAs: ['https://watchonlinemovies.vercel.app']
       },
       {
-        '@type': 'WebPage',
-        '@id': 'https://watchonlinemovies.vercel.app/#webpage',
-        url: 'https://watchonlinemovies.vercel.app/',
-        name: 'Movie',
+        '@type': 'Article',
+        '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/',
+        headline: details?.original_title,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
-        about: {
-          '@type': 'Person',
-          '@id':
-            'https://watchonlinemovies.vercel.app/author/uwatchfreeonline/',
-          name: 'Dr Trailer',
-          url: 'https://watchonlinemovies.vercel.app/author/uwatchfreeonline/',
-          image: {
-            '@type': 'ImageObject',
-            '@id': 'https://gravatar.com/drtrailer2022',
-            url: 'https://gravatar.com/drtrailer2022',
-            caption: 'Dr Trailer',
-            inLanguage: 'en-US'
-          }
+        articleSection: 'Movie',
+        author: {
+          '@id': 'https://watchonlinemovies.vercel.app/author/watchmoviesonline/'
         },
+        publisher: {
+          '@id': 'https://gravatar.com/drtrailer2022/#person'
+        },
+        description: 'Watch Online Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!',
+        image: getImagePath(details?.backdrop_path),
+        name: details?.original_title,
         isPartOf: {
-          '@id': 'https://watchonlinemovies.vercel.app/#website'
+          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/'
         },
         inLanguage: 'en-US',
-        mainEntity: [
-          {
-            '@type': 'Article',
-            '@id': 'https://watchonlinemovies.vercel.app/',
-            url: 'https://watchonlinemovies.vercel.app/',
-            headline: 'Movie',
-            datePublished: '2024-01-13T13:00:00+00:00',
-            dateModified: '2024-01-13T13:13:00+00:00',
-            author: {
-              '@type': 'Person',
-              '@id':
-                'https://watchonlinemovies.vercel.app/author/watchnewsonline/',
-              name: 'Dr Trailer',
-              url: 'https://watchonlinemovies.vercel.app/author/watchnewsonline/',
-              image: {
-                '@type': 'ImageObject',
-                '@id': 'https://gravatar.com/drtrailer2022',
-                url: 'https://gravatar.com/drtrailer2022',
-                caption: 'Dr Trailer',
-                inLanguage: 'en-US'
-              }
-            },
-            publisher: {
-              '@type': 'Organization',
-              '@id': 'https://watchonlinemovies.vercel.app/#organization',
-              name: 'Watch Online Movies™',
-              url: 'https://watchonlinemovies.vercel.app/'
-            }
-          }
-        ]
-        // "sameAs": ["https://www.your-social-media-profile1.com", "https://www.your-social-media-profile2.com"]
+        mainEntityOfPage: {
+          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/'
+        }
+      },
+      {
+        '@type': 'BlogPosting',
+        '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/',
+        headline: details?.original_title,
+        datePublished: '2024-01-13T13:00:00+00:00',
+        dateModified: '2024-01-13T13:13:00+00:00',
+        articleSection: 'Movie',
+        author: {
+          '@id': 'https://watchonlinemovies.vercel.app/author/watchmoviesonline/'
+        },
+        publisher: {
+          '@id': 'https://gravatar.com/drtrailer2022/#person'
+        },
+        description: 'Watch Online Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!',
+        image: getImagePath(details?.backdrop_path),
+        name: details?.original_title,
+        '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/',
+        isPartOf: {
+          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/'
+        },
+        inLanguage: 'en-US',
+        mainEntityOfPage: {
+          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/'
+        }
       }
     ]
-  })
+  });
+  
 
   const baseUrl = 'https://watchonlinemovies.vercel.app/'
   const ldJsonData = {
