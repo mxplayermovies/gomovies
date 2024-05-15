@@ -203,7 +203,7 @@ const MovieDetails = async ({ params: { id } }: Props) => {
       name: 'Watch Online Movies™',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://watchonlinemovies.vercel.appog_image.jpg' // Typo in URL, should be corrected
+        url: 'https://watchonlinemovies.vercel.app/og_image.jpg' // Typo in URL, should be corrected
       }
     },
     additionalProperty: {
