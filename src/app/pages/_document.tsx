@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import GoogleTagManager from '../../components/GoogleTagManager';
+
 
 const uwatchfreeSchema = JSON.stringify([
   {
@@ -132,7 +132,7 @@ const rankMathSchema = JSON.stringify({
 class MyDocument extends Document {
   render() {
 
-    const gtmId = 'G-REYHDZZ5K8'; // Replace with your GTM Container ID
+
 
     return (
       <Html>
@@ -147,7 +147,7 @@ class MyDocument extends Document {
             name='viewport'
             content='width=device-width, initial-scale=1.0'
           />
-            <GoogleTagManager gtmId={gtmId} />
+          
           <link
             rel='icon'
             type='image/x-icon'

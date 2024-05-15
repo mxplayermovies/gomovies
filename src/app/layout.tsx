@@ -6,8 +6,11 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Footer from "@/components/Footer";
 import Head from 'next/head'
 import Script from 'next/script'
+import GoogleTagManager from '@/components/GoogleTagManager';
 
 const inter = Inter({ subsets: ["latin"] });
+
+const gtmId = 'G-REYHDZZ5K8'; 
 
 const uwatchfreeSchema = JSON.stringify([
   {
@@ -331,6 +334,7 @@ export default function RootLayout({
 
         </Head>
       <Script src='../../propler/ads.js' defer />
+      <GoogleTagManager gtmId={gtmId} />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
