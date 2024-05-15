@@ -21,8 +21,8 @@ export default async function Home() {
   const topRatedMovies = await getTopRatedMovies();
   const popularMovies = await getPopularMovies();
 
-  const [details, setDetails] = useState<any>(null);
-  const ogImageUrl = details?.image?.url; 
+  const details = await getMovieDetails
+  const ogImageUrl = details?.image?.url;
  
   return (
     <main>
