@@ -8,21 +8,10 @@ import Head from 'next/head'
 import Script from 'next/script'
 import GoogleTagManager from '@/components/GoogleTagManager'
 import WebpushrComponent from '@/components/WebpushrComponent'
-import { getImagePath } from '@/lib/getImagePath'
 
-import {
-  getMovieDetails,
- } from '@/lib/getMovies'
-
-//  import {
-//   getMovieDetails,
-//  } from '@/lib/getImagePath'
-
- const details = await getMovieDetails
 const inter = Inter({ subsets: ['latin'] })
 
 const gtmId = 'G-REYHDZZ5K8'
-const ogImageUrl = details?.og?.image; 
 
 const uwatchfreeSchema = JSON.stringify([
   {
@@ -231,9 +220,10 @@ export default function RootLayout ({
           property='og:site_name'
           content='Watch Online Movies™ - The Best Movies Platform HD Movies.'
         />
-          {ogImageUrl && ( // Render meta tag only if ogImageUrl is available
-        <meta property="og:image" content={ogImageUrl} />
-      )}
+        <meta
+          property='og:image'
+          content='https://watchonlinemovies.vercel.app/og_image.jpg'
+        />
       
         <meta property='og:image:width' content='1280' />
         <meta property='og:image:height' content='720' />
