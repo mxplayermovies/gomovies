@@ -16,7 +16,7 @@ import {
 } from 'next-share';
 
 const ShareButtons = () => {
-  const shareUrl = 'https://github.com/next-share'; // Example share URL
+ 
   const shareTitle = 'Watch Online Movies™ - For Movies & TV Show.';
   const shareHashtag = '#drtrailer';
   const shareSubject = 'Watch Online Movies™ - For Movies & TV Show.';
@@ -39,7 +39,7 @@ const ShareButtons = () => {
   return (
     <div className="bg-transparent flex gap-2 justify-center p-2">
       {/* Facebook Share Button */}
-      <FacebookShareButton url={shareUrl} quote={shareTitle} hashtag={shareHashtag}
+      <FacebookShareButton url={url} quote={shareTitle} hashtag={shareHashtag}
         onClick={handleShareSuccess}
         onError={handleShareError}
       >
@@ -49,7 +49,7 @@ const ShareButtons = () => {
       </FacebookShareButton>
 
       {/* Telegram Share Button */}
-      <TelegramShareButton url={shareUrl} title={shareTitle}
+      <TelegramShareButton url={url} title={shareTitle}
        onClick={handleShareSuccess}
        onError={handleShareError}
       >
@@ -59,7 +59,7 @@ const ShareButtons = () => {
       </TelegramShareButton>
 
       {/* Twitter Share Button */}
-      <TwitterShareButton url={shareUrl} title={shareTitle}
+      <TwitterShareButton url={url} title={shareTitle}
        onClick={handleShareSuccess}
        onError={handleShareError}
       >
@@ -68,7 +68,7 @@ const ShareButtons = () => {
       </TwitterShareButton>
 
       {/* Whatsapp Share Button */}
-      <WhatsappShareButton url={shareUrl} title={shareTitle} separator="::"
+      <WhatsappShareButton url={url} title={shareTitle} separator="::"
        onClick={handleShareSuccess}
        onError={handleShareError}
       >
@@ -77,7 +77,7 @@ const ShareButtons = () => {
       </WhatsappShareButton>
 
       {/* Linkedin Share Button */}
-      <LinkedinShareButton url={shareUrl}
+      <LinkedinShareButton url={url}
        onClick={handleShareSuccess}
        onError={handleShareError}
       >
@@ -86,7 +86,7 @@ const ShareButtons = () => {
       </LinkedinShareButton>
 
       {/* Email Share Button */}
-      <EmailShareButton url={shareUrl} subject={shareSubject} body={shareBody}
+      <EmailShareButton url={url} subject={shareSubject} body={shareBody}
        onClick={handleShareSuccess}
        onError={handleShareError}
       >
