@@ -170,7 +170,7 @@ const MovieDetails = async ({ params: { id } }: Props) => {
   const ldJsonData = {
     '@context': 'https://schema.org',
     '@type': 'Movie',
-    '@id': details ? encodeURIComponent(details?.original_title.trim()) : '/',
+    '@id': details ? details?.original_title.replace(/\s/g, '') : '/',
     name: details?.original_title,
     url: embedUrl ? details?.embedUrl : '/', 
     description: details?.overview,
