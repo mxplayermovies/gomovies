@@ -1,5 +1,6 @@
 import CaroselBanner from '@/components/CaroselBanner'
 import MovieContainer from '@/components/MovieContainer'
+import Metadata from '@/components/metadata';
 import Script from 'next/script'
 import Head from 'next/head'
 import { Metadata as NextMetadata } from 'next';

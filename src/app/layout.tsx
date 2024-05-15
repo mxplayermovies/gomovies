@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Head from 'next/head'
 import Script from 'next/script'
 import GoogleTagManager from '@/components/GoogleTagManager';
+import Metadata from '@/components/metadata';
 
 const inter = Inter({ subsets: ["latin"] });
 
