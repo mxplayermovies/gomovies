@@ -1,100 +1,58 @@
 "use client";
 import React from 'react';
 import {
-  FacebookShareButton,
-  FacebookIcon,
-  TelegramShareButton,
-  TelegramIcon,
-  TwitterShareButton,
-  TwitterIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-  EmailShareButton,
-  EmailIcon,
-} from 'next-share';
+  FacebookShare,
+  TwitterShare,
+  LinkedinShare,
+  WhatsappShare,
+  TelegramShare,
+} from 'react-share-kit';
+import { EmailShare } from 'next-share'; // Use next-share for EmailShare
 
-const ShareButtons = () => {
- 
-  const shareTitle = 'Watch Online Movies™ - For Movies & TV Show.';
-  const shareHashtag = '#drtrailer';
-  const shareSubject = 'Watch Online Movies™ - For Movies & TV Show.';
-  const shareBody = 'Check out this cool share button!';
-
-  const url = typeof window !== 'undefined' ? window.location.href : '';
-
-  const handleShareSuccess = () => {
-    console.log('Share successful!');
-    // Additional logic for share success
-  };
-
-  // Error handling function compatible with React's event handler type
-  const handleShareError: React.ReactEventHandler<HTMLButtonElement> = (event) => {
-    const error = new Error('Share button error');
-    console.error('Share error:', error);
-    // Additional logic for share error
-  };
+const SocialShareButtons = () => {
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const shareTitle = 'react-share-kit - social share buttons for next & react apps.';
+  const shareHashtag = '#react-share-kit';
+  const shareBody = 'Check out this awesome social share kit!';
 
   return (
     <div className="bg-transparent flex gap-2 justify-center p-2">
-      {/* Facebook Share Button */}
-      <FacebookShareButton url={url} quote={shareTitle} hashtag={shareHashtag}
-        onClick={handleShareSuccess}
-        onError={handleShareError}
-      >
-    
-        <FacebookIcon size={36} round />
-    
-      </FacebookShareButton>
+      {/* Facebook Share */}
+      <FacebookShare
+        url={shareUrl}
+        quote={shareTitle}
+        hashtag={shareHashtag}
+      />
 
-      {/* Telegram Share Button */}
-      <TelegramShareButton url={url} title={shareTitle}
-       onClick={handleShareSuccess}
-       onError={handleShareError}
-      >
-    
-        <TelegramIcon size={36} round />
-       
-      </TelegramShareButton>
+      {/* Twitter Share */}
+      <TwitterShare
+        url={shareUrl}
+        title={shareTitle}
+        hashtags={['#react-share-kit', '#front-end']}
+      />
 
-      {/* Twitter Share Button */}
-      <TwitterShareButton url={url} title={shareTitle}
-       onClick={handleShareSuccess}
-       onError={handleShareError}
-      >
-        <TwitterIcon size={36} round />
-     
-      </TwitterShareButton>
+      {/* Linkedin Share */}
+      <LinkedinShare url={shareUrl} />
 
-      {/* Whatsapp Share Button */}
-      <WhatsappShareButton url={url} title={shareTitle} separator="::"
-       onClick={handleShareSuccess}
-       onError={handleShareError}
-      >
-        <WhatsappIcon size={36} round />
-      
-      </WhatsappShareButton>
+      {/* Whatsapp Share */}
+      <WhatsappShare
+        url={shareUrl}
+        title={shareTitle}
+        separator=":: "
+      />
 
-      {/* Linkedin Share Button */}
-      <LinkedinShareButton url={url}
-       onClick={handleShareSuccess}
-       onError={handleShareError}
-      >
-    
-        <LinkedinIcon size={36} round />
-      </LinkedinShareButton>
+      {/* Telegram Share */}
+      <TelegramShare url={shareUrl} />
 
-      {/* Email Share Button */}
-      <EmailShareButton url={url} subject={shareSubject} body={shareBody}
-       onClick={handleShareSuccess}
-       onError={handleShareError}
-      >
-        <EmailIcon size={36} round />
-   
-      </EmailShareButton>
+      {/* Email Share */}
+      <EmailShare
+        url={shareUrl}
+        subject={'Next Share'}
+        body="body"
+      />
     </div>
   );
 };
 
-export default ShareButtons;
+export default SocialShareButtons;
+
