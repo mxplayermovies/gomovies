@@ -159,7 +159,7 @@ export default function RootLayout ({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <link
+        {/* <link
           rel='sitemap'
           type='application/xml'
           title='Sitemap'
@@ -258,7 +258,7 @@ export default function RootLayout ({
           content='dm0zffs8dj8pcb3gd'
         />
         <meta name='monetag' content='5c1338da4436ca30815b74198d2dfe20' />
-
+*/}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: uwatchfreeSchema }}
@@ -266,7 +266,7 @@ export default function RootLayout ({
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: rankMathSchema }}
-        />
+        /> 
 
         <Script src='../../propler/ads.js' defer />
         <GoogleTagManager gtmId={gtmId} />
