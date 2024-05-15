@@ -8,7 +8,7 @@ import Head from 'next/head'
 import Script from 'next/script'
 import GoogleTagManager from '@/components/GoogleTagManager'
 import WebpushrComponent from '@/components/WebpushrComponent'
-// import { getImagePath } from '@/lib/getImagePath'
+import { getImagePath } from '@/lib/getImagePath'
 
 import {
   getMovieDetails,
