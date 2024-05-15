@@ -10,9 +10,13 @@ import GoogleTagManager from '@/components/GoogleTagManager'
 import WebpushrComponent from '@/components/WebpushrComponent'
 // import { getImagePath } from '@/lib/getImagePath'
 
-import {
+// import {
+//   getMovieDetails,
+//  } from '@/lib/getMovies'
+
+ import {
   getMovieDetails,
- } from '@/lib/getMovies'
+ } from '@/lib/getImagePath'
 
  const details: any = await getMovieDetails
 const inter = Inter({ subsets: ['latin'] })
