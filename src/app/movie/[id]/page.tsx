@@ -97,9 +97,12 @@ const MovieDetails = async ({ params: { id } }: Props) => {
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
         isPartOf: {
-          '@id': 'https://watchonlinemovies.vercel.app#website'
+          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/'
         },
-        inLanguage: 'en-US'
+        inLanguage: 'en-US',
+        mainEntityOfPage: {
+          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/'
+        }
       },
       {
         '@type': 'Person',
@@ -117,7 +120,7 @@ const MovieDetails = async ({ params: { id } }: Props) => {
       },
       {
         '@type': 'Article',
-        '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/',
+        '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}#article` : '/',
         headline: details?.original_title,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
@@ -132,16 +135,16 @@ const MovieDetails = async ({ params: { id } }: Props) => {
         image: getImagePath(details?.backdrop_path),
         name: details?.original_title,
         isPartOf: {
-          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/'
+          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}#webpage` : '/'
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/'
+          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}#webpage` : '/'
         }
       },
       {
         '@type': 'BlogPosting',
-        '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/',
+        '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}#blogPost` : '/',
         headline: details?.original_title,
         datePublished: '2024-01-13T13:00:00+00:00',
         dateModified: '2024-01-13T13:13:00+00:00',
@@ -155,17 +158,17 @@ const MovieDetails = async ({ params: { id } }: Props) => {
         description: 'Watch Online Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!',
         image: getImagePath(details?.backdrop_path),
         name: details?.original_title,
-        '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/',
         isPartOf: {
-          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/'
+          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}#webpage` : '/'
         },
         inLanguage: 'en-US',
         mainEntityOfPage: {
-          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}` : '/'
+          '@id': details ? `https://watchonlinemovies.vercel.app/${details.original_title.replace(/\s/g, '')}#webpage` : '/'
         }
       }
     ]
   });
+  
   
 
   const baseUrl = 'https://watchonlinemovies.vercel.app/'
