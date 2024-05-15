@@ -12,14 +12,14 @@ const VideoPlayer = ({ videos }: Videos) => {
   };
   return (
     <div>
-      <h2 className="text-xl font-bold mb-5">Offical videos from Youtube:</h2>
+      <h2 className="text-xl font-bold mb-5" style={{ color: '#000', marginTop:'20px', textShadow: '1px 1px 1px #000' }}>Offical videos from Youtube:</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {videos.map((video) => (
           <div
             key={video?.id}
             className="border border-gray-600 rounded-md w-full overflow-hidden relative"
           >
-            <p className="text-xl font-bold px-6 py-3 text-center justify-center " style={{ color: '#40D7BC', textShadow: '1px 2px 2px #000' }}>
+            <p className="text-xl font-bold px-6 py-3 text-center justify-center " style={{ color: '#000', textShadow: '1px 1px 1px #000' }}>
               Type: {video?.type} - {video?.official ? "Offical" : "General"}
             </p>
             <YouTube videoId={video?.key} onReady={onPlayerReady} opts={opts}style={{
