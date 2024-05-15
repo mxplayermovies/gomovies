@@ -4,18 +4,14 @@ import { getImagePath } from '@/lib/getImagePath'
 import Styles from '../../../../styles/video-player.module.css'
 import Script from 'next/script'
 
-
 import {
   getMovieDetails,
   getMovieVideos,
   getPopularMovies
 } from '@/lib/getMovies'
-import { Metadata as NextMetadata } from 'next';
+import { Metadata as NextMetadata } from 'next'
 import Image from 'next/image'
 import React from 'react'
-
-
-
 
 interface Props {
   params: {
@@ -132,11 +128,11 @@ const MovieDetails = async ({ params: { id } }: Props) => {
   //       image: {getImagePath(details?.backdrop_path)},
   //       name: `{details?.original_title}`,
   //       isPartOf: {
-  //         '@id': `/#webpage`
+  //         '@id': `details ? `${baseUrl}movie/${details?.title}` : baseUrl,/#webpage`
   //       },
   //       inLanguage: 'en-US',
   //       mainEntityOfPage: {
-  //         '@id': `/ #webpage`
+  //        '@id': `details ? `${baseUrl}movie/${details?.title}` : baseUrl,/#webpage`
   //       }
   //     },
   //     {
@@ -155,24 +151,32 @@ const MovieDetails = async ({ params: { id } }: Props) => {
   //       description: ` Watch Online Movies, TV shows & Sports online on any device. We offer streaming on any Platform. Watch now !!!`,
   //       image: {getImagePath(details?.backdrop_path)},
   //       name: ``,
-  //       '@id': `/#richSnippet`,
+  //       '@id': `details ? `${baseUrl}movie/${details?.title}` : baseUrl,/#richSnippet`
+  //
   //       isPartOf: {
-  //         '@id': `/ #webpage`
+  //        '@id': `details ? `${baseUrl}movie/${details?.title}` : baseUrl,/#webpage`
   //       },
   //       inLanguage: 'en-US',
   //       mainEntityOfPage: {
-  //         '@id': `/ #webpage`
+  //         '@id': `details ? `${baseUrl}movie/${details?.title}` : baseUrl,/#webpage`
   //       }
   //     }
   //   ]
   // })
 
+  const baseUrl = 'https://watchonlinemovies.vercel.app/'
+
   const ldJsonData = {
     '@context': 'https://schema.org',
     '@type': 'Movie',
+    // '@id': details ? details?.original_title.replace(/\s/g, '') : '/',
+    // '@id': details ? `${baseUrl}movie/${details?.original_title.replace(/\s/g, '')}` : baseUrl,
     '@id': details ? details?.original_title.replace(/\s/g, '') : '/',
     name: details?.original_title,
-    url: embedUrl ? details?.embedUrl : '/', 
+    url: details
+      ? `${baseUrl}movie/${details?.original_title.replace(/\s/g, '')}`
+      : baseUrl,
+    url: embedUrl ? details?.embedUrl : '/',
     description: details?.overview,
     image: getImagePath(details?.backdrop_path),
     genre: details?.genres.map((item: any) => item.name).join(', '),
@@ -182,68 +186,73 @@ const MovieDetails = async ({ params: { id } }: Props) => {
       target: {
         '@type': 'EntryPoint',
         name: details?.original_title,
-        urlTemplate: '',
-      },
+        urlTemplate: ''
+      }
     },
     locationCreated: {
       '@type': 'Place',
-      name: details?.country,
+      name: details?.country
     },
     author: {
       '@type': 'Person',
       name: 'DrTrailer',
-      url: 'https://gravatar.com/drtrailer2022',
+      url: 'https://gravatar.com/drtrailer2022'
     },
     publisher: {
       '@type': 'Organization',
       name: 'Watch Online Movies™',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://watchonlinemovies.vercel.appog_image.jpg', // Typo in URL, should be corrected
-      },
+        url: 'https://watchonlinemovies.vercel.appog_image.jpg' // Typo in URL, should be corrected
+      }
     },
     additionalProperty: {
       '@type': 'PropertyValue',
       name: 'Action Platform',
-      value: ['Desktop Web Platform', 'iOS Platform', 'Android Platform'],
-    },
-  };
-  
- 
+      value: ['Desktop Web Platform', 'iOS Platform', 'Android Platform']
+    }
+  }
+
   return (
     <div>
-     {/* <meta
+      {/* <meta
           name='keywords'
           content={getImagePath(details?.keywords)}
         /> */}
-          {/* <script
+      {/* <script
             type='application/ld+json'
             dangerouslySetInnerHTML={{ __html: uwatchfreeSchema }}
           /> */}
-        <script
+      <meta
+        property='og:image'
+        content={getImagePath(details?.backdrop_path)}
+      />
+      <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJsonData) }}
       />
-           {/* <script
+      {/* <script
             type='application/ld+json'
             dangerouslySetInnerHTML={{ __html: rankMathSchema }}
           /> */}
 
-       
       <Script src='../../../propler/ads.js' defer />
       <div className='px-10 '>
         <div className='py-10 flex flex-col lg:flex-row items-center gap-5'>
-          <div className='w-full lg:w-1/2 min-h-96 rounded-md overflow-hidden group' >
+          <div className='w-full lg:w-1/2 min-h-96 rounded-md overflow-hidden group'>
             <Image
               src={getImagePath(details?.poster_path)}
               alt={details?.title}
               width={1920}
               height={1080}
-              className='w-full h-full object-cover shadow-md shadow-gray-900 drop-shadow-xl group-hover:scale-110 duration-500' 
+              className='w-full h-full object-cover shadow-md shadow-gray-900 drop-shadow-xl group-hover:scale-110 duration-500'
             />
           </div>
           <div className='w-full lg:w-1/2 flex flex-col gap-2'>
-            <h2 className='text-2xl font-semibold underline decoration-[1px]' style={{ color: '#000', textShadow: '1px 1px 1px #000' }}>
+            <h2
+              className='text-2xl font-semibold underline decoration-[1px]'
+              style={{ color: '#000', textShadow: '1px 1px 1px #000' }}
+            >
               {details?.original_title}
             </h2>
             <p className='text-sm leading-6 tracking-wide mt-2'>
@@ -257,9 +266,7 @@ const MovieDetails = async ({ params: { id } }: Props) => {
             </p>
             <p className='text-blue-500 text-sm'>
               Votes:{' '}
-              <span className='text-black font-bold'>
-                {details.vote_count}
-              </span>
+              <span className='text-black font-bold'>{details.vote_count}</span>
             </p>
             <p className='text-blue-500 text-sm'>
               Release Data:{' '}
