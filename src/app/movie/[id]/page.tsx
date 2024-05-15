@@ -3,6 +3,8 @@ import VideoPlayer from '@/components/VideoPlayer'
 import { getImagePath } from '@/lib/getImagePath'
 import Styles from '../../../../styles/video-player.module.css'
 import Script from 'next/script'
+import ShareButtons from '@/components/ShareButtons';
+
 
 import {
   getMovieDetails,
@@ -423,8 +425,33 @@ const MovieDetails = async ({ params: { id } }: Props) => {
             </div>
           )}
         </div>
+        <div class='container1'  style={{
+          marginTop: '30px',
+         
+          justifyContent: 'center'
+        }}>
+        <ShareButtons
+        title="Watch Online Movies™"
+        description="For Movies & TV Show "
+        // shareMessage={shareMessage}
+        image={getImagePath(details?.backdrop_path)}
+      />
+         </div>
+      
         <VideoPlayer videos={videos} />
-      </div>
+        <div class='container1'  style={{
+          marginTop: '30px',
+         
+          justifyContent: 'center'
+        }}>
+        <ShareButtons
+        title="Watch Online Movies™"
+        description="For Movies & TV Show "
+        // shareMessage={shareMessage}
+        image={getImagePath(details?.backdrop_path)}
+      />
+        </div>
+         </div>
       <div className='mt-6'>
         <MovieContainer
           movies={popoularMovies}
