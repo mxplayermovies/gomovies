@@ -2,7 +2,8 @@ import CaroselBanner from '@/components/CaroselBanner'
 import MovieContainer from '@/components/MovieContainer'
 import Script from 'next/script'
 import Head from 'next/head'
-import { Metadata } from 'next'
+import { Metadata as NextMetadata } from 'next';
+
 
 import {
   getNowPlayingMovies,
