@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import GoogleTagManager from '../components/GoogleTagManager';
+import GoogleTagManager from '../../components/GoogleTagManager';
 
 const uwatchfreeSchema = JSON.stringify([
   {
