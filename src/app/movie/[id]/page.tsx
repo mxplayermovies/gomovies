@@ -40,9 +40,7 @@ const MovieDetails = async ({ params: { id } }: Props) => {
   const ogImageUrl = details?.og?.image
   const embedUrl = `https://vidsrc.to/embed/movie/${id}/`
 
-  const title = details?.original_title;
-  const description = 'Watch Online Movies™ - For Movies & TV Show.';
-  const image = getImagePath(details?.backdrop_path);
+
 
   const uwatchfreeSchema = JSON.stringify([
     {
@@ -429,9 +427,9 @@ const MovieDetails = async ({ params: { id } }: Props) => {
           )}
         </div>
 
-        <ShareButtons title={title} description={description} image={image} />
+        <ShareButtons  />
         <VideoPlayer videos={videos} />
-        <ShareButtons title={title} description={description} image={image} />
+        <ShareButtons  />
          </div>
       <div className='mt-6'>
         <MovieContainer
