@@ -7,11 +7,18 @@ import Footer from '@/components/Footer'
 import Head from 'next/head'
 import Script from 'next/script'
 import GoogleTagManager from '@/components/GoogleTagManager'
-import WebpushrComponent from '@/components/WebpushrComponent';
+import WebpushrComponent from '@/components/WebpushrComponent'
+import { getImagePath } from '@/lib/getImagePath'
 
+import {
+  getMovieDetails,
+ } from '@/lib/getMovies'
+
+ const details: any = await getMovieDetails
 const inter = Inter({ subsets: ['latin'] })
 
 const gtmId = 'G-REYHDZZ5K8'
+const ogImageUrl = details?.og?.image; 
 
 const uwatchfreeSchema = JSON.stringify([
   {
@@ -159,12 +166,13 @@ export default function RootLayout ({
   return (
     <html lang='en'>
       <body className={inter.className}>
-      <link
+        <link
           rel='sitemap'
           type='application/xml'
           title='Sitemap'
           href='https://watchonlinemovies.vercel.app/sitemap.xml'
         />
+        <meta property="og:locale" content="en_US" />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
         <link
@@ -193,8 +201,9 @@ export default function RootLayout ({
         />
         <meta
           name='keywords'
-          content='uwatchfree, uwatchfree latest movie, free movie, films, free movie online, free movie online, online movie, watch online movie free sites, watch free movie online free, free online movie, watch movie online, watch online movie, watch movie free online, online watch movie, free new movie online, watch movie online free, movie 2 watch, free full movie, online movie watch, movie online watch, online movie for free, online watch movie, 2024 Latest movie, 2024 Latest movie online'
+          content='watch online movie, watch online latest movie, free movie, films, free movie online, free movie online, online movie, watch online movie free sites, watch free movie online free, free online movie, watch movie online, watch online movie, watch movie free online, online watch movie, free new movie online, watch movie online free, movie 2 watch, free full movie, online movie watch, movie online watch, online movie for free, online watch movie, 2024 Latest movie, 2024 Latest movie online'
         />
+
         <meta
           name='description'
           content='Watch free Movie, & TV shows online on any device. We offer streaming on any Platform. Watch now !!!'
@@ -218,10 +227,10 @@ export default function RootLayout ({
           property='og:site_name'
           content='Watch Online Movies™ - The Best Movies Platform HD Movies.'
         />
-        <meta
-          property='og:image'
-          content='https://watchonlinemovies.vercel.app/og_image.jpg'
-        />
+          {ogImageUrl && ( // Render meta tag only if ogImageUrl is available
+        <meta property="og:image" content={ogImageUrl} />
+      )}
+      
         <meta property='og:image:width' content='1280' />
         <meta property='og:image:height' content='720' />
         <meta property='og:image:type' content='image/webp' />
@@ -229,7 +238,8 @@ export default function RootLayout ({
           name='application-name'
           content='Watch Online Movies™ - The Best Movies Platform HD Movies.'
         />
-
+        <meta property='og:type' content='video.movie' />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           property='article:modified_time'
           content='2024-01-01T13:13:13+00:00'
@@ -254,32 +264,16 @@ export default function RootLayout ({
           content='dm0zffs8dj8pcb3gd'
         />
         <meta name='monetag' content='5c1338da4436ca30815b74198d2dfe20' />
-          
-          <script
-            type='application/ld+json'
-            dangerouslySetInnerHTML={{ __html: uwatchfreeSchema }}
-          />
-          <script
-            type='application/ld+json'
-            dangerouslySetInnerHTML={{ __html: rankMathSchema }}
-          />
-          {/* <cript
-            dangerouslySetInnerHTML={{
-              __html: `
-            (function (w, d, s, id) {
-              if (typeof (w.webpushr) !== 'undefined') return;
-              w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) };
-              var js, fjs = d.getElementsByTagName(s)[0];
-              js = d.createElement(s); js.id = id; js.async = 1;
-              js.src = "https://cdn.webpushr.com/app.min.js";
-              fjs.parentNode.appendChild(js);
-            }(window, document, 'script', 'webpushr-jssdk'));
 
-            webpushr('setup', { 'key': 'BFiNtErWPSlY1EdDYECv3rzPp2d5bVs46-O6I4iILsKtA2USCyBEakKcLs7yooH4Gj36tIvYtQtpZ0qZVfhHyAU' });
-          `
-            }}
-          /> */}
-     
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: uwatchfreeSchema }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: rankMathSchema }}
+        />
+
         <Script src='../../propler/ads.js' defer />
         <GoogleTagManager gtmId={gtmId} />
         <WebpushrComponent />
