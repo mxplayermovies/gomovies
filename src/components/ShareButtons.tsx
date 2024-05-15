@@ -21,58 +21,108 @@ import {
   EmailIcon,
 } from 'next-share';
 
-const SocialShareButtons = () => {
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
-  const shareTitle = 'Watch Online Movies™ - The Best Movies Platform HD Movies.';
+const ShareButtons = ({ title, description, image }) => {
+  const url = typeof window !== 'undefined' ? window.location.href : '';
+
+  const handleShareSuccess = () => {
+    console.log('Share successful!');
+  };
+
+  const handleShareError = (error) => {
+    console.error('Share failed:', error);
+  };
 
   return (
-    <div className="flex justify-center gap-4 p-4">
+    <div className="bg-transparent flex gap-4 justify-center p-4">
       {/* Facebook Share Button */}
-      <FacebookShareButton url={shareUrl} quote={shareTitle} hashtag="#nextshare">
-        <FacebookIcon size={36} round />
+      <FacebookShareButton
+        url={url}
+        quote={description || title}
+        hashtag="#drtrailer"
+        onClick={handleShareSuccess}
+        onError={handleShareError}
+      >
+        <FacebookIcon size={32} round />
       </FacebookShareButton>
 
       {/* Pinterest Share Button */}
-      <PinterestShareButton url={shareUrl} media={shareTitle}>
-        <PinterestIcon size={36} round />
+      <PinterestShareButton
+        url={url}
+        media={image}
+        onClick={handleShareSuccess}
+        onError={handleShareError}
+      >
+        <PinterestIcon size={32} round />
       </PinterestShareButton>
 
       {/* Reddit Share Button */}
-      <RedditShareButton url={shareUrl} title={shareTitle}>
-        <RedditIcon size={36} round />
+      <RedditShareButton
+        url={url}
+        title={title}
+        onClick={handleShareSuccess}
+        onError={handleShareError}
+      >
+        <RedditIcon size={32} round />
       </RedditShareButton>
 
       {/* Telegram Share Button */}
-      <TelegramShareButton url={shareUrl} title={shareTitle}>
-        <TelegramIcon size={36} round />
+      <TelegramShareButton
+        url={url}
+        title={title}
+        onClick={handleShareSuccess}
+        onError={handleShareError}
+      >
+        <TelegramIcon size={32} round />
       </TelegramShareButton>
 
       {/* Twitter Share Button */}
-      <TwitterShareButton url={shareUrl} title={shareTitle}>
-        <TwitterIcon size={36} round />
+      <TwitterShareButton
+        url={url}
+        title={description || title}
+        onClick={handleShareSuccess}
+        onError={handleShareError}
+      >
+        <TwitterIcon size={32} round />
       </TwitterShareButton>
 
       {/* WhatsApp Share Button */}
-      <WhatsappShareButton url={shareUrl} title={shareTitle} separator=":: ">
-        <WhatsappIcon size={36} round />
+      <WhatsappShareButton
+        url={url}
+        title={description || title}
+        separator="::"
+        onClick={handleShareSuccess}
+        onError={handleShareError}
+      >
+        <WhatsappIcon size={32} round />
       </WhatsappShareButton>
 
       {/* LinkedIn Share Button */}
-      <LinkedinShareButton url={shareUrl}>
-        <LinkedinIcon size={36} round />
+      <LinkedinShareButton url={url}>
+        <LinkedinIcon size={32} round />
       </LinkedinShareButton>
 
       {/* Facebook Messenger Share Button */}
-      <FacebookMessengerShareButton url={shareUrl} appId={''}>
-        <FacebookMessengerIcon size={36} round />
+      <FacebookMessengerShareButton
+        url={url}
+        appId={''} // Add your Facebook App ID here
+        onClick={handleShareSuccess}
+        onError={handleShareError}
+      >
+        <FacebookMessengerIcon size={32} round />
       </FacebookMessengerShareButton>
 
       {/* Email Share Button */}
-      <EmailShareButton url={shareUrl} subject={'Next Share'} body="Check out this cool share button!">
-        <EmailIcon size={36} round />
+      <EmailShareButton
+        url={url}
+        subject={title}
+        body={description || 'Check this out!'}
+        onClick={handleShareSuccess}
+        onError={handleShareError}
+      >
+        <EmailIcon size={32} round />
       </EmailShareButton>
     </div>
   );
 };
 
-export default SocialShareButtons;
+export default ShareButtons;
