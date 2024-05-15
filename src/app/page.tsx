@@ -1,7 +1,7 @@
 import CaroselBanner from "@/components/CaroselBanner";
 import MovieContainer from "@/components/MovieContainer";
 import Script from 'next/script';
-
+import ShareButtons from '@/components/ShareButtons';
 
 
 
@@ -29,7 +29,7 @@ export default async function Home() {
         <Script src='../../propler/ads.js' defer />
       <CaroselBanner />
       <div className="flex flex-col space-y-2">
-     
+      <ShareButtons />
         <MovieContainer movies={nowPlayingMovies} title="Now Playing" />
         <MovieContainer movies={upcomingMovies} title="Upcoming" />
         <MovieContainer movies={topRatedMovies} title="Top Rated" />

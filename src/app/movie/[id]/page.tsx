@@ -3,7 +3,7 @@ import VideoPlayer from '@/components/VideoPlayer'
 import { getImagePath } from '@/lib/getImagePath'
 import Styles from '../../../../styles/video-player.module.css'
 import Script from 'next/script'
-
+import ShareButtons from '@/components/ShareButtons';
 
 import {
   getMovieDetails,
@@ -425,9 +425,9 @@ const MovieDetails = async ({ params: { id } }: Props) => {
           )}
         </div>
 
-      
+        <ShareButtons />
         <VideoPlayer videos={videos} />
-       
+        <ShareButtons />
          </div>
       <div className='mt-6'>
         <MovieContainer
