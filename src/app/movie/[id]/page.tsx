@@ -165,7 +165,6 @@ const MovieDetails = async ({ params: { id } }: Props) => {
   // })
 
   const baseUrl = 'https://watchonlinemovies.vercel.app/'
-
   const ldJsonData = {
     '@context': 'https://schema.org',
     '@type': 'Movie',
@@ -173,9 +172,6 @@ const MovieDetails = async ({ params: { id } }: Props) => {
     // '@id': details ? `${baseUrl}movie/${details?.original_title.replace(/\s/g, '')}` : baseUrl,
     '@id': details ? details?.original_title.replace(/\s/g, '') : '/',
     name: details?.original_title,
-    url: details
-      ? `${baseUrl}movie/${details?.original_title.replace(/\s/g, '')}`
-      : baseUrl,
     url: embedUrl ? details?.embedUrl : '/',
     description: details?.overview,
     image: getImagePath(details?.backdrop_path),
