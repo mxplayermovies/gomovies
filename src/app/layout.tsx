@@ -327,6 +327,8 @@ export default function RootLayout({
           `
             }}
           />
+       
+
         </Head>
       <Script src='../../propler/ads.js' defer />
         <ThemeProvider
