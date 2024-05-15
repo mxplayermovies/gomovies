@@ -6,53 +6,55 @@ import {
   LinkedinShare,
   WhatsappShare,
   TelegramShare,
+  EmailShare,
 } from 'react-share-kit';
-import { EmailShare } from 'next-share'; // Use next-share for EmailShare
 
 const SocialShareButtons = () => {
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
-  const shareTitle = 'react-share-kit - social share buttons for next & react apps.';
-  const shareHashtag = '#react-share-kit';
-  const shareBody = 'Check out this awesome social share kit!';
+  const shareTitle = 'react-share-kit - Social Share Buttons';
+  const shareDescription = 'Integrate social share buttons using react-share-kit.';
 
   return (
     <div className="bg-transparent flex gap-2 justify-center p-2">
-      {/* Facebook Share */}
+      {/* Facebook Share Button */}
       <FacebookShare
         url={shareUrl}
         quote={shareTitle}
-        hashtag={shareHashtag}
+        hashtag="#reactsharekit"
       />
 
-      {/* Twitter Share */}
+      {/* Twitter Share Button */}
       <TwitterShare
         url={shareUrl}
         title={shareTitle}
-        hashtags={['#react-share-kit', '#front-end']}
+        hashtags={['#reactsharekit', '#frontend']}
       />
 
-      {/* Linkedin Share */}
-      <LinkedinShare url={shareUrl} />
+      {/* Linkedin Share Button */}
+      <LinkedinShare
+        url={shareUrl}
+      />
 
-      {/* Whatsapp Share */}
+      {/* Whatsapp Share Button */}
       <WhatsappShare
         url={shareUrl}
         title={shareTitle}
         separator=":: "
       />
 
-      {/* Telegram Share */}
-      <TelegramShare url={shareUrl} />
+      {/* Telegram Share Button */}
+      <TelegramShare
+        url={shareUrl}
+      />
 
-      {/* Email Share */}
+      {/* Email Share Button */}
       <EmailShare
         url={shareUrl}
-        subject={'Next Share'}
-        body="body"
+        subject={shareTitle}
+        body={shareDescription}
       />
     </div>
   );
 };
 
 export default SocialShareButtons;
-
