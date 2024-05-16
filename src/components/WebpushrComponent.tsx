@@ -46,7 +46,7 @@ const WebpushrComponent: React.FC = () => {
     loadWebpushrScript();
   }, []); // Empty dependency array ensures this effect runs only once
 
-  return null; // This component doesn't render anything visible
+  return null; // This component doesn't render anything visi ble
 };
 
 export default WebpushrComponent;
