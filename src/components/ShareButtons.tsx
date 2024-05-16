@@ -30,7 +30,7 @@ const ShareButtons = () => {
         quote={shareTitle}
         hashtag="#reactsharekit"
         onSuccess={() => handleShareSuccess('Facebook')}
-        onError={(error: Error) => handleShareError('Facebook', error)}
+        onError={(error) => handleShareError('Facebook', error as Error)}
       />
 
       {/* Twitter Share Button */}
@@ -39,14 +39,14 @@ const ShareButtons = () => {
         title={shareTitle}
         hashtags={['#reactsharekit', '#frontend']}
         onSuccess={() => handleShareSuccess('Twitter')}
-        onError={(error: Error) => handleShareError('Twitter', error)}
+        onError={(error) => handleShareError('Twitter', error as Error)}
       />
 
       {/* Linkedin Share Button */}
       <LinkedinShare
         url={shareUrl}
         onSuccess={() => handleShareSuccess('LinkedIn')}
-        onError={(error: Error) => handleShareError('LinkedIn', error)}
+        onError={(error) => handleShareError('LinkedIn', error as Error)}
       />
 
       {/* Whatsapp Share Button */}
@@ -55,14 +55,14 @@ const ShareButtons = () => {
         title={shareTitle}
         separator=":: "
         onSuccess={() => handleShareSuccess('WhatsApp')}
-        onError={(error: Error) => handleShareError('WhatsApp', error)}
+        onError={(error) => handleShareError('WhatsApp', error as Error)}
       />
 
       {/* Telegram Share Button */}
       <TelegramShare
         url={shareUrl}
         onSuccess={() => handleShareSuccess('Telegram')}
-        onError={(error: Error) => handleShareError('Telegram', error)}
+        onError={(error) => handleShareError('Telegram', error as Error)}
       />
 
       {/* Email Share Button */}
@@ -71,7 +71,7 @@ const ShareButtons = () => {
         subject={shareTitle}
         body={shareDescription}
         onSuccess={() => handleShareSuccess('Email')}
-        onError={(error: Error) => handleShareError('Email', error)}
+        onError={(error) => handleShareError('Email', error as Error)}
       />
     </div>
   );
