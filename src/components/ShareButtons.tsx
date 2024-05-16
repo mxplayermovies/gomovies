@@ -9,7 +9,7 @@ import {
   EmailShare,
 } from 'react-share-kit';
 
-const SocialShareButtons = () => {
+const ShareButtons = () => {
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
   const shareTitle = 'react-share-kit - Social Share Buttons';
   const shareDescription = 'Integrate social share buttons using react-share-kit.';
@@ -77,4 +77,4 @@ const SocialShareButtons = () => {
   );
 };
 
-export default SocialShareButtons;
+export default ShareButtons;
